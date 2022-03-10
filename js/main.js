@@ -147,6 +147,7 @@ $(document).ready(function() {
 
     /*======== Skills Progress Animation ========*/
     if($('.skills').length > 0) {
+        console.log('skills');
 
         var el = new SimpleBar($('#resume')[0]).getScrollElement();
 
@@ -161,32 +162,28 @@ $(document).ready(function() {
         }
 
         //When Resume Link is clicked
-        $('a[href="#resume"]').on('click', function(){
+        $('a[href="#resume"]').on('click', function() {
             animateProgress();
         });
 
         function animateProgress() {
             $('.progress .progress-bar').each(function() {
-                var bottom_object = $(this).offset().top + $(this).outerHeight();
-                var bottom_window = $(window).scrollTop() + $(window).height();
                 var progressWidth = $(this).data('progress-value') + '%';
-                if (bottom_window > bottom_object) {
-                    $(this).css({
-                        width: progressWidth
-                    });
-                    $(this).find('.progress-value').animate({
-                        countNum: parseInt(progressWidth, 10)
-                    }, {
-                        duration: 2000,
-                        easing: 'swing',
-                        step: function() {
-                            $(this).text(Math.floor(this.countNum) + '%');
-                        },
-                        complete: function() {
-                            $(this).text(this.countNum + '%');
-                        }
-                    });
-                }
+                $(this).css({
+                    width: progressWidth
+                });
+                $(this).find('.progress-value').animate({
+                    countNum: parseInt(progressWidth, 10)
+                }, {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function() {
+                        $(this).text(Math.floor(this.countNum) + '%');
+                    },
+                    complete: function() {
+                        $(this).text(this.countNum + '%');
+                    }
+                });
             });
         }
     }
