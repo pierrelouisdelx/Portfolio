@@ -1275,6 +1275,11 @@ header .header-mobile .header-toggle i {
     bottom: -18px;
 }
 
+span.during {
+    display: flex;
+    align-items: center;
+}
+
 .resume-section .skills {
     margin-bottom: 30px;
 }
