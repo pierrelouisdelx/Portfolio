@@ -27,12 +27,12 @@
 
 .slide:nth-of-type(1) {
     background-image: url('../img/portfolio/Drone.png');
-  }
-  
-  .slide:nth-of-type(2) {
-    background-image: url('../img/portfolio/iroboat-challenge.jpg');
-  }
+}
 
-  .slide:nth-of-type(3) {
-    background-image: url('../img/portfolio/drone_gazebo.png');
-  }
+.slide:nth-of-type(2) {
+    background-image: url('../img/portfolio/SkyCrane-home.png');
+}
+
+.slide:nth-of-type(3) {
+    background-image: url('../img/portfolio/ballsio.png');
+}

@@ -630,6 +630,9 @@ blockquote {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .preloader .loader h4 {
