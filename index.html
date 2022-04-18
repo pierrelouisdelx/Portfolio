@@ -22,6 +22,9 @@
 
         <!--Color Css-->
         <link class="site-color" rel="stylesheet" href="css/blue-color.css">
+        
+        <!--Slideshow-->
+        <link rel="stylesheet" href="css/slideshow.css">
 
         <!--Modernizr Js-->
         <script src="js/modernizr.js"></script>
@@ -92,13 +95,12 @@
             <div id="main" class="site-main">
 
                 <!--Banner Section Start-->
-                <section id="home" class="banner-section pt-page simple-slider simple-slider-demo" style="background-image: url('img/portfolio/drone_gazebo.png')">
-                    <div class="slider-wrapper">
-                        <div class="slider-slide" style="background-image: url('img/portfolio/SkyCrane-home.png')"></div>
-                        <div class="slider-slide" style="background-image: url('img/portfolio/SkyCrane-lobby.png')"></div>
-                        <div class="slider-slide" style="background-image: url('img/portfolio/SkyCrane-home.png')"></div>
-                    </div>
-
+                <section id="home" class="banner-section pt-page simple-slider simple-slider-demo">
+                    <ul id="slides">
+                        <li class="slide active"></li>
+                        <li class="slide"></li>
+                        <li class="slide"></li>
+                    </ul>
                     <div id="particles-js"></div>
 
                     <div class="banner-content">
@@ -109,8 +111,7 @@
                         <p class="cd-headline clip is-full-width">
                         <span>I am a </span>
                         <span class="cd-words-wrapper">
-                            <b class="is-visible">Freelancer</b>
-                            <b>Web Developper</b>
+                            <b class="is-visible">Web Developper Freelance</b>
                             <b>Video Game Developper</b>
                             <b>Drone Developper</b>
                         </span>
@@ -822,9 +823,9 @@
 
                             <!--Portfolio Item-->
                             <div class="item col-lg-4 col-sm-6 software">
-                                <a class="image-link" href="https://community.emlid.com/uploads/default/original/2X/7/715232cbfbbcfa88236e7e5c1a96b49bb1624944.png">
+                                <a class="image-link" href="img/portfolio/Drone.png">
                                     <figure>
-                                        <img src="https://community.emlid.com/uploads/default/original/2X/7/715232cbfbbcfa88236e7e5c1a96b49bb1624944.png" alt="">
+                                        <img src="img/portfolio/Drone.png" alt="">
                                         <figcaption>
                                             <h4>Drone Development</h4>
                                             <p>Software</p>
@@ -900,12 +901,13 @@
         <script src="js/main.js"></script>
 
         <script src="js/main-demo.js"></script>
+        <script src="js/slideshow.js"></script>
 
         <script>
             //Particles
-            particlesJS.load('particles-js', 'js/particles2.json', function() {
-                console.log('callback - particles.js config loaded');
-            });
+            //particlesJS.load('particles-js', 'js/particles2.json', function() {
+            //    console.log('callback - particles.js config loaded');
+            //});
         </script>
 
     </body>
