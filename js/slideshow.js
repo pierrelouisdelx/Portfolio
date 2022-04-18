@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const slides = document.getElementById('slides');
     children = slides.children;
 
-    setInterval(nextSlide, 5000);
+    setInterval(nextSlide, 2750);
 });
 
 var i = 0;
