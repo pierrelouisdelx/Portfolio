@@ -2,7 +2,7 @@ let hexagons = document.querySelector('#hexagons');
 let w = window.innerWidth;
 let h = window.innerHeight;
 
-for (let i = -2; i < h / 110; i++) {
+for (let i = -3; i < h / 110; i++) {
     row = createRow();
     for (let j = 0; j < w / 100; j++) {
         hexagon = createHexagon();
