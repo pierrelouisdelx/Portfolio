@@ -91,14 +91,22 @@
             <div id="main" class="site-main">
 
                 <!--Banner Section Start-->
-                <section id="home" class="banner-section pt-page simple-slider simple-slider-demo">
-                    <ul id="slides">
-                        <li class="slide active"></li>
-                        <li class="slide"></li>
-                        <li class="slide"></li>
-                        <li class="slide"></li>
-                    </ul>
-                    <div id="particles-js"></div>
+                <section id="home" class="banner-section pt-page">
+
+                    <div class="banner-slider">
+                        <div id="slides">
+                            <div class="slides-container">
+                                <!--Slide 1-->
+                                <img src="img/portfolio/Computer-Vision.jpg" alt="">
+                                <!--Slide 2-->
+                                <img src="img/portfolio/Drone.png" alt="">
+                                <!--Slide 3-->
+                                <img src="img/portfolio/SkyCrane-home.png" alt="">
+                                <!--Slide 4-->
+                                <img src="img/portfolio/ballsio.png" alt="">
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="banner-content">
                         <!--Banner Text-->
@@ -951,13 +959,15 @@
         <!--Site Main JS-->
         <script src="js/main.js"></script>
 
-        <script src="js/main-demo.js"></script>
-        <script src="js/slideshow.js"></script>
-
         <script>
             //Particles
-            particlesJS.load('particles-js', 'js/particles2.json', function() {
-                console.log('callback - particles.js config loaded');
+            //particlesJS.load('particles-js', 'js/particles2.json', function() {
+            //    console.log('callback - particles.js config loaded');
+            //});
+            //Super Slider
+            $('#slides').superslides({
+                animation: 'fade',
+                play: 2750
             });
         </script>
 
