@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
+import Experience from '@/components/Experience';
 
 export default function Home() {
     return (
@@ -10,6 +11,7 @@ export default function Home() {
             <main className='flex flex-col items-center justify-center flex-1 px-20 text-center text-white'>
                 <Hero />
                 <About />
+                <Experience />
             </main>
         </div>
     );

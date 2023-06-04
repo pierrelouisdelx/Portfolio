@@ -11,11 +11,15 @@ const Links = [
     },
     {
         href: '#',
-        title: 'Resume',
+        title: 'Experience',
     },
     {
         href: '#',
         title: 'Projects',
+    },
+    {
+        href: '#',
+        title: 'Contact',
     },
 ];
 

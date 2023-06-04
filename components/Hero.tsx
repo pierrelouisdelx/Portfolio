@@ -11,7 +11,7 @@ export default function Hero() {
                 <h5 className='text-xl uppercase tracking-wide underline underline-offset-8 decoration-orange-400 decoration-4'>
                     {' '}
                     <Typical
-                        steps={['Web Developper Freelance', 1000, 'Software Engineer', 1000]}
+                        steps={['Web Developper Freelance', 1000, 'Computer Vision Engineer', 1000]}
                         loop={Infinity}
                     />
                 </h5>
