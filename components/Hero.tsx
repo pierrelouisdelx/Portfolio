@@ -25,8 +25,8 @@ export default function Hero() {
         >
             <Spline
                 scene='https://prod.spline.design/3vT6YOc2K22A30tk/scene.splinecode'
-                style={{ width: '80vw', height: '80vh' }}
-                className='absolute inset-0 -z-10'
+                style={{ width: '80vw', height: '80vh', marginTop: '10vh', marginLeft: '10vw' }}
+                className='absolute inset-0 -z-10 items-center justify-center flex'
                 onLoad={onLoad}
             />
             <h1 className='text-[5vw] uppercase tracking-wide font-semibold'>Pierre-Louis</h1>

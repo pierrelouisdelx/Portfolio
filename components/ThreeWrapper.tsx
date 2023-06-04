@@ -1,46 +1,34 @@
-import React, { useRef, useEffect } from 'react';
-import { Canvas, extend, useFrame, useThree } from 'react-three-fiber';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-
-extend({ OrbitControls });
-
-function MouseFollower() {
-    const followerRef = useRef();
-
-    const { camera, gl } = useThree();
-    useEffect(() => {
-        const controls = new OrbitControls(camera, gl.domElement);
-        controls.enabled = false;
-        controls.enablePan = false;
-        controls.enableZoom = false;
-
-        return () => {
-            controls.dispose();
-        };
-    }, [camera, gl]);
-
-    useFrame(() => {
-        const { clientX, clientY } = followerRef.current.mouse;
-        const x = (clientX / window.innerWidth) * 2 - 1;
-        const y = -(clientY / window.innerHeight) * 2 + 1;
-        followerRef.current.position.x = x * 5;
-        followerRef.current.position.y = y * 5;
-    });
-
-    return (
-        <mesh ref={followerRef} position={[0, 0, 0]}>
-            <boxBufferGeometry args={[1, 1, 1]} />
-            <meshStandardMaterial color='red' />
-        </mesh>
-    );
-}
+import React, { useRef } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { OrbitControls, Box } from '@react-three/drei';
+import { Vector3 } from 'three';
 
 export default function ThreeWrapper() {
     return (
-        <Canvas style={{ width: '100%', height: '100vh' }}>
+        <Canvas style={{ width: '100vw', height: '100vh' }}>
             <ambientLight />
             <pointLight position={[10, 10, 10]} />
+            <OrbitControls enablePan={false} enableZoom={false} />
             <MouseFollower />
         </Canvas>
     );
 }
+
+const MouseFollower = () => {
+    const followerRef = useRef();
+    const vec = new Vector3();
+
+    useFrame(({ mouse }) => {
+        const x = mouse.x * 5;
+        const y = mouse.y * 5;
+        followerRef?.current?.position.lerp(vec.set(x, y, 0), 0.05);
+
+        console.log(followerRef?.current?.position);
+    });
+
+    return (
+        <Box ref={followerRef} position={[0, 0, 0]} args={[1, 1, 1]}>
+            <meshStandardMaterial color='red' />
+        </Box>
+    );
+};
