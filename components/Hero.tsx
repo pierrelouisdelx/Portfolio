@@ -20,7 +20,7 @@ export default function Hero() {
 
     return (
         <div
-            className='flex flex-col items-center justify-center flex-1 px-20 text-center min-h-screen w-screen mt-10'
+            className='flex flex-col items-center justify-center text-center min-h-screen w-screen mt-10'
             onMouseMove={triggerAnimation}
         >
             <Spline

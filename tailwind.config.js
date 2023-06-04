@@ -10,6 +10,7 @@ module.exports = {
             animation: {
                 'bounce-slow': 'bounce 1.5s infinite',
             },
+            colors: {},
         },
     },
     plugins: [],

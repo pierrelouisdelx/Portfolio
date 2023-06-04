@@ -1,7 +1,9 @@
+import { Title } from '@/ui';
+
 export default function About() {
     return (
-        <div className='flex flex-col items-center justify-center flex-1 px-20 text-center text-white'>
-            <h1 className='text-5xl uppercase tracking-wide font-semibold'>Who am i ?</h1>
+        <div className='flex flex-col text-left w-full'>
+            <Title>Who am I ?</Title>
             <p>
                 My name is Pierre-Louis Delcroix and I've been coding since High School. During this
                 past 6 years I did several projects such as a Music streaming Web App, an Optical

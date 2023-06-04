@@ -50,7 +50,7 @@ export default function Experience() {
         <>
             <div className='mb-4 border-b border-gray-200 dark:border-gray-700'>
                 <ul
-                    className='flex flex-wrap -mb-px text-sm font-medium text-center'
+                    className='flex text-sm font-medium text-center'
                     id='myTab'
                     data-tabs-toggle='#myTabContent'
                     role='tablist'
