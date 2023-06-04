@@ -29,7 +29,7 @@ const freelanceexperiences = [
         location: 'Paris, France',
         position: 'Software Engineer',
         date: '09/2022 - 01/2023',
-        icon: 'https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/isifma26whlciahngbqi',
+        icon: 'https://images.emojiterra.com/google/android-11/512px/1f349.png',
         description:
             'OneCommerce is a startup that aims to revolutionize the way we buy online. I will be in charge of the development of the front-end of the website.',
     },
@@ -63,7 +63,7 @@ export default function Experience() {
                             type='button'
                             role='tab'
                             aria-controls='work'
-                            aria-selected='false'
+                            aria-selected='true'
                         >
                             Work Experience
                         </button>
@@ -102,12 +102,13 @@ export default function Experience() {
                     id='freelance'
                     role='tabpanel'
                     aria-labelledby='freelance-tab'
-                ></div>
-                <VerticalTimeline animate={true} lineColor={'#fb923c'}>
-                    {freelanceexperiences.map((experience) => (
-                        <ExperienceCard {...experience} key={experience.company} />
-                    ))}
-                </VerticalTimeline>
+                >
+                    <VerticalTimeline animate={true} lineColor={'#fb923c'}>
+                        {freelanceexperiences.map((experience) => (
+                            <ExperienceCard {...experience} key={experience.company} />
+                        ))}
+                    </VerticalTimeline>
+                </div>
             </div>
         </>
     );
