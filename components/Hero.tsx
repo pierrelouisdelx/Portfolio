@@ -20,20 +20,19 @@ export default function Hero() {
 
     return (
         <div
-            className='flex flex-col items-center justify-center flex-1 px-20 text-center min-h-screen'
+            className='flex flex-col items-center justify-center flex-1 px-20 text-center min-h-screen w-screen mt-10'
             onMouseMove={triggerAnimation}
         >
             <Spline
-                scene='https://prod.spline.design/3vT6YOc2K22A30tk/scene.splinecode'
-                style={{ width: '80vw', height: '80vh', marginTop: '10vh', marginLeft: '10vw' }}
-                className='absolute inset-0 -z-10 items-center justify-center flex'
+                scene='/mushroom.spline'
+                className='absolute inset-0 -z-10 items-center justify-center flex w-[80vw] h-[80vh]'
                 onLoad={onLoad}
             />
             <h1 className='text-[5vw] uppercase tracking-wide font-semibold'>Pierre-Louis</h1>
             <h1 className='text-[5vw] uppercase tracking-wide font-semibold'>Delcroix</h1>
-            <div className='flex flex-row'>
+            <div className='flex flex-col md:flex-row'>
                 <h5 className='text-xl uppercase tracking-wide'>I'm a</h5>
-                <h5 className='text-xl uppercase tracking-wide underline underline-offset-8 decoration-orange-400 decoration-4 ml-2'>
+                <h5 className='text-xl uppercase tracking-wide underline underline-offset-8 decoration-orange-400 decoration-4 ml-2 leading-10'>
                     <TypeAnimation
                         sequence={animationSequence}
                         wrapper='span'
