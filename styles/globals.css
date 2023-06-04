@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    font-family: 'Popins', sans-serif;
+}
+
+::selection {
+    background-color: #fcb3bf;
+}
+
+body {
+    background-color: #1a191d;
+}
