@@ -11,10 +11,7 @@ export const Card = ({ project }: { project: ProjectProps }) => {
     return (
         <motion.div
             layout
-            animate={{ opacity: 1 }}
-            initial={{ opacity: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.25 }}
             className='bg-black p-5 rounded-lg m-2 w-1/4'
         >
             <h3>{project.name}</h3>
