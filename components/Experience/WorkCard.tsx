@@ -16,8 +16,11 @@ export default function ExperienceCard(props: ExperienceCardProps) {
             contentStyle={{ background: '#1f2937', color: '#fff' }}
             contentArrowStyle={{ borderRight: '7px solid orange' }}
             iconStyle={{ background: '#1f2937', color: '#fff' }}
-            icon={<img src={props.icon} className='h-8 w-8' alt='Company Logo' />}
+            icon={
+                <img src={props.icon} className='h-full w-full rounded-full' alt='Company Logo' />
+            }
             date={props.date}
+            dateClassName='text-gray-400'
         >
             <h3 className='vertical-timeline-element-title mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
                 {props.company}
