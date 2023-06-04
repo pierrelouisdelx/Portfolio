@@ -146,7 +146,7 @@ const skills = [
 
 export default function Skills() {
     return (
-        <div className='flex flex-col w-full'>
+        <div className='flex flex-col w-full' id='skills'>
             <Title>Skills</Title>
             <div className='flex flex-row flex-wrap'>
                 {skills.map((skill) => (

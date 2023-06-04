@@ -22,6 +22,7 @@ export default function Hero() {
         <div
             className='flex flex-col items-center justify-center text-center min-h-screen w-screen mt-10'
             onMouseMove={triggerAnimation}
+            id='hero'
         >
             <Spline
                 scene='/mushroom.spline'
@@ -30,7 +31,7 @@ export default function Hero() {
             />
             <h1 className='text-[5vw] uppercase tracking-wide font-semibold'>Pierre-Louis</h1>
             <h1 className='text-[5vw] uppercase tracking-wide font-semibold'>Delcroix</h1>
-            <div className='flex flex-col md:flex-row'>
+            <div className='flex flex-col md:flex-row items-center'>
                 <h5 className='text-xl uppercase tracking-wide'>I'm a</h5>
                 <h5 className='text-xl uppercase tracking-wide underline underline-offset-8 decoration-orange-400 decoration-4 ml-2 leading-10'>
                     <TypeAnimation

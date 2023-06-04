@@ -2,23 +2,23 @@ import React from 'react';
 
 const Links = [
     {
-        href: '#',
+        href: '#hero',
         title: 'Home',
     },
     {
-        href: '#',
+        href: '#about',
         title: 'About',
     },
     {
-        href: '#',
+        href: '#experience',
         title: 'Experience',
     },
     {
-        href: '#',
+        href: '#projects',
         title: 'Projects',
     },
     {
-        href: '#',
+        href: '#contact',
         title: 'Contact',
     },
 ];

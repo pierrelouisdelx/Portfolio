@@ -50,7 +50,7 @@ export default function Projects() {
     }, [selected]);
 
     return (
-        <div className='flex flex-col w-full'>
+        <div className='flex flex-col w-full' id='projects'>
             <Title>Projects</Title>
             <div className='flex justify-evenly flex-wrap'>
                 {cats.map((cat, index) => (

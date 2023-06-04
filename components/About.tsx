@@ -2,7 +2,7 @@ import { Title } from '@/ui';
 
 export default function About() {
     return (
-        <div className='flex flex-col text-left w-full'>
+        <div className='flex flex-col text-left w-full' id='about'>
             <Title>Who am I ?</Title>
             <p>
                 My name is Pierre-Louis Delcroix and I've been coding since High School. During this
