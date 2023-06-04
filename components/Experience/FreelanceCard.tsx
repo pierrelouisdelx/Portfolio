@@ -3,12 +3,13 @@ import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 interface FreelanceCardProps {
     company: string;
     position: string;
+    location: string;
     date: string;
     icon: string;
     description: string;
 }
 
-export default function FreelanceCard(props: ExperienceCardProps) {
+export default function FreelanceCard(props: FreelanceCardProps) {
     return (
         <VerticalTimelineElement
             className='vertical-timeline-element--work'

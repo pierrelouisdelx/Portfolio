@@ -1,12 +1,13 @@
 import { VerticalTimeline } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import WorkCard from '@/components/Experience/WorkCard';
-import FreelanceCard from '@/components/Experience/FreelanceCard';
+import ExperienceCard from '@/components/Experience/WorkCard';
+import { useState } from 'react';
 
 const workexperiences = [
     {
         company: 'OneCommerce',
         position: 'Software Engineer',
+        location: 'London, UK',
         date: '09/2022 - 01/2023',
         icon: 'https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/isifma26whlciahngbqi',
         description:
@@ -15,6 +16,7 @@ const workexperiences = [
     {
         company: 'Freelance',
         position: 'Fullstack Developer',
+        location: 'Worldwide',
         date: '09/2021 - Present',
         icon: 'https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/isifma26whlciahngbqi',
         description: 'Working as a freelance in parallel of my studies',
@@ -24,6 +26,7 @@ const workexperiences = [
 const freelanceexperiences = [
     {
         company: 'Sweez.io',
+        location: 'Paris, France',
         position: 'Software Engineer',
         date: '09/2022 - 01/2023',
         icon: 'https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/isifma26whlciahngbqi',
@@ -32,6 +35,7 @@ const freelanceexperiences = [
     },
     {
         company: 'Freelance',
+        location: 'Worldwide',
         position: 'Fullstack Developer',
         date: '09/2021 - Present',
         icon: 'https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/isifma26whlciahngbqi',
@@ -40,21 +44,71 @@ const freelanceexperiences = [
 ];
 
 export default function Experience() {
-    return (
-        <div className='flex flex-col items-center justify-center flex-1 px-20 text-center text-white'>
-            <h1 className='text-5xl uppercase tracking-wide font-semibold'>Work Experience</h1>
-            <VerticalTimeline animate={true} lineColor={'#fb923c'}>
-                {workexperiences.map((experience) => (
-                    <WorkCard {...experience} key={experience.company} />
-                ))}
-            </VerticalTimeline>
+    const [activeTab, setActiveTab] = useState('work');
 
-            <h1 className='text-5xl uppercase tracking-wide font-semibold'>Freelance Experience</h1>
-            <VerticalTimeline animate={true} lineColor={'#fb923c'}>
-                {freelanceexperiences.map((experience) => (
-                    <FreelanceCard {...experience} key={experience.company} />
-                ))}
-            </VerticalTimeline>
-        </div>
+    return (
+        <>
+            <div className='mb-4 border-b border-gray-200 dark:border-gray-700'>
+                <ul
+                    className='flex flex-wrap -mb-px text-sm font-medium text-center'
+                    id='myTab'
+                    data-tabs-toggle='#myTabContent'
+                    role='tablist'
+                >
+                    <li className='mr-2' role='presentation'>
+                        <button
+                            className='inline-block p-4 border-b-2 rounded-t-lg'
+                            id='profile-tab'
+                            data-tabs-target='#work'
+                            type='button'
+                            role='tab'
+                            aria-controls='work'
+                            aria-selected='false'
+                        >
+                            Work Experience
+                        </button>
+                    </li>
+                    <li className='mr-2' role='presentation'>
+                        <button
+                            className='inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300'
+                            id='freelance-tab'
+                            data-tabs-target='#freelance'
+                            type='button'
+                            role='tab'
+                            aria-controls='freelance'
+                            aria-selected='false'
+                        >
+                            Freelance Experience
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div id='myTabContent'>
+                <div
+                    className='hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800'
+                    id='work'
+                    role='tabpanel'
+                    aria-labelledby='work-tab'
+                >
+                    <VerticalTimeline animate={true} lineColor={'#fb923c'}>
+                        {workexperiences.map((experience) => (
+                            <ExperienceCard {...experience} key={experience.company} />
+                        ))}
+                    </VerticalTimeline>
+                </div>
+
+                <div
+                    className='hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800'
+                    id='freelance'
+                    role='tabpanel'
+                    aria-labelledby='freelance-tab'
+                ></div>
+                <VerticalTimeline animate={true} lineColor={'#fb923c'}>
+                    {freelanceexperiences.map((experience) => (
+                        <ExperienceCard {...experience} key={experience.company} />
+                    ))}
+                </VerticalTimeline>
+            </div>
+        </>
     );
 }

@@ -1,14 +1,15 @@
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 
-interface WorkCardProps {
+interface ExperienceCardProps {
     company: string;
     position: string;
+    location: string;
     date: string;
     icon: string;
     description: string;
 }
 
-export default function ExperienceCard(props: WorkCardProps) {
+export default function ExperienceCard(props: ExperienceCardProps) {
     return (
         <VerticalTimelineElement
             className='vertical-timeline-element--work'
@@ -19,7 +20,9 @@ export default function ExperienceCard(props: WorkCardProps) {
             icon={<img src={props.icon} className='h-8 mr-3' alt='Company Logo' />}
         >
             <h3 className='vertical-timeline-element-title'>{props.company}</h3>
-            <h4 className='vertical-timeline-element-subtitle'>{props.position}</h4>
+            <h4 className='vertical-timeline-element-subtitle'>
+                {props.position} - {props.location}
+            </h4>
             <p>{props.description}</p>
         </VerticalTimelineElement>
     );
