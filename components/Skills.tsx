@@ -159,7 +159,7 @@ export default function Skills() {
 
 const CategorySkills = (props: CategorySkillProps) => {
     return (
-        <div className='flex flex-col items-left justify-left w-1/2 py-5'>
+        <div className='flex flex-col w-1/3 p-5 px-5 items-left justify-left'>
             <h1 className='text-2xl uppercase'>{props.title}</h1>
             <div className='flex flex-row flex-wrap'>
                 {props.skills.map((skill) => (
@@ -172,7 +172,7 @@ const CategorySkills = (props: CategorySkillProps) => {
 
 const Skill = (props: SkillProps) => {
     return (
-        <div className='flex flex-col text-left w-full p-2'>
+        <div className='flex flex-col w-full p-2 text-left'>
             <h1 className='text-lg'>{props.name}</h1>
             <ProgressBar p={props.level} />
         </div>
@@ -181,7 +181,7 @@ const Skill = (props: SkillProps) => {
 
 const ProgressBar = ({ p }: { p: number }) => {
     return (
-        <div className='h-1 w-full bg-gray-300 rounded-md'>
+        <div className='w-full h-1 bg-gray-300 rounded-md'>
             <div style={{ width: `${p}%` }} className='h-1 bg-orange-400 rounded-md'></div>
         </div>
     );

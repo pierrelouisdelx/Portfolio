@@ -1,7 +1,8 @@
 import { Title } from '@/ui';
 import { useEffect, useState } from 'react';
 import { Card } from '@/components/Projects/Card';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, useMotionValue, animate } from 'framer-motion';
+import DotGrid from '@/components/DotGrid';
 
 enum Categories {
     ALL = -1,
@@ -15,20 +16,23 @@ enum Categories {
 const cats = ['all', 'web', 'video games', 'software', 'system', 'computer vision'];
 const projects = [
     {
-        name: '1',
-        description: 'My personal website',
+        name: 'HydraFlow',
+        description: 'Fluid simulation engine',
+        technologies: ['OpenGL', 'C++'],
         url: '',
         category: Categories.WEB,
     },
     {
         name: '2',
         description: 'My personal website',
+        technologies: ['OpenGL', 'C++'],
         url: '',
         category: Categories.SYSTEM,
     },
     {
         name: '3',
         description: 'My personal website',
+        technologies: ['OpenGL', 'C++'],
         url: '',
         category: Categories.WEB,
     },
@@ -44,6 +48,23 @@ export default function Projects() {
     const [selected, setSelected] = useState<Categories>(Categories.WEB);
     const [filteredProjects, setFilteredProjects] = useState(projects);
 
+    const mouseX = useMotionValue(typeof window !== 'undefined' ? window.innerWidth / 2 : 0);
+    const mouseY = useMotionValue(typeof window !== 'undefined' ? window.innerHeight / 2 : 0);
+
+    useEffect(() => {
+        const handleMouseMove = (e: MouseEvent) => {
+            animate(mouseX, e.clientX);
+            animate(mouseY, e.clientY);
+        };
+        if (typeof window === 'undefined') return;
+
+        window.addEventListener('mousemove', handleMouseMove);
+
+        return () => {
+            window.removeEventListener('mousemove', handleMouseMove);
+        };
+    }, []);
+
     useEffect(() => {
         if (selected === Categories.ALL) setFilteredProjects(projects);
         else setFilteredProjects(projects.filter((project) => project.category === selected));
@@ -52,7 +73,7 @@ export default function Projects() {
     return (
         <div className='flex flex-col w-full' id='projects'>
             <Title>Projects</Title>
-            <div className='flex justify-evenly flex-wrap'>
+            <div className='flex flex-wrap justify-evenly'>
                 {cats.map((cat, index) => (
                     <Category
                         category={cat}
@@ -62,10 +83,16 @@ export default function Projects() {
                     />
                 ))}
             </div>
-            <motion.div layout className='flex flex-wrap'>
+            <motion.div layout className='relative flex flex-wrap transform-style preserve-3d'>
+                <DotGrid />
                 <AnimatePresence>
                     {filteredProjects.map((project) => (
-                        <Card project={project} key={project.name} />
+                        <Card
+                            project={project}
+                            key={project.name}
+                            mouseX={mouseX}
+                            mouseY={mouseY}
+                        />
                     ))}
                 </AnimatePresence>
             </motion.div>
@@ -76,7 +103,7 @@ export default function Projects() {
 const Category = (props: CategoryProps) => {
     return (
         <div
-            className='bg-orange-300 text-white rounded-lg p-2 capitalize m-2 cursor-pointer hover:bg-orange-400'
+            className='flex items-center justify-center px-2 py-1 m-2 text-white capitalize bg-orange-300 rounded-lg cursor-pointer hover:bg-orange-400'
             onClick={() => props.setSelected(props.index)}
         >
             <h1 className='text-lg'>{props.category}</h1>

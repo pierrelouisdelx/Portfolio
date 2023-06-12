@@ -10,8 +10,16 @@ module.exports = {
             animation: {
                 'bounce-slow': 'bounce 1.5s infinite',
             },
+            backgroundImage: {
+                'gradient-radial': 'radial-gradient(circle at 1px 1px, grey 2px, transparent 0)',
+            },
             colors: {},
         },
     },
-    plugins: [],
+    plugins: [
+        function ({ addVariant }) {
+            addVariant('child', '& > *');
+            addVariant('child-hover', '& > *:hover');
+        },
+    ],
 };
