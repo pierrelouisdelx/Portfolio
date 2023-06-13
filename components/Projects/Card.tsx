@@ -51,9 +51,3 @@ export const Card = ({
         </motion.div>
     );
 };
-
-const CardWrapper = ({ children }) => (
-    <motion.div className='rounded-lg backdrop-filter backdrop-blur-sm backdrop-brightness-120'>
-        {children}
-    </motion.div>
-);
