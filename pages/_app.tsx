@@ -11,14 +11,22 @@ export default function App({ Component, pageProps }: AppProps) {
         }, 1000);
     }, []);
 
-    return <>{loading ? <Component {...pageProps} /> : <LoadingScreen />}</>;
+    return (
+        <React.Fragment>
+            {loading ? <Component {...pageProps} /> : <LoadingScreen />}
+        </React.Fragment>
+    );
 }
 
 const LoadingScreen = () => {
     return (
         <div className='flex flex-col items-center justify-center text-center h-screen w-screen text-white'>
-            <h1 className='text-[5vw] uppercase tracking-wide font-semibold'>Pierre-Louis</h1>
-            <h1 className='text-[5vw] uppercase tracking-wide font-semibold'>Delcroix</h1>
+            <h1 className='text-[5vw] uppercase tracking-wide font-semibold'>
+                Pierre-Louis
+            </h1>
+            <h1 className='text-[5vw] uppercase tracking-wide font-semibold'>
+                Delcroix
+            </h1>
         </div>
     );
 };

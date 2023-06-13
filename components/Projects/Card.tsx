@@ -8,6 +8,7 @@ interface ProjectProps {
     technologies: string[];
     url: string;
     category: number;
+    background?: string;
 }
 
 export const Card = ({
@@ -22,8 +23,13 @@ export const Card = ({
     return (
         <motion.div
             layout
-            className='bg-[#1f2937] p-5 rounded-lg m-2 w-1/4 cursor-pointer text-left border max-h-64'
+            className='p-5 rounded-lg m-2 w-full lg:w-1/4 cursor-pointer text-left border h-52 max-w-md bg-center bg-cover'
             whileHover={{ scale: 1.15 }}
+            style={{
+                backgroundImage: project.background
+                    ? `url(${project.background}`
+                    : '#1f2937'
+            }}
         >
             <a href={project.url} target='_blank'>
                 <h3 className='pb-3 text-2xl font-semibold'>{project.name}</h3>

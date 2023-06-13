@@ -32,7 +32,8 @@ const projects = [
         description: 'Fluid simulation engine',
         technologies: ['OpenGL', 'C++'],
         url: '',
-        category: Categories.WEB
+        category: Categories.WEB,
+        background: '/fluid.png'
     },
     {
         name: '2',
@@ -92,7 +93,7 @@ export default function Projects() {
     return (
         <div className='flex flex-col w-full' id='projects'>
             <Title>Projects</Title>
-            <div className='flex flex-wrap justify-evenly'>
+            <div className='flex flex-wrap justify-start md:justify-evenly'>
                 {cats.map((cat, index) => (
                     <Category
                         category={cat}
@@ -102,10 +103,10 @@ export default function Projects() {
                     />
                 ))}
             </div>
-            <div style={{ perspective: 1000 }} className='w-screen h-screen'>
+            <div style={{ perspective: 1000 }} className='min-h-72'>
                 <motion.div
                     layout
-                    className='relative flex flex-wrap transform-style preserve-3d'
+                    className='relative flex flex-wrap transform-style preserve-3d h-full'
                 >
                     <DotGrid />
                     <AnimatePresence>
