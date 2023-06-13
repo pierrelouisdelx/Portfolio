@@ -12,20 +12,24 @@ interface ExperienceCardProps {
 export default function ExperienceCard(props: ExperienceCardProps) {
     return (
         <VerticalTimelineElement
-            className='vertical-timeline-element--work text-left'
+            className='text-left vertical-timeline-element--work'
             contentStyle={{ background: '#1f2937', color: '#fff' }}
             contentArrowStyle={{ borderRight: '7px solid orange' }}
             iconStyle={{ background: '#1f2937', color: '#fff' }}
             icon={
-                <img src={props.icon} className='h-full w-full rounded-full' alt='Company Logo' />
+                <img
+                    src={props.icon}
+                    className='w-full h-full p-2 bg-white rounded-full'
+                    alt='Company Logo'
+                />
             }
             date={props.date}
             dateClassName='text-gray-400'
         >
-            <h3 className='vertical-timeline-element-title mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+            <h3 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 vertical-timeline-element-title dark:text-white'>
                 {props.company}
             </h3>
-            <h4 className='vertical-timeline-element-subtitle mb-3 font-normal text-gray-700 dark:text-gray-400'>
+            <h4 className='mb-3 font-normal text-gray-700 vertical-timeline-element-subtitle dark:text-gray-400'>
                 {props.position} - {props.location}
             </h4>
             <p>{props.description}</p>

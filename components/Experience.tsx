@@ -19,7 +19,7 @@ const workexperiences = [
         position: 'Fullstack Developer',
         location: 'Worldwide',
         date: '09/2021 - Present',
-        icon: 'https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/isifma26whlciahngbqi',
+        icon: '/malt.png',
         description: 'Working as a freelance in parallel of my studies',
     },
 ];
@@ -35,11 +35,59 @@ const freelanceexperiences = [
             'OneCommerce is a startup that aims to revolutionize the way we buy online. I will be in charge of the development of the front-end of the website.',
     },
     {
-        company: 'Freelance',
+        company: 'IROC',
         location: 'Worldwide',
         position: 'Fullstack Developer',
         date: '09/2021 - Present',
-        icon: 'https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/isifma26whlciahngbqi',
+        icon: 'https://cdn.fs.brandfolder.com/YeH8YOVsQcCYC00c5fMw/convert?rotate=exif&fit=max&w=400&h=300&format=png',
+        description: 'Working as a freelance in parallel of my studies',
+    },
+    {
+        company: 'OneGrid',
+        location: 'Worldwide',
+        position: 'Fullstack Developer',
+        date: '09/2021 - Present',
+        icon: 'https://uploads-ssl.webflow.com/6448183e496bc3264491c91a/646ca8ebece104b428536f80_OG%20Favicon%20s.png',
+        description: 'Working as a freelance in parallel of my studies',
+    },
+    {
+        company: 'Mobility Care',
+        location: 'Worldwide',
+        position: 'Fullstack Developer',
+        date: '09/2021 - Present',
+        icon: 'https://res.cloudinary.com/dg6kenloy/image/upload/v1665392448/static/logo_xhhlzi.png',
+        description: 'Working as a freelance in parallel of my studies',
+    },
+    {
+        company: 'Lomed',
+        location: 'Worldwide',
+        position: 'Fullstack Developer',
+        date: '09/2021 - Present',
+        icon: 'https://www.lomed.fr/hubfs/logoipsum-logo-50-1-_2_-1-_1_-_1_-2.png',
+        description: 'Working as a freelance in parallel of my studies',
+    },
+    {
+        company: 'Harmony Promotion',
+        location: 'Worldwide',
+        position: 'Fullstack Developer',
+        date: '09/2021 - Present',
+        icon: 'https://www.harmony-promotion.com/wp-content/uploads/2022/09/image001.gif',
+        description: 'Working as a freelance in parallel of my studies',
+    },
+    {
+        company: 'Legaware',
+        location: 'Worldwide',
+        position: 'Fullstack Developer',
+        date: '09/2021 - Present',
+        icon: 'https://d1hbpr09pwz0sk.cloudfront.net/logo_url/legaware-db493ab3',
+        description: 'Working as a freelance in parallel of my studies',
+    },
+    {
+        company: 'Psychologies',
+        location: 'Worldwide',
+        position: 'Fullstack Developer',
+        date: '09/2021 - Present',
+        icon: 'https://www.psychologies.com/wp-content/themes/psycho/assets/images/psychologies.svg',
         description: 'Working as a freelance in parallel of my studies',
     },
 ];
@@ -52,10 +100,10 @@ export default function Experience() {
     const [activeTab, setActiveTab] = useState(0);
 
     return (
-        <div className='flex flex-col'>
+        <div className='flex flex-col w-full'>
             <Title>Experience</Title>
             <div
-                className='mb-4 border-b border-gray-200 dark:border-gray-700 flex justify-center'
+                className='flex justify-center mb-4 border-b border-gray-200 dark:border-gray-700'
                 id='experience'
             >
                 <ul className='flex text-sm font-medium text-center'>
