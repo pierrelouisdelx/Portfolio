@@ -2,6 +2,7 @@ import { TypeAnimation } from 'react-type-animation';
 import { ArrowDownIcon } from '@heroicons/react/24/solid';
 import Spline from '@splinetool/react-spline';
 import { useRef } from 'react';
+import { scrollTo } from './ScrollTo';
 
 const animationSequence = ['Web Developer Freelance', 1000, 'Computer Vision Engineer', 1000];
 
@@ -20,9 +21,8 @@ export default function Hero() {
 
     return (
         <div
-            className='flex flex-col items-center justify-center text-center min-h-screen w-screen mt-10'
+            className='flex flex-col items-center justify-center w-screen min-h-screen mt-10 text-center'
             onMouseMove={triggerAnimation}
-            id='hero'
         >
             <Spline
                 scene='/mushroom.spline'
@@ -31,9 +31,9 @@ export default function Hero() {
             />
             <h1 className='text-[5vw] uppercase tracking-wide font-semibold'>Pierre-Louis</h1>
             <h1 className='text-[5vw] uppercase tracking-wide font-semibold'>Delcroix</h1>
-            <div className='flex flex-col md:flex-row items-center'>
-                <h5 className='text-xl uppercase tracking-wide'>I'm a</h5>
-                <h5 className='text-xl uppercase tracking-wide underline underline-offset-8 decoration-orange-400 decoration-4 ml-2 leading-10'>
+            <div className='flex flex-col items-center md:flex-row'>
+                <h5 className='text-xl tracking-wide uppercase'>I'm a</h5>
+                <h5 className='ml-2 text-xl leading-10 tracking-wide underline uppercase underline-offset-8 decoration-orange-400 decoration-4'>
                     <TypeAnimation
                         sequence={animationSequence}
                         wrapper='span'
@@ -43,8 +43,11 @@ export default function Hero() {
                 </h5>
             </div>
 
-            <div className='flex flex-row mt-20'>
-                <ArrowDownIcon className='h-10 w-10 animate-bounce-slow mt-10 text-orange-400' />
+            <div
+                className='flex flex-row mt-20 cursor-pointer'
+                onClick={() => scrollTo({ id: 'about' })}
+            >
+                <ArrowDownIcon className='w-10 h-10 mt-10 text-orange-400 animate-bounce-slow' />
             </div>
         </div>
     );

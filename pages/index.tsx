@@ -10,7 +10,7 @@ import Contacts from '@/components/Contact';
 
 export default function Home() {
     return (
-        <div className='flex flex-col'>
+        <div className='flex flex-col' id='hero'>
             <Navbar />
 
             <main className='flex flex-col items-center justify-center flex-1 px-5 text-center text-white md:px-20 child:py-20'>
