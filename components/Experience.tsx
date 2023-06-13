@@ -7,6 +7,7 @@ import { Title } from '@/ui';
 const workexperiences = [
     {
         company: 'OneCommerce',
+        link: 'https://onecommerce.group',
         position: 'Software Engineer',
         location: 'London, UK',
         date: '09/2022 - 01/2023',
@@ -26,7 +27,8 @@ const workexperiences = [
 
 const freelanceexperiences = [
     {
-        company: 'Sweez.io',
+        company: 'Sweez',
+        link: 'https://sweez.io',
         location: 'Paris, France',
         position: 'Software Engineer',
         date: '09/2022 - 01/2023',
@@ -36,6 +38,7 @@ const freelanceexperiences = [
     },
     {
         company: 'IROC',
+        link: 'https://iroc.app',
         location: 'Worldwide',
         position: 'Fullstack Developer',
         date: '09/2021 - Present',
@@ -44,6 +47,7 @@ const freelanceexperiences = [
     },
     {
         company: 'OneGrid',
+        link: 'https://onegrid.me',
         location: 'Worldwide',
         position: 'Fullstack Developer',
         date: '09/2021 - Present',
@@ -52,6 +56,7 @@ const freelanceexperiences = [
     },
     {
         company: 'Mobility Care',
+        link: 'https://mobilitycare.fr',
         location: 'Worldwide',
         position: 'Fullstack Developer',
         date: '09/2021 - Present',
@@ -60,6 +65,7 @@ const freelanceexperiences = [
     },
     {
         company: 'Lomed',
+        link: 'https://www.lomed.fr',
         location: 'Worldwide',
         position: 'Fullstack Developer',
         date: '09/2021 - Present',
@@ -68,6 +74,7 @@ const freelanceexperiences = [
     },
     {
         company: 'Harmony Promotion',
+        link: 'https://www.harmony-promotion.com',
         location: 'Worldwide',
         position: 'Fullstack Developer',
         date: '09/2021 - Present',
@@ -76,6 +83,7 @@ const freelanceexperiences = [
     },
     {
         company: 'Legaware',
+        link: 'https://legaware.com',
         location: 'Worldwide',
         position: 'Fullstack Developer',
         date: '09/2021 - Present',
@@ -84,6 +92,7 @@ const freelanceexperiences = [
     },
     {
         company: 'Psychologies',
+        link: 'https://www.psychologies.com',
         location: 'Worldwide',
         position: 'Fullstack Developer',
         date: '09/2021 - Present',
