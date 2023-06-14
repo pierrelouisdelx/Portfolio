@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 export const WavingHand = () => {
     return (
         <motion.div
-            className='text-5xl mx-5'
+            className='text-7xl mx-5'
             animate={{ rotate: 20 }}
             transition={{
                 repeat: Infinity,

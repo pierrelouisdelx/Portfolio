@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Title from '@/ui/Title';
 
 const contacts = [
     {
@@ -9,10 +10,13 @@ const contacts = [
 
 export default function Contacts() {
     return (
-        <div className='flex flex-row justify-evenly'>
-            {contacts.map((contact) => (
-                <Contact {...contact} key={contact.link} />
-            ))}
+        <div className='flex flex-col w-full' id='contacts'>
+            <Title>Contacts</Title>
+            <div className='flex flex-row justify-evenly'>
+                {contacts.map((contact) => (
+                    <Contact {...contact} key={contact.link} />
+                ))}
+            </div>
         </div>
     );
 }

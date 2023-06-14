@@ -4,27 +4,27 @@ import { scrollTo } from './ScrollTo';
 const Links = [
     {
         href: '#hero',
-        title: 'Home',
+        title: 'Home'
     },
     {
         href: '#about',
-        title: 'About',
+        title: 'About'
     },
     {
         href: '#experience',
-        title: 'Experience',
+        title: 'Experience'
     },
     {
         href: '#projects',
-        title: 'Projects',
+        title: 'Projects'
     },
     {
-        href: '#contact',
-        title: 'Contact',
-    },
+        href: '#contacts',
+        title: 'Contacts'
+    }
 ];
 
-export default function Navbar() {
+export default function Navbar({ setCurrent }) {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
 
     return (
@@ -54,13 +54,17 @@ export default function Navbar() {
                 <div
                     className={[
                         'w-full md:flex md:items-center md:w-auto transition-all duration-300 ease-in-out',
-                        showMobileMenu ? '' : 'hidden',
+                        showMobileMenu ? '' : 'hidden'
                     ].join(' ')}
                     onClick={() => setShowMobileMenu(false)}
                 >
                     <ul className='flex flex-col w-full py-4 mt-4 font-medium md:p-0 md:flex-row md:space-x-8 md:mt-0'>
-                        {Links.map((link) => (
-                            <Link {...link} key={link.title} />
+                        {Links.map((link, index) => (
+                            <Link
+                                {...link}
+                                key={link.title}
+                                setCurrent={setCurrent}
+                            />
                         ))}
                     </ul>
                 </div>
@@ -69,11 +73,11 @@ export default function Navbar() {
     );
 }
 
-const Link = ({ href, title }) => {
+const Link = ({ href, title, setCurrent }) => {
     return (
         <li
             className='block py-2 pl-3 pr-4 text-gray-900 rounded cursor-pointer hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-400 md:p-0 md:dark:hover:text-orange-400 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 '
-            onClick={() => scrollTo({ id: href.replace('#', '') })}
+            onClick={() => setCurrent(href)}
         >
             {title}
         </li>

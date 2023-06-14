@@ -7,7 +7,10 @@ export const AnimatedTextCharacter = ({ text }: { text: string }) => {
         hidden: { opacity: 0 },
         visible: (i = 1) => ({
             opacity: 1,
-            transition: { staggerChildren: 0.05, delayChildren: 0.1 * i }
+            transition: {
+                staggerChildren: 0.05,
+                delayChildren: 0.1 * i
+            }
         })
     };
 

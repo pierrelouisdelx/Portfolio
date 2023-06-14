@@ -1,12 +1,17 @@
 import { TypeAnimation } from 'react-type-animation';
 import { ArrowDownIcon } from '@heroicons/react/24/solid';
 import Spline from '@splinetool/react-spline';
-import { useRef } from 'react';
+import { useRef, Suspense } from 'react';
 import { scrollTo } from './ScrollTo';
 
-const animationSequence = ['Web Developer Freelance', 1000, 'Computer Vision Engineer', 1000];
+const animationSequence = [
+    'Web Developer Freelance',
+    1000,
+    'Computer Vision Engineer',
+    1000
+];
 
-export default function Hero() {
+export default function Hero({ setCurrent }) {
     const objectToAnimate = useRef();
 
     function onLoad(spline) {
@@ -23,14 +28,21 @@ export default function Hero() {
         <div
             className='flex flex-col items-center justify-center w-screen min-h-screen mt-10 text-center'
             onMouseMove={triggerAnimation}
+            id='hero'
         >
-            <Spline
-                scene='/mushroom.spline'
-                className='absolute inset-0 -z-10 items-center justify-center flex w-[80vw] h-[80vh]'
-                onLoad={onLoad}
-            />
-            <h1 className='text-[5vw] uppercase tracking-wide font-semibold'>Pierre-Louis</h1>
-            <h1 className='text-[5vw] uppercase tracking-wide font-semibold'>Delcroix</h1>
+            <Suspense fallback={null}>
+                <Spline
+                    scene='/mushroom.spline'
+                    className='absolute inset-0 -z-10 items-center justify-center flex w-[80vw] h-[80vh]'
+                    onLoad={onLoad}
+                />
+            </Suspense>
+            <h1 className='text-[5vw] uppercase tracking-wide font-semibold'>
+                Pierre-Louis
+            </h1>
+            <h1 className='text-[5vw] uppercase tracking-wide font-semibold'>
+                Delcroix
+            </h1>
             <div className='flex flex-col items-center md:flex-row'>
                 <h5 className='text-xl tracking-wide uppercase'>I'm a</h5>
                 <h5 className='ml-2 text-xl leading-10 tracking-wide underline uppercase underline-offset-8 decoration-orange-400 decoration-4'>
@@ -45,7 +57,7 @@ export default function Hero() {
 
             <div
                 className='flex flex-row mt-20 cursor-pointer'
-                onClick={() => scrollTo({ id: 'about' })}
+                onClick={() => setCurrent('#about')}
             >
                 <ArrowDownIcon className='w-10 h-10 mt-10 text-orange-400 animate-bounce-slow' />
             </div>

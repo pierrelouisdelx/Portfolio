@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -8,13 +8,19 @@ import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import Contacts from '@/components/Contact';
 
-export default function Home() {
-    return (
-        <div className='flex flex-col' id='hero'>
-            <Navbar />
+export default function App() {
+    const [current, setCurrent] = React.useState('#hero');
 
-            <main className='flex flex-col items-center justify-center flex-1 px-5 text-center text-white md:px-20 child:py-20'>
-                <Hero />
+    useEffect(() => {
+        document.querySelector(`${current}`)?.scrollIntoView();
+    }, [current]);
+
+    return (
+        <div className='flex flex-col'>
+            <Navbar setCurrent={setCurrent} />
+
+            <main className='text-center text-white md:child:px-20 child:py-20 snap-y snap-mandatory h-screen overflow-scroll child:snap-start child:min-h-screen scroll-smooth'>
+                <Hero setCurrent={setCurrent} />
                 <About />
                 <Experience />
                 <Skills />
