@@ -35,7 +35,7 @@ export const AnimatedTextCharacter = ({ text }: { text: string }) => {
 
     return (
         <motion.div
-            className='text-[5vw] uppercase tracking-wide font-semibold overflow-hidden flex text-left'
+            className='text-7xl uppercase tracking-wide font-semibold overflow-hidden flex text-left flex-wrap'
             variants={container}
             initial='hidden'
             animate='visible'

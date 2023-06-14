@@ -3,18 +3,13 @@ import { motion } from 'framer-motion';
 export const WavingHand = () => {
     return (
         <motion.div
-            style={{
-                marginBottom: '-20px',
-                marginRight: '-45px',
-                paddingBottom: '20px',
-                paddingRight: '45px',
-                display: 'inline-block'
-            }}
+            className='text-5xl mx-5'
             animate={{ rotate: 20 }}
             transition={{
-                yoyo: Infinity,
+                repeat: Infinity,
+                repeatType: 'reverse',
                 from: 0,
-                duration: 0.2,
+                duration: 0.3,
                 ease: 'easeInOut',
                 type: 'tween'
             }}
