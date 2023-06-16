@@ -1,12 +1,7 @@
 import { Title } from '@/ui';
 import { useEffect, useState } from 'react';
 import { Card } from '@/components/Projects/Card';
-import {
-    AnimatePresence,
-    motion,
-    useMotionValue,
-    animate
-} from 'framer-motion';
+import { AnimatePresence, motion, useMotionValue, animate } from 'framer-motion';
 import DotGrid from '@/components/DotGrid';
 
 enum Categories {
@@ -15,17 +10,10 @@ enum Categories {
     VIDEOGAME,
     SOFTWARE,
     SYSTEM,
-    COMPUTERVISION
+    COMPUTERVISION,
 }
 
-const cats = [
-    'all',
-    'web',
-    'video games',
-    'software',
-    'system',
-    'computer vision'
-];
+const cats = ['all', 'web', 'video games', 'software', 'system', 'computer vision'];
 const projects = [
     {
         name: 'HydraFlow',
@@ -33,22 +21,73 @@ const projects = [
         technologies: ['OpenGL', 'C++'],
         url: '',
         category: Categories.WEB,
-        background: '/fluid.png'
+        background: '/fluid.png',
     },
     {
-        name: '2',
-        description: 'My personal website',
-        technologies: ['OpenGL', 'C++'],
+        name: 'TerraNoise',
+        description: 'Procedural terrain generation',
+        technologies: ['C++', 'Unreal Engine'],
         url: '',
-        category: Categories.SYSTEM
+        category: Categories.VIDEOGAME,
     },
     {
-        name: '3',
-        description: 'My personal website',
-        technologies: ['OpenGL', 'C++'],
+        name: 'HyperLiDAR Classification',
+        description:
+            'Classification pixels in hyperspectral and LiDAR images to identify object classes in the environment',
+        technologies: ['Python', 'Sklearn', 'SeaBorn', 'Pandas', 'Numpy'],
         url: '',
-        category: Categories.WEB
-    }
+        category: Categories.COMPUTERVISION,
+        background: '/hyperspectral.png',
+    },
+    {
+        name: 'SchoolRunner',
+        description: 'Educational endless runner video game for mobile',
+        technologies: ['C#', 'Unity'],
+        url: '',
+        category: Categories.VIDEOGAME,
+        background: '/schoolrunner.png',
+    },
+    {
+        name: 'Finalist of the GottaGoHack Hackathon 2022',
+        description: 'Dating app in the metaverse',
+        technologies: ['C#', 'Unity', 'Mediapipe'],
+        url: '',
+        category: Categories.WEB,
+        background: '/metavers.gif',
+    },
+    {
+        name: 'Snow avalanche detection',
+        description: 'Computer vision project',
+        technologies: ['Python', 'OpenCV'],
+        url: '',
+        category: Categories.COMPUTERVISION,
+        background: '/avalanche.png',
+    },
+    {
+        name: 'SkyCrane',
+        description: 'RPG video game',
+        technologies: ['C#', 'Unity'],
+        url: '',
+        category: Categories.VIDEOGAME,
+        background: '/skycrane.png',
+    },
+    {
+        name: 'Autonomous Drone',
+        description: 'Autonomous drone for package delivery controlled by finger tracking',
+        technologies: ['C++', 'Python', 'Mediapipe', 'Ardupilot', 'Raspberry Pi'],
+        url: '',
+        category: Categories.COMPUTERVISION,
+        background: '/drone.png',
+    },
+    {
+        name: 'SSH brute force map',
+        description: 'Map of the world with SSH brute force attacks based on IP addresses',
+        technologies: ['Python', 'React', 'SQL'],
+        url: '',
+        category: Categories.SYSTEM,
+        background:
+            'https://raw.githubusercontent.com/pierrelouisdelx/ssh-bruteforce-map/main/bruteforce-map.png',
+    },
 ];
 
 interface CategoryProps {
@@ -58,15 +97,11 @@ interface CategoryProps {
 }
 
 export default function Projects() {
-    const [selected, setSelected] = useState<Categories>(Categories.WEB);
+    const [selected, setSelected] = useState<Categories>(Categories.ALL);
     const [filteredProjects, setFilteredProjects] = useState(projects);
 
-    const mouseX = useMotionValue(
-        typeof window !== 'undefined' ? window.innerWidth / 2 : 0
-    );
-    const mouseY = useMotionValue(
-        typeof window !== 'undefined' ? window.innerHeight / 2 : 0
-    );
+    const mouseX = useMotionValue(typeof window !== 'undefined' ? window.innerWidth / 2 : 0);
+    const mouseY = useMotionValue(typeof window !== 'undefined' ? window.innerHeight / 2 : 0);
 
     useEffect(() => {
         const handleMouseMove = (e: MouseEvent) => {
@@ -84,16 +119,13 @@ export default function Projects() {
 
     useEffect(() => {
         if (selected === Categories.ALL) setFilteredProjects(projects);
-        else
-            setFilteredProjects(
-                projects.filter((project) => project.category === selected)
-            );
+        else setFilteredProjects(projects.filter((project) => project.category === selected));
     }, [selected]);
 
     return (
         <div className='flex flex-col w-full' id='projects'>
             <Title>Projects</Title>
-            <div className='flex flex-wrap justify-start md:justify-evenly'>
+            <div className='flex flex-wrap justify-start md:justify-center'>
                 {cats.map((cat, index) => (
                     <Category
                         category={cat}
@@ -106,7 +138,7 @@ export default function Projects() {
             <div style={{ perspective: 1000 }} className='min-h-72'>
                 <motion.div
                     layout
-                    className='relative flex flex-wrap transform-style preserve-3d h-full'
+                    className='relative flex flex-wrap justify-center h-full transform-style preserve-3d'
                 >
                     <DotGrid />
                     <AnimatePresence>

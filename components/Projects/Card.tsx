@@ -1,6 +1,7 @@
 import { motion, MotionValue, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import Link from 'next';
+import Image from 'next/image';
 
 interface ProjectProps {
     name: string;
@@ -14,7 +15,7 @@ interface ProjectProps {
 export const Card = ({
     project,
     mouseX,
-    mouseY
+    mouseY,
 }: {
     project: ProjectProps;
     mouseX: MotionValue<number>;
@@ -23,20 +24,17 @@ export const Card = ({
     return (
         <motion.div
             layout
-            className='p-5 rounded-lg m-2 w-full lg:w-1/4 cursor-pointer text-left border h-52 max-w-md bg-center bg-cover'
-            whileHover={{ scale: 1.15 }}
-            style={{
-                backgroundImage: project.background
-                    ? `url(${project.background}`
-                    : '#1f2937'
-            }}
+            className='relative w-full max-w-md p-5 m-2 text-left cursor-pointer lg:w-1/4 h-72'
         >
+            <img
+                src={project.background}
+                alt={project.name}
+                className='absolute inset-0 border rounded-lg -z-10'
+            />
             <a href={project.url} target='_blank'>
                 <h3 className='pb-3 text-2xl font-semibold'>{project.name}</h3>
                 <p>{project.description}</p>
-                <p className='pt-2 italic text-slate-500'>
-                    {project.technologies.join(', ')}
-                </p>
+                <p className='pt-2 italic text-slate-500'>{project.technologies.join(', ')}</p>
             </a>
         </motion.div>
     );
