@@ -41,10 +41,11 @@ export default function About() {
                 possibilities.
                 <br />
                 <br />
-                Currently, I am pursuing my studies at Epita, one of France's esteemed engineering
-                schools. At Epita, I am immersing myself in the world of computer vision and honing
-                my skills in this specialized domain. The curriculum and resources at Epita provide
-                me with valuable knowledge and a comprehensive understanding of the subject.
+                Currently, I am pursuing my studies at Epita, one of France&apos;s esteemed
+                engineering schools. At Epita, I am immersing myself in the world of computer vision
+                and honing my skills in this specialized domain. The curriculum and resources at
+                Epita provide me with valuable knowledge and a comprehensive understanding of the
+                subject.
                 <br />
                 <br />
                 In 2021, I began freelancing and working on a multitude of projects. This experience
@@ -67,8 +68,8 @@ export default function About() {
             </h3>
             <p className='text-justify'>
                 In 2017, I embarked on my first entrepreneurial venture, armed with my older
-                brother's hand-me-down Wiko Ozzy phone. It was during this time that I stumbled upon
-                an app called AppLike, which presented an opportunity to earn money by playing
+                brother&apos;s hand-me-down Wiko Ozzy phone. It was during this time that I stumbled
+                upon an app called AppLike, which presented an opportunity to earn money by playing
                 games. Intrigued, I discovered a clever trick - playing games at night would yield
                 more points and, consequently, more earnings. To optimize this strategy, I
                 downloaded an app that prevented the screen from turning off, allowing me to keep
@@ -89,8 +90,9 @@ export default function About() {
                 cable on the motherboard. Encouraged by the upcoming Christmas season, I asked my
                 parents for a soldering iron as a gift and skillfully repaired the laptop. I
                 thoroughly cleaned the device and installed a fresh copy of Windows, before listing
-                it on eBay as "Like new." To my astonishment, it sold for 100£ - a staggering
-                100-fold profit from my initial investment. My parents were equally impressed.
+                it on eBay as &quot;Like new.&quot; To my astonishment, it sold for 100£ - a
+                staggering 100-fold profit from my initial investment. My parents were equally
+                impressed.
                 <br />
                 <br />
                 Empowered by this early success, I continued my business of acquiring broken
@@ -150,6 +152,7 @@ export default function About() {
                     to={item.to}
                     title={item.title}
                     description={item.description}
+                    key={item.title}
                 />
             ))}
 
@@ -162,6 +165,7 @@ export default function About() {
                     to={item.to}
                     title={item.title}
                     description={item.description}
+                    key={item.title}
                 />
             ))}
         </div>

@@ -9,7 +9,7 @@ interface ExperienceCardProps {
     date: string;
     icon: string;
     description: string;
-    skills: string;
+    skills?: string;
 }
 
 export default function ExperienceCard(props: ExperienceCardProps) {

@@ -35,7 +35,11 @@ const socials = [
     },
 ];
 
-export default function Navbar({ setCurrent }) {
+interface NavbarProps {
+    setCurrent: (index: any) => void;
+}
+
+export default function Navbar({ setCurrent }: NavbarProps) {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
 
     return (
@@ -85,7 +89,13 @@ export default function Navbar({ setCurrent }) {
     );
 }
 
-const Link = ({ href, title, setCurrent }) => {
+interface LinkProps {
+    href: string;
+    title: string;
+    setCurrent: (index: any) => void;
+}
+
+const Link = ({ href, title, setCurrent }: LinkProps) => {
     return (
         <li
             className='block py-2 pl-3 pr-4 text-gray-900 rounded cursor-pointer hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-400 md:p-0 md:dark:hover:text-orange-400 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 '

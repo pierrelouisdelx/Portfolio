@@ -15,7 +15,7 @@ export default function ThreeWrapper() {
 }
 
 const MouseFollower = () => {
-    const followerRef = useRef();
+    const followerRef = useRef<any>();
     const vec = new Vector3();
 
     useFrame(({ mouse }) => {
