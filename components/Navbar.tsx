@@ -1,27 +1,38 @@
 import React, { useState } from 'react';
-import { scrollTo } from './ScrollTo';
+import Image from 'next/image';
 
 const Links = [
     {
         href: '#hero',
-        title: 'Home'
+        title: 'Home',
     },
     {
         href: '#about',
-        title: 'About'
+        title: 'About',
     },
     {
         href: '#experience',
-        title: 'Experience'
+        title: 'Experience',
     },
     {
         href: '#projects',
-        title: 'Projects'
+        title: 'Projects',
     },
     {
         href: '#contacts',
-        title: 'Contacts'
-    }
+        title: 'Contacts',
+    },
+];
+
+const socials = [
+    {
+        image: '/linkedin.png',
+        link: 'https://linkedin.com',
+    },
+    {
+        image: '/github.png',
+        link: 'https://github.com/pierrelouisdelx',
+    },
 ];
 
 export default function Navbar({ setCurrent }) {
@@ -29,8 +40,8 @@ export default function Navbar({ setCurrent }) {
 
     return (
         <nav className='bg-white dark:bg-[#030406] w-full fixed z-50'>
-            <div className='flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto transition-all duration-300 ease-in-out md:justify-center'>
-                <div className='flex md:order-2'>
+            <div className='flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto transition-all duration-300 ease-in-out'>
+                <div className='flex'>
                     <button
                         type='button'
                         className='inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
@@ -54,20 +65,21 @@ export default function Navbar({ setCurrent }) {
                 <div
                     className={[
                         'w-full md:flex md:items-center md:w-auto transition-all duration-300 ease-in-out',
-                        showMobileMenu ? '' : 'hidden'
+                        showMobileMenu ? '' : 'hidden',
                     ].join(' ')}
                     onClick={() => setShowMobileMenu(false)}
                 >
                     <ul className='flex flex-col w-full py-4 mt-4 font-medium md:p-0 md:flex-row md:space-x-8 md:mt-0'>
                         {Links.map((link, index) => (
-                            <Link
-                                {...link}
-                                key={link.title}
-                                setCurrent={setCurrent}
-                            />
+                            <Link {...link} key={link.title} setCurrent={setCurrent} />
                         ))}
                     </ul>
                 </div>
+                <ul className='flex flex-row justify-center pl-3 space-x-4 md:justify-end md:pl-0'>
+                    {socials.map((social) => (
+                        <Social {...social} key={social.link} />
+                    ))}
+                </ul>
             </div>
         </nav>
     );
@@ -81,5 +93,18 @@ const Link = ({ href, title, setCurrent }) => {
         >
             {title}
         </li>
+    );
+};
+
+interface SocialProps {
+    image: string;
+    link: string;
+}
+
+const Social = (props: SocialProps) => {
+    return (
+        <a href={props.link} target='_blank'>
+            <Image src={props.image} width={25} height={25} alt={props.image} />
+        </a>
     );
 };

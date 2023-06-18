@@ -1,16 +1,4 @@
-import Image from 'next/image';
 import Title from '@/ui/Title';
-
-const socials = [
-    {
-        image: '/linkedin.png',
-        link: 'https://linkedin.com',
-    },
-    {
-        image: '/github.png',
-        link: 'https://github.com/pierrelouisdelx',
-    },
-];
 
 export default function Contacts() {
     return (
@@ -42,24 +30,6 @@ export default function Contacts() {
                     </div>
                 </div>
             </div>
-            <div className='flex flex-row justify-evenly'>
-                {socials.map((contact) => (
-                    <Social {...contact} key={contact.link} />
-                ))}
-            </div>
         </div>
     );
 }
-
-interface ContactProps {
-    image: string;
-    link: string;
-}
-
-const Social = (props: ContactProps) => {
-    return (
-        <a href={props.link} target='_blank'>
-            <Image src={props.image} width={50} height={50} alt={props.image} />
-        </a>
-    );
-};
