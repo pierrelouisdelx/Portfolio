@@ -28,11 +28,13 @@ export default function Contacts() {
                             placeholder='Email'
                         />
                     </div>
-                    <textarea
-                        className='w-full p-2 m-2 text-black border rounded-lg'
-                        placeholder='Message'
-                        rows={5}
-                    />
+                    <div className='flex'>
+                        <textarea
+                            className='w-full p-2 m-2 text-black border rounded-lg'
+                            placeholder='Message'
+                            rows={5}
+                        />
+                    </div>
                     <button className='w-1/2 p-2 m-2 text-orange-400 border border-orange-400 rounded-lg cursor-pointer hover:bg-orange-400 hover:text-white'>
                         Send
                     </button>
