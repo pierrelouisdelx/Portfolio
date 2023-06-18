@@ -17,12 +17,12 @@ enum Categories {
 const cats = ['all', 'web', 'video games', 'software', 'system', 'computer vision'];
 const projects = [
     {
-        name: 'HydraFlow',
-        description: 'Fluid simulation engine',
-        technologies: ['OpenGL', 'C++'],
+        name: 'Finalist of the GottaGoHack Hackathon 2022',
+        description: 'Dating app in the metaverse',
+        technologies: ['C#', 'Unity', 'Mediapipe'],
         url: '',
-        category: Categories.SOFTWARE,
-        background: '/fluid.png',
+        category: Categories.WEB,
+        background: '/metavers.gif',
     },
     {
         name: 'TerraNoise',
@@ -30,6 +30,7 @@ const projects = [
         technologies: ['C++', 'Unreal Engine'],
         url: '',
         category: Categories.VIDEOGAME,
+        background: '/terranoise.png',
     },
     {
         name: 'HyperLiDAR Classification',
@@ -50,12 +51,12 @@ const projects = [
         height: 3,
     },
     {
-        name: 'Finalist of the GottaGoHack Hackathon 2022',
-        description: 'Dating app in the metaverse',
-        technologies: ['C#', 'Unity', 'Mediapipe'],
+        name: 'HydraFlow',
+        description: 'Fluid simulation engine',
+        technologies: ['OpenGL', 'C++'],
         url: '',
-        category: Categories.WEB,
-        background: '/metavers.gif',
+        category: Categories.SOFTWARE,
+        background: '/fluid.png',
     },
     {
         name: 'Snow avalanche detection',
