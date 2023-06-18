@@ -19,7 +19,7 @@ export default function App() {
         <div className='flex flex-col'>
             <Navbar setCurrent={setCurrent} />
 
-            <main className='text-center text-white md:child:px-20 child:py-20 snap-y snap-mandatory h-screen overflow-scroll child:snap-start child:min-h-screen scroll-smooth'>
+            <main className='h-screen overflow-scroll text-center text-white child:px-5 md:child:px-20 child:py-20 snap-y snap-mandatory child:snap-start child:min-h-screen scroll-smooth'>
                 <Hero setCurrent={setCurrent} />
                 <About />
                 <Experience />
