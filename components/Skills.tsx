@@ -159,7 +159,7 @@ export default function Skills() {
 
 const CategorySkills = (props: CategorySkillProps) => {
     return (
-        <div className='flex flex-col md:w-1/3 md:p-5 items-left justify-left'>
+        <div className='flex flex-col w-full py-5 md:w-1/3 md:px-5 items-left justify-left'>
             <h1 className='text-2xl uppercase'>{props.title}</h1>
             <div className='flex flex-row flex-wrap'>
                 {props.skills.map((skill) => (
