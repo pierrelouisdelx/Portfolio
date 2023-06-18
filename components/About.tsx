@@ -30,7 +30,7 @@ export default function About() {
         <div className='flex flex-col w-full text-left snap-center bg-[#1a191d]' id='about'>
             <Title>About</Title>
 
-            <p>
+            <p className='text-justify'>
                 My name is Pierre-Louis Delcroix, and my journey into the world of computer science
                 began when I was just 15 years old. At that young age, I discovered my passion for
                 coding and embarked on a continuous learning process. I started by exploring web
@@ -65,7 +65,7 @@ export default function About() {
             <h3 className='mt-5 mb-3 text-2xl font-semibold tracking-wide text-left underline uppercase underline-offset-8'>
                 My businesses
             </h3>
-            <p>
+            <p className='text-justify'>
                 In 2017, I embarked on my first entrepreneurial venture, armed with my older
                 brother's hand-me-down Wiko Ozzy phone. It was during this time that I stumbled upon
                 an app called AppLike, which presented an opportunity to earn money by playing
@@ -122,7 +122,7 @@ export default function About() {
             <h3 className='mt-5 mb-3 text-2xl font-semibold tracking-wide text-left underline uppercase underline-offset-8'>
                 Future
             </h3>
-            <p>
+            <p className='text-justify'>
                 Currently, I am immersed in my studies at Epita, where my primary focus lies in the
                 captivating domain of computer vision. My fervent desire is to apply my skills and
                 knowledge in this field to tackle real-world challenges head-on. Alongside computer
