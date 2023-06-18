@@ -27,7 +27,7 @@ const Links = [
 const socials = [
     {
         image: '/linkedin.png',
-        link: 'https://linkedin.com',
+        link: 'https://www.linkedin.com/in/pierre-louis-delcroix',
     },
     {
         image: '/github.png',
