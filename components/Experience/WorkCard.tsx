@@ -9,6 +9,7 @@ interface ExperienceCardProps {
     date: string;
     icon: string;
     description: string;
+    skills: string;
 }
 
 export default function ExperienceCard(props: ExperienceCardProps) {
@@ -42,6 +43,7 @@ export default function ExperienceCard(props: ExperienceCardProps) {
                 {props.position} - {props.location}
             </h4>
             <p dangerouslySetInnerHTML={{ __html: props.description }}></p>
+            {props.skills && <img src={props.skills} className='w-full h-full p-2' alt='Skills' />}
         </VerticalTimelineElement>
     );
 }
