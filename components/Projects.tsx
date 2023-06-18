@@ -21,7 +21,7 @@ const projects = [
         description: 'Fluid simulation engine',
         technologies: ['OpenGL', 'C++'],
         url: '',
-        category: Categories.WEB,
+        category: Categories.SOFTWARE,
         background: '/fluid.png',
     },
     {
@@ -64,6 +64,14 @@ const projects = [
         url: '',
         category: Categories.COMPUTERVISION,
         background: '/avalanche.png',
+    },
+    {
+        name: 'Multiplayer THREE.js Video Game',
+        description: 'Agar.io like video game made in 3D with THREE.js',
+        technologies: ['NextJS', 'React', 'THREE.js', 'NodeJS', 'Socket.io'],
+        url: '',
+        category: Categories.WEB,
+        background: '/balls.png',
     },
     {
         name: 'SkyCrane',
