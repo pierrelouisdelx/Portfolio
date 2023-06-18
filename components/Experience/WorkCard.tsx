@@ -41,7 +41,7 @@ export default function ExperienceCard(props: ExperienceCardProps) {
             <h4 className='mb-3 font-normal text-gray-700 vertical-timeline-element-subtitle dark:text-gray-400'>
                 {props.position} - {props.location}
             </h4>
-            <p>{props.description}</p>
+            <p dangerouslySetInnerHTML={{ __html: props.description }}></p>
         </VerticalTimelineElement>
     );
 }

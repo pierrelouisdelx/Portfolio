@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Card } from '@/components/Projects/Card';
 import { AnimatePresence, motion, useMotionValue, animate } from 'framer-motion';
 import DotGrid from '@/components/DotGrid';
+import { XMarkIcon } from '@heroicons/react/24/solid';
 
 enum Categories {
     ALL = -1,
@@ -46,6 +47,7 @@ const projects = [
         url: '',
         category: Categories.VIDEOGAME,
         background: '/schoolrunner.png',
+        height: 3,
     },
     {
         name: 'Finalist of the GottaGoHack Hackathon 2022',
@@ -93,12 +95,14 @@ const projects = [
 interface CategoryProps {
     category: string;
     index: number;
-    setSelected: (index: number) => void;
+    setSelectedCategory: (index: number) => void;
+    isSelected: boolean;
 }
 
 export default function Projects() {
-    const [selected, setSelected] = useState<Categories>(Categories.ALL);
+    const [selectedCategory, setSelectedCategory] = useState<Categories>(Categories.ALL);
     const [filteredProjects, setFilteredProjects] = useState(projects);
+    const [selectedProject, setSelectedProject] = useState(null);
 
     const mouseX = useMotionValue(typeof window !== 'undefined' ? window.innerWidth / 2 : 0);
     const mouseY = useMotionValue(typeof window !== 'undefined' ? window.innerHeight / 2 : 0);
@@ -118,9 +122,12 @@ export default function Projects() {
     }, []);
 
     useEffect(() => {
-        if (selected === Categories.ALL) setFilteredProjects(projects);
-        else setFilteredProjects(projects.filter((project) => project.category === selected));
-    }, [selected]);
+        if (selectedCategory === Categories.ALL) setFilteredProjects(projects);
+        else
+            setFilteredProjects(
+                projects.filter((project) => project.category === selectedCategory)
+            );
+    }, [selectedCategory]);
 
     return (
         <div className='flex flex-col w-full' id='projects'>
@@ -131,14 +138,15 @@ export default function Projects() {
                         category={cat}
                         key={cat}
                         index={index - 1}
-                        setSelected={setSelected}
+                        setSelectedCategory={setSelectedCategory}
+                        isSelected={selectedCategory === index - 1}
                     />
                 ))}
             </div>
             <div style={{ perspective: 1000 }} className='min-h-72'>
                 <motion.div
                     layout
-                    className='relative flex flex-wrap justify-center h-full transform-style preserve-3d'
+                    className='relative grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 grid-flow-dense'
                 >
                     <DotGrid />
                     <AnimatePresence>
@@ -146,12 +154,26 @@ export default function Projects() {
                             <Card
                                 project={project}
                                 key={project.name}
-                                mouseX={mouseX}
-                                mouseY={mouseY}
+                                setSelectedProject={setSelectedProject}
                             />
                         ))}
                     </AnimatePresence>
                 </motion.div>
+                <AnimatePresence>
+                    {selectedProject && (
+                        <motion.div
+                            layoutId={selectedProject}
+                            className='absolute inset-0 flex flex-col items-center justify-center w-full h-full p-5 text-white bg-black rounded-lg bg-opacity-80'
+                        >
+                            <motion.button onClick={() => setSelectedProject(null)}>
+                                <XMarkIcon className='w-6 h-6' />
+                            </motion.button>
+
+                            <motion.h5>{selectedProject.name}</motion.h5>
+                            <motion.h2>{selectedProject.description}</motion.h2>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
             </div>
         </div>
     );
@@ -160,8 +182,9 @@ export default function Projects() {
 const Category = (props: CategoryProps) => {
     return (
         <div
-            className='flex items-center justify-center px-2 py-1 m-2 text-white capitalize bg-orange-300 rounded-lg cursor-pointer hover:bg-orange-400'
-            onClick={() => props.setSelected(props.index)}
+            className={`flex items-center justify-center px-2 py-1 m-2 text-white capitalize rounded-lg cursor-pointer hover:bg-orange-400
+            ${props.isSelected ? 'bg-orange-400' : 'bg-orange-300'}`}
+            onClick={() => props.setSelectedCategory(props.index)}
         >
             <h1 className='text-lg'>{props.category}</h1>
         </div>
