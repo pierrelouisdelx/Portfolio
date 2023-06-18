@@ -27,7 +27,7 @@ const international = [
 
 export default function About() {
     return (
-        <div className='flex flex-col w-full text-left snap-center' id='about'>
+        <div className='flex flex-col w-full text-left snap-center bg-[#1a191d]' id='about'>
             <Title>About</Title>
 
             <p>
