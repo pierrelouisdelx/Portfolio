@@ -99,6 +99,23 @@ const projects = [
         background:
             'https://raw.githubusercontent.com/pierrelouisdelx/ssh-bruteforce-map/main/bruteforce-map.png',
     },
+    {
+        name: 'Aqualand',
+        description: 'Aquarium website prototype',
+        technologies: ['React', 'tailwindcss'],
+        url: '',
+        category: Categories.WEB,
+        background: '/balena.png',
+    },
+    {
+        name: 'Optical Character Recognition',
+        description: 'OCR project made at Epita using C and GTK',
+        technologies: ['C', 'GTK'],
+        url: 'https://github.com/pierrelouisdelx/OCR',
+        category: Categories.SOFTWARE,
+        background:
+            'https://raw.githubusercontent.com/pierrelouisdelx/OCR/main/images/gui-intro.png',
+    },
 ];
 
 interface CategoryProps {
