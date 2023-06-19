@@ -21,8 +21,10 @@ export default function Hero({ setCurrent }: HeroProps) {
                     className='absolute inset-0 -z-10 items-center justify-center flex w-[80vw] h-[80vh]'
                 />
             </Suspense>
-            <h1 className='text-[5vw] uppercase tracking-wide font-semibold'>Pierre-Louis</h1>
-            <h1 className='text-[5vw] uppercase tracking-wide font-semibold'>Delcroix</h1>
+            <h1 className='text-4xl font-semibold tracking-wide uppercase md:text-7xl'>
+                Pierre-Louis
+            </h1>
+            <h1 className='text-4xl font-semibold tracking-wide uppercase md:text-7xl'>Delcroix</h1>
             <div className='flex flex-col items-center md:flex-row'>
                 <h5 className='text-xl tracking-wide uppercase'>I&apos;m a</h5>
                 <h5 className='ml-2 text-xl leading-10 tracking-wide underline uppercase underline-offset-8 decoration-orange-400 decoration-4'>
