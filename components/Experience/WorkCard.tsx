@@ -42,7 +42,7 @@ export default function ExperienceCard(props: ExperienceCardProps) {
             <h4 className='mb-3 font-normal text-gray-700 vertical-timeline-element-subtitle dark:text-gray-400'>
                 {props.position} - {props.location}
             </h4>
-            <p dangerouslySetInnerHTML={{ __html: props.description }}></p>
+            <div dangerouslySetInnerHTML={{ __html: props.description }}></div>
             {props.skills && <img src={props.skills} className='w-full h-full p-2' alt='Skills' />}
         </VerticalTimelineElement>
     );
