@@ -5,7 +5,7 @@ import { LoadingScreen } from '@/components/Preloader/LoadingScreen';
 import { AnimatePresence, motion } from 'framer-motion';
 
 export default function App({ Component, pageProps }: AppProps) {
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         setTimeout(() => {
@@ -16,11 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
     return (
         <AnimatePresence>
             {loading && (
-                <motion.div
-                    exit={{ opacity: 0 }}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                >
+                <motion.div exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                     <LoadingScreen />
                 </motion.div>
             )}
