@@ -209,7 +209,7 @@ const Category = (props: CategoryProps) => {
     return (
         <div
             className={`flex items-center justify-center px-2 py-1 m-2 text-white capitalize rounded-lg cursor-pointer hover:bg-orange-400
-            ${props.isSelected ? 'bg-orange-400' : 'bg-orange-300'}`}
+            ${props.isSelected ? 'bg-orange-800' : 'bg-orange-400'}`}
             onClick={() => props.setSelectedCategory(props.index)}
         >
             <h1 className='text-lg'>{props.category}</h1>
