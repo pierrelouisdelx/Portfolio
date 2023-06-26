@@ -14,7 +14,6 @@ export default function Hero({ setCurrent }: HeroProps) {
 
     function onLoad(spline: any) {
         obj.current = spline.findObjectByName('Mushrooms');
-        console.log(obj.current);
     }
 
     useEffect(() => {
