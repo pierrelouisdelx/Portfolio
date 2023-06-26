@@ -10,6 +10,7 @@ interface ProjectProps {
     category: number;
     background?: string;
     height?: number;
+    video?: string;
 }
 
 export const Card = ({
@@ -32,15 +33,32 @@ export const Card = ({
             }}
             //onClick={() => setSelectedProject(project)}
         >
-            <img
-                src={project.background}
-                alt={project.name}
-                className={`${
-                    isHovered ? 'blur-sm brightness-50' : ''
-                } transition-all ease-in-out duration-300 rounded-lg border`}
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-            />
+            {project.background && (
+                <img
+                    src={project.background}
+                    alt={project.name}
+                    className={`${
+                        isHovered ? 'blur-sm brightness-50' : ''
+                    } transition-all ease-in-out duration-300 rounded-lg border`}
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                />
+            )}
+            {project.video && (
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className={`${
+                        isHovered ? 'blur-sm brightness-50' : ''
+                    } transition-all ease-in-out duration-300 rounded-lg border`}
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                >
+                    <source src={project.video} type='video/mp4' />
+                </video>
+            )}
             <a
                 className={`w-full h-full ${
                     isHovered ? 'opacity-100' : 'opacity-0'

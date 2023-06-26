@@ -22,7 +22,7 @@ const projects = [
         technologies: ['C#', 'Unity', 'Mediapipe'],
         url: '',
         category: Categories.WEB,
-        background: '/metavers.gif',
+        video: '/gottagohack.mp4',
     },
     {
         name: 'TerraNoise',
@@ -185,8 +185,8 @@ export default function Projects() {
                         ))}
                     </AnimatePresence>
                 </motion.div>
-                <AnimatePresence>
-                    {/*selectedProject && (
+                {/*<AnimatePresence>
+                    selectedProject && (
                         <motion.div
                             layoutId={selectedProject}
                             className='absolute inset-0 flex flex-col items-center justify-center w-full h-full p-5 text-white bg-black rounded-lg bg-opacity-80'
@@ -198,8 +198,8 @@ export default function Projects() {
                             <motion.h5>{selectedProject.name}</motion.h5>
                             <motion.h2>{selectedProject.description}</motion.h2>
                         </motion.div>
-                    )*/}
-                </AnimatePresence>
+                        )
+                </AnimatePresence>*/}
             </div>
         </div>
     );

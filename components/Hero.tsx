@@ -43,8 +43,8 @@ export default function Hero({ setCurrent }: HeroProps) {
             id='hero'
         >
             <Spline
-                scene='/mushroom.spline'
-                className='absolute inset-0 -z-10 items-center justify-center flex w-[80vw] h-[80vh]'
+                scene='https://prod.spline.design/sKnEkDMN2rPJRqYh/scene.splinecode'
+                className='absolute inset-0 -z-10 items-center justify-center flex w-[80vw] h-[80vh] bg-[#030406]'
                 onLoad={onLoad}
             />
             <h1 className='text-4xl font-semibold tracking-wide uppercase md:text-7xl'>
