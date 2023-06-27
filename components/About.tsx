@@ -130,17 +130,18 @@ export default function About() {
                 knowledge in this field to tackle real-world challenges head-on. Alongside computer
                 vision, I have developed a keen interest in the expansive realm of artificial
                 intelligence and machine learning. As I envision my future, I aspire to carve out a
-                career at the intersection of computer vision and artificial intelligence, where I
-                can make significant contributions.
+                career at the intersection of computer vision and artificial intelligence or video
+                game development, where I can make significant contributions.
                 <br />
                 <br />
                 While web development continues to be a freelance endeavor, a means through which I
                 can both indulge in my passion and earn income, I must confess that my aspirations
-                have shifted. Computer vision and artificial intelligence have taken center stage in
-                my professional goals. These fields are where I wish to invest my time, energy, and
-                expertise. As a result, web development no longer serves as my primary focus.
-                Instead, I am driven to pursue a career dedicated to computer vision and artificial
-                intelligence, where I can make a lasting impact.
+                have shifted. Computer vision, artificial intelligence, and video game development
+                have taken center stage in my professional goals. These fields are where I wish to
+                invest my time, energy, and expertise. As a result, web development no longer serves
+                as my primary focus. Instead, I am driven to pursue a career dedicated to computer
+                vision, artificial intelligence, or video game development, where I can make a
+                lasting impact.
             </p>
 
             <h3 className='mt-5 mb-3 text-2xl font-semibold tracking-wide text-left underline uppercase underline-offset-8'>
