@@ -15,18 +15,10 @@ enum Categories {
     WEB,
     VIDEOGAME,
     SOFTWARE,
-    SYSTEM,
     COMPUTERVISION
 }
 
-const cats = [
-    'all',
-    'web',
-    'video games',
-    'software',
-    'system',
-    'computer vision'
-];
+const cats = ['all', 'web', 'video games', 'software', 'computer vision'];
 const projects = [
     {
         name: 'Finalist of the GottaGoHack Hackathon 2022',
@@ -115,7 +107,7 @@ const projects = [
             'Map of the world with SSH brute force attacks based on IP addresses',
         technologies: ['Python', 'React', 'SQL'],
         url: '',
-        category: Categories.SYSTEM,
+        category: Categories.SOFTWARE,
         background:
             'https://raw.githubusercontent.com/pierrelouisdelx/ssh-bruteforce-map/main/bruteforce-map.png'
     },
