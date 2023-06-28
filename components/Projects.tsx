@@ -165,7 +165,7 @@ export default function Projects() {
     return (
         <div className='flex flex-col w-full' id='projects'>
             <Title>Projects</Title>
-            <div className='flex flex-wrap justify-start md:justify-center'>
+            <div className='flex flex-wrap justify-center'>
                 {cats.map((cat, index) => (
                     <Category
                         category={cat}

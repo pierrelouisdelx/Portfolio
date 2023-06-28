@@ -25,7 +25,7 @@ export const Card = ({
     return (
         <motion.div
             layout
-            className='relative m-2 text-left rounded-lg cursor-pointer'
+            className='relative text-left rounded-lg cursor-pointer md:m-2'
             style={{
                 width: '100%',
                 maxWidth: '24rem',
