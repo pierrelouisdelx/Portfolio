@@ -44,8 +44,8 @@ export default function Navbar({ setCurrent }: NavbarProps) {
 
     return (
         <nav className='bg-white dark:bg-[#030406] w-full fixed z-50'>
-            <div className='flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto transition-all duration-300 ease-in-out'>
-                <div className='flex items-center justify-between w-full'>
+            <div className='flex flex-wrap items-center justify-between w-full max-w-screen-xl p-4 mx-auto md:flex-row-reverse'>
+                <div className='flex items-center justify-between w-full md:w-auto'>
                     <button
                         type='button'
                         className='inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
@@ -84,6 +84,7 @@ export default function Navbar({ setCurrent }: NavbarProps) {
                         ))}
                     </ul>
                 </div>
+                <div />
             </div>
         </nav>
     );
