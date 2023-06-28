@@ -45,7 +45,7 @@ export default function Navbar({ setCurrent }: NavbarProps) {
     return (
         <nav className='bg-white dark:bg-[#030406] w-full fixed z-50'>
             <div className='flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto transition-all duration-300 ease-in-out'>
-                <div className='flex'>
+                <div className='flex items-center justify-between w-full'>
                     <button
                         type='button'
                         className='inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
@@ -65,6 +65,11 @@ export default function Navbar({ setCurrent }: NavbarProps) {
                             ></path>
                         </svg>
                     </button>
+                    <ul className='flex flex-row justify-center pl-3 space-x-4 md:justify-end md:pl-0'>
+                        {socials.map((social) => (
+                            <Social {...social} key={social.link} />
+                        ))}
+                    </ul>
                 </div>
                 <div
                     className={[
@@ -79,11 +84,6 @@ export default function Navbar({ setCurrent }: NavbarProps) {
                         ))}
                     </ul>
                 </div>
-                <ul className='flex flex-row justify-center pl-3 space-x-4 md:justify-end md:pl-0'>
-                    {socials.map((social) => (
-                        <Social {...social} key={social.link} />
-                    ))}
-                </ul>
             </div>
         </nav>
     );
