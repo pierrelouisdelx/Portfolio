@@ -1,6 +1,7 @@
 import { Title } from '@/ui';
 import { useEffect, useState } from 'react';
 import { Card } from '@/components/Projects/Card';
+import Modal from '@/components/Projects/Modal';
 import { AnimatePresence, motion, useMotionValue, animate } from 'framer-motion';
 import DotGrid from '@/components/DotGrid';
 import { XMarkIcon } from '@heroicons/react/24/solid';
@@ -135,7 +136,7 @@ interface CategoryProps {
 export default function Projects() {
     const [selectedCategory, setSelectedCategory] = useState<Categories>(Categories.ALL);
     const [filteredProjects, setFilteredProjects] = useState(projects);
-    const [selectedProject, setSelectedProject] = useState(null);
+    const [selectedProject, setSelectedProject] = useState<any>(null);
 
     const mouseX = useMotionValue(typeof window !== 'undefined' ? window.innerWidth / 2 : 0);
     const mouseY = useMotionValue(typeof window !== 'undefined' ? window.innerHeight / 2 : 0);
@@ -192,22 +193,10 @@ export default function Projects() {
                         ))}
                     </AnimatePresence>
                 </motion.div>
-                {/*<AnimatePresence>
-                    selectedProject && (
-                        <motion.div
-                            layoutId={selectedProject}
-                            className='absolute inset-0 flex flex-col items-center justify-center w-full h-full p-5 text-white bg-black rounded-lg bg-opacity-80'
-                        >
-                            <motion.button onClick={() => setSelectedProject(null)}>
-                                <XMarkIcon className='w-6 h-6' />
-                            </motion.button>
-
-                            <motion.h5>{selectedProject.name}</motion.h5>
-                            <motion.h2>{selectedProject.description}</motion.h2>
-                        </motion.div>
-                        )
-                </AnimatePresence>*/}
             </div>
+            {selectedProject && (
+                <Modal {...selectedProject} setSelectedProject={setSelectedProject} />
+            )}
         </div>
     );
 }

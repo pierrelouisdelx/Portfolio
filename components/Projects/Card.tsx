@@ -31,7 +31,7 @@ export const Card = ({
                 maxWidth: '24rem',
                 gridRowEnd: getGridRowEnd(project?.height),
             }}
-            //onClick={() => setSelectedProject(project)}
+            onClick={() => setSelectedProject(project)}
         >
             {project.background && (
                 <img
