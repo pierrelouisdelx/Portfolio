@@ -93,6 +93,7 @@ const projects = [
         name: 'Drone Choreography',
         description: 'Drone Choregraphy for Paris 2024 Olympic Games',
         technologies: ['Blender', 'Skybrush'],
+        url: '',
         category: Categories.SOFTWARE,
         background: '/OlympicGames.jpg',
     },
