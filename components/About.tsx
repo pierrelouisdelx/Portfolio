@@ -173,12 +173,9 @@ export default function About() {
             </Accordion>
 
             <div className='flex items-center justify-center w-full my-5'>
-                <iframe
-                    src='https://drive.google.com/file/d/16Pln8EU43hUrHQS_nVT2ev-TvGgs7UAp/preview'
-                    width={640}
-                    height={480}
-                    className='rounded-lg'
-                ></iframe>
+                <video controls className='w-full max-w-3xl'>
+                    <source src='http://51.222.155.201/cdn/story_720p.mp4' type='video/mp4' />
+                </video>
             </div>
 
             <h3 className='mt-5 mb-3 text-2xl font-semibold tracking-wide text-left underline uppercase underline-offset-8'>
