@@ -174,7 +174,7 @@ export default function About() {
 
             <div className='flex items-center justify-center w-full my-5'>
                 <video controls className='w-full max-w-3xl'>
-                    <source src='http://51.222.155.201/cdn/story_720p.mp4' type='video/mp4' />
+                    <source src='https://cdn.orbs.cloud/story_720p.mp4' type='video/mp4' />
                 </video>
             </div>
 
