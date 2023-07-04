@@ -8,6 +8,7 @@ interface ModalProps {
     video?: string;
     demo?: string;
     setSelectedProject: (index: any) => void;
+    innerRef: any;
 }
 
 export default function Modal(props: ModalProps) {
@@ -15,7 +16,10 @@ export default function Modal(props: ModalProps) {
 
     return (
         <div className='fixed inset-0 z-50 flex items-center justify-center w-full h-full p-4 bg-black bg-opacity-80'>
-            <div className='flex flex-col justify-center w-full bg-gray-700 rounded-lg shadow md:w-auto'>
+            <div
+                className='flex flex-col justify-center w-full bg-gray-700 rounded-lg shadow md:w-auto'
+                ref={props.innerRef}
+            >
                 <div className='flex items-center justify-between p-4 border-b border-gray-600 rounded-t'>
                     <h3 className='text-xl font-semibold text-white max-w-[80%] text-start'>
                         {props.name}
