@@ -40,7 +40,7 @@ export default function Modal(props: ModalProps) {
                 <div className='flex flex-col items-center justify-center p-3'>
                     <p className='text-base leading-relaxed text-gray-400'>{props.description}</p>
                     <p className='pt-2 italic text-slate-500'>{props.technologies.join(', ')}</p>
-                    {props.background && (
+                    {props.video?.length === 0 && props.background && (
                         <img
                             src={props.background}
                             alt={props.name}
