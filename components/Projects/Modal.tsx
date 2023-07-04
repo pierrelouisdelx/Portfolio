@@ -51,7 +51,7 @@ export default function Modal(props: ModalProps) {
                         <img
                             src={props.background}
                             alt={props.name}
-                            className='w-full p-4 rounded-lg max-h-96'
+                            className='p-4 rounded-lg max-h-96'
                         />
                     )}
                     {video && (
