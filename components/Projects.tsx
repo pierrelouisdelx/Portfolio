@@ -48,6 +48,7 @@ const projects = [
         url: '',
         category: Categories.VIDEOGAME,
         background: '/schoolrunner.png',
+        demo: 'https://cdn.orbs.cloud/SchoolRunner.mp4',
         height: 3,
     },
     {
@@ -98,6 +99,7 @@ const projects = [
         url: '',
         category: Categories.SOFTWARE,
         background: '/OlympicGames.jpg',
+        demo: 'https://cdn.orbs.cloud/OlympicGames.mp4',
     },
     {
         name: 'SSH brute force map',

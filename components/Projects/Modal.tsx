@@ -55,14 +55,7 @@ export default function Modal(props: ModalProps) {
                         />
                     )}
                     {video && (
-                        <video
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            className='w-full p-4 rounded-lg max-h-96'
-                            controls
-                        >
+                        <video autoPlay controls className='w-full p-4 rounded-lg max-h-96'>
                             <source src={video} type='video/mp4' />
                         </video>
                     )}
