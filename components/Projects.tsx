@@ -73,6 +73,7 @@ const projects = [
         url: '',
         category: Categories.SOFTWARE,
         background: '/fluid.png',
+        demo: 'https://cdn.orbs.cloud/fluid_75k.mp4',
     },
     {
         name: 'TerraNoise',

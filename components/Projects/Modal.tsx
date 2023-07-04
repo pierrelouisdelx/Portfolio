@@ -6,10 +6,13 @@ interface ModalProps {
     category: number;
     background?: string;
     video?: string;
+    demo?: string;
     setSelectedProject: (index: any) => void;
 }
 
 export default function Modal(props: ModalProps) {
+    const video = props.video || props.demo || null;
+
     return (
         <div className='fixed inset-0 z-50 flex items-center justify-center w-full h-full p-4 bg-black bg-opacity-80'>
             <div className='flex flex-col justify-center w-full bg-gray-700 rounded-lg shadow md:w-auto'>
@@ -40,22 +43,23 @@ export default function Modal(props: ModalProps) {
                 <div className='flex flex-col items-center justify-center p-3'>
                     <p className='text-base leading-relaxed text-gray-400'>{props.description}</p>
                     <p className='pt-2 italic text-slate-500'>{props.technologies.join(', ')}</p>
-                    {props.video?.length === 0 && props.background && (
+                    {!video && props.background && (
                         <img
                             src={props.background}
                             alt={props.name}
                             className='w-full p-4 rounded-lg max-h-96'
                         />
                     )}
-                    {props.video && (
+                    {video && (
                         <video
                             autoPlay
                             loop
                             muted
                             playsInline
                             className='w-full p-4 rounded-lg max-h-96'
+                            controls
                         >
-                            <source src={props.video} type='video/mp4' />
+                            <source src={video} type='video/mp4' />
                         </video>
                     )}
                 </div>
