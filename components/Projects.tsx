@@ -1,10 +1,10 @@
 import { Title } from '@/ui';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Card } from '@/components/Projects/Card';
 import Modal from '@/components/Projects/Modal';
 import { AnimatePresence, motion, useMotionValue, animate } from 'framer-motion';
 import DotGrid from '@/components/DotGrid';
-import { XMarkIcon } from '@heroicons/react/24/solid';
+import { useOutsideClick } from '@/hooks/outsideClick';
 
 enum Categories {
     ALL = -1,
@@ -138,6 +138,7 @@ export default function Projects() {
     const [selectedCategory, setSelectedCategory] = useState<Categories>(Categories.ALL);
     const [filteredProjects, setFilteredProjects] = useState(projects);
     const [selectedProject, setSelectedProject] = useState<any>(null);
+    const modalRef = useRef<any>();
 
     const mouseX = useMotionValue(typeof window !== 'undefined' ? window.innerWidth / 2 : 0);
     const mouseY = useMotionValue(typeof window !== 'undefined' ? window.innerHeight / 2 : 0);
@@ -163,6 +164,11 @@ export default function Projects() {
                 projects.filter((project) => project.category === selectedCategory)
             );
     }, [selectedCategory]);
+
+    useOutsideClick({
+        ref: modalRef,
+        callback: () => setSelectedProject(null),
+    });
 
     return (
         <div className='flex flex-col w-full' id='projects'>
@@ -196,7 +202,11 @@ export default function Projects() {
                 </motion.div>
             </div>
             {selectedProject && (
-                <Modal {...selectedProject} setSelectedProject={setSelectedProject} />
+                <Modal
+                    {...selectedProject}
+                    setSelectedProject={setSelectedProject}
+                    innerRef={modalRef}
+                />
             )}
         </div>
     );
