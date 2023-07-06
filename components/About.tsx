@@ -51,123 +51,87 @@ export default function About() {
                 </AccordionHeader>
                 <AccordionBody className='text-white'>
                     <p className='text-justify'>
-                        My name is Pierre-Louis Delcroix, and my journey into the world of computer
-                        science began when I was just 15 years old. At that young age, I discovered
-                        my passion for coding and embarked on a continuous learning process. I
-                        started by exploring web development, where I gained a solid foundation in
-                        programming and created websites. As I delved deeper into the field, my
-                        curiosity led me to the fascinating realm of computer vision. At the age of
-                        17, I took my first steps using OpenCV and Python to grasp the basics. It
-                        was an exciting introduction that opened doors to endless possibilities.
+                        Hi, my name is Pierre-Louis Delcroix, and my journey into computer science
+                        began at the age of 15. I quickly discovered my passion for coding and
+                        started with web development, where I gained a strong foundation in
+                        programming and creating websites. But my curiosity led me to explore
+                        computer vision, and at 17, I started using OpenCV and Python to learn the
+                        basics. It was an exciting introduction that opened doors to endless
+                        possibilities.
                         <br />
                         <br />
-                        Currently, I am pursuing my studies at Epita, one of France&apos;s esteemed
-                        engineering schools. At Epita, I am immersing myself in the world of
-                        computer vision and honing my skills in this specialized domain. The
-                        curriculum and resources at Epita provide me with valuable knowledge and a
-                        comprehensive understanding of the subject.
-                        <br />
-                        <br />
-                        In 2021, I began freelancing and working on a multitude of projects. This
-                        experience has been instrumental in my growth as a computer scientist and a
-                        professional. Freelancing has not only allowed me to apply my skills in
-                        real-world scenarios but has also taught me to adapt to different
-                        requirements and challenges. Throughout my journey, I have remained
-                        committed to continuous learning. I have taken the initiative to explore and
-                        master various languages and technologies beyond what was covered in my
-                        formal education. From Mediapipe and Tensorflow to Pytorch and Cuda, I have
-                        embraced these tools to broaden my knowledge and skill set. Learning has
-                        become a way of life for me, and I take pride in how far I have come. From
-                        starting with a humble laptop running Ubuntu, I have learned to navigate the
-                        intricacies of Linux and leverage the power of the terminal. This ongoing
-                        process of self-improvement has allowed me to pursue my passion and thrive
-                        in the ever-evolving world of computer science and computer vision.
+                        Currently, I'm studying at Epita, one of France's esteemed engineering
+                        schools, specialising in computer vision to further develop my skills in
+                        this field.
                     </p>
 
                     <h3 className='mt-5 mb-3 text-2xl font-semibold tracking-wide text-left underline uppercase underline-offset-8'>
                         My businesses
                     </h3>
                     <p className='text-justify'>
-                        In 2017, I embarked on my first entrepreneurial venture, armed with my older
-                        brother&apos;s hand-me-down Wiko Ozzy phone. It was during this time that I
-                        stumbled upon an app called AppLike, which presented an opportunity to earn
-                        money by playing games. Intrigued, I discovered a clever trick - playing
-                        games at night would yield more points and, consequently, more earnings. To
-                        optimize this strategy, I downloaded an app that prevented the screen from
-                        turning off, allowing me to keep the phone active throughout the night while
-                        playing a random game recommended by the app.
+                        In 2017, using my brother's old phone, I discovered an app called AppLike
+                        that allowed me to earn money by playing games. I found a clever trick:
+                        playing games at night for more points and earnings. I downloaded an app to
+                        keep the screen active throughout the night. After five months, I had £35,
+                        which felt like a fortune. I turned to eBay, bought broken laptops, and
+                        refurbished them. One incredible find was a laptop priced at just 0.99£ with
+                        a severed power cable. With a soldering iron, I skillfully repaired it,
+                        cleaned it thoroughly, and listed it as "Like new" on eBay. It sold for
+                        100£, a 100-fold profit. Encouraged, I continued acquiring broken laptops,
+                        restoring them, and reselling them. With the profits, I bought my own laptop
+                        and focused on web scraping in web development. In one week, I created a
+                        Python bot to retrieve phone prices from Chinese websites. I took advantage
+                        of discounts and consistently made a minimum profit of 75£ per device.
+                        Within two weeks, I sold ten units of the intriguing VKWorld S8 phone.
                         <br />
                         <br />
-                        After just five months, I had accumulated £35, and I felt like a
-                        millionaire. With this newfound wealth, I decided to pursue a long-standing
-                        dream of mine - building my own external battery. I purchased two 18650
-                        batteries, a battery holder, a TP4056, and a 5V step-up converter,
-                        assembling a battery with a whopping 10,000mAh capacity for just a few
-                        bucks.
+                        While pursuing my studies, I initially struggled to maintain my businesses.
+                        However, two years later, I found myself freelancing as a full-stack web
+                        developer. Drawing upon the experience I had been cultivating since the age
+                        of 15, I quickly attracted a tenth of clients, successfully earning over
+                        $30,000 in less than two years. This marked the turning point where my
+                        passion transformed into a sustainable livelihood. One notable example of my
+                        collaborative work was during my mission at sweez.io. I was tasked with
+                        implementing a collaborative editor in their main component, the Sweez
+                        editor, within a tight deadline. Recognizing the urgency, I worked closely
+                        with other developers to seamlessly integrate the functionality into the
+                        main app, ensuring a fast and efficient delivery. This experience further
+                        solidified my expertise in client management, deadline management, and
+                        effective teamwork, paving the way for future projects and opportunities in
+                        my journey as a web developer.
                         <br />
                         <br />
-                        With some funds still remaining, I turned to eBay, where I purchased broken
-                        laptops to refurbish and resell. My very first deal was an incredible find -
-                        a broken laptop priced at a mere 0.99£. The issue with this particular
-                        laptop was a severed power cable on the motherboard. Encouraged by the
-                        upcoming Christmas season, I asked my parents for a soldering iron as a gift
-                        and skillfully repaired the laptop. I thoroughly cleaned the device and
-                        installed a fresh copy of Windows, before listing it on eBay as &quot;Like
-                        new.&quot; To my astonishment, it sold for 100£ - a staggering 100-fold
-                        profit from my initial investment. My parents were equally impressed.
+                        Today, I'm still in college, balancing my studies while earning a living
+                        doing what I love. I've remained committed to continuous learning, exploring
+                        and mastering various languages and technologies beyond my formal education.
+                        From Mediapipe and Tensorflow to Pytorch and Cuda, I've embraced these tools
+                        to broaden my knowledge and skill set. Learning has become a way of life for
+                        me, and I take pride in how far I've come. This ongoing self-improvement has
+                        allowed me to pursue my passion and thrive in the ever-evolving world of
+                        computer science and computer vision.
                         <br />
-                        <br />
-                        Empowered by this early success, I continued my business of acquiring broken
-                        laptops, restoring them, and reselling them. With the profits I earned, I
-                        purchased my very own laptop - a significant milestone for me. It was with
-                        this laptop that I delved deeper into web development, particularly focusing
-                        on web scraping. In just one week, I crafted a Python bot capable of
-                        retrieving prices of specific phones from various Chinese websites. Whenever
-                        promotions presented themselves, I seized the opportunity to buy phones from
-                        China at discounted rates and sold them on eBay, consistently netting a
-                        minimum profit of 75£ per device. One of the most intriguing phones I came
-                        across was the VKWorld S8, which I offered at a lower price than my
-                        competitors. Within a fortnight, I successfully sold ten units.
-                        <br />
-                        <br />
-                        I continued these entrepreneurial endeavors until I returned to France to
-                        pursue my studies. During my first two years of college, I regrettably did
-                        not have the time to maintain these businesses. However, two years later, I
-                        found myself freelancing as a full-stack developer. Thanks to my prior
-                        experience in web development, which I had begun cultivating at the age of
-                        15, I swiftly attracted clients. Creating numerous websites for diverse
-                        clientele, I have managed to sustain myself and turn my passion into a
-                        livelihood.
-                        <br />
-                        <br />
-                        Today, I am still in college, balancing my studies while earning a living
-                        doing what I love. The journey from utilizing an old phone to explore gaming
-                        apps to becoming a proficient full-stack developer has been a fulfilling and
-                        rewarding experience.
+                        <br />I immerse myself in computer vision projects, constantly fueling my
+                        curiosity and expertise. Currently, I'm developing my own drone, applying
+                        computer vision principles like finger recognition for control and object
+                        detection using the onboard camera. This hands-on application deepens my
+                        understanding and opens up new avenues for innovation.
                     </p>
 
                     <h3 className='mt-5 mb-3 text-2xl font-semibold tracking-wide text-left underline uppercase underline-offset-8'>
                         Future
                     </h3>
                     <p className='text-justify'>
-                        Currently, I am immersed in my studies at Epita, where my primary focus lies
-                        in the captivating domain of computer vision. My fervent desire is to apply
-                        my skills and knowledge in this field to tackle real-world challenges
-                        head-on. Alongside computer vision, I have developed a keen interest in the
-                        expansive realm of artificial intelligence and machine learning. As I
-                        envision my future, I aspire to carve out a career at the intersection of
-                        computer vision and artificial intelligence or video game development, where
-                        I can make significant contributions.
-                        <br />
-                        <br />
-                        While web development continues to be a freelance endeavor, a means through
-                        which I can both indulge in my passion and earn income, I must confess that
-                        my aspirations have shifted. Computer vision, artificial intelligence, and
-                        video game development have taken center stage in my professional goals.
-                        These fields are where I wish to invest my time, energy, and expertise. As a
-                        result, web development no longer serves as my primary focus. Instead, I am
-                        driven to pursue a career dedicated to computer vision, artificial
-                        intelligence, or video game development, where I can make a lasting impact.
+                        Computer vision and video game development have become the central focus of
+                        my professional aspirations. I am determined to dedicate my time, energy,
+                        and expertise to these fields, as they offer tremendous opportunities to
+                        make a lasting impact. At Epita, my primary focus is on computer vision,
+                        where I aim to apply my skills to tackle real-world challenges. Whether it's
+                        developing computer vision solutions or creating immersive experiences in
+                        video games, I am passionate about using these technologies to solve
+                        practical problems and make significant contributions. By pursuing a career
+                        in computer vision or video game development, I believe I can make a
+                        meaningful difference in addressing real-world challenges and pushing the
+                        boundaries of what is possible.
                     </p>
                 </AccordionBody>
             </Accordion>
