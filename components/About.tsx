@@ -60,29 +60,30 @@ export default function About() {
                         possibilities.
                         <br />
                         <br />
-                        Currently, I'm studying at Epita, one of France's esteemed engineering
-                        schools, specialising in computer vision to further develop my skills in
-                        this field.
+                        Currently, I&apos;m studying at Epita, one of France&apos;s esteemed
+                        engineering schools, specialising in computer vision to further develop my
+                        skills in this field.
                     </p>
 
                     <h3 className='mt-5 mb-3 text-2xl font-semibold tracking-wide text-left underline uppercase underline-offset-8'>
                         My businesses
                     </h3>
                     <p className='text-justify'>
-                        In 2017, using my brother's old phone, I discovered an app called AppLike
-                        that allowed me to earn money by playing games. I found a clever trick:
-                        playing games at night for more points and earnings. I downloaded an app to
-                        keep the screen active throughout the night. After five months, I had £35,
-                        which felt like a fortune. I turned to eBay, bought broken laptops, and
+                        In 2017, using my brother&apos;s old phone, I discovered an app called
+                        AppLike that allowed me to earn money by playing games. I found a clever
+                        trick: playing games at night for more points and earnings. I downloaded an
+                        app to keep the screen active throughout the night. After five months, I had
+                        £35, which felt like a fortune. I turned to eBay, bought broken laptops, and
                         refurbished them. One incredible find was a laptop priced at just 0.99£ with
                         a severed power cable. With a soldering iron, I skillfully repaired it,
-                        cleaned it thoroughly, and listed it as "Like new" on eBay. It sold for
-                        100£, a 100-fold profit. Encouraged, I continued acquiring broken laptops,
-                        restoring them, and reselling them. With the profits, I bought my own laptop
-                        and focused on web scraping in web development. In one week, I created a
-                        Python bot to retrieve phone prices from Chinese websites. I took advantage
-                        of discounts and consistently made a minimum profit of 75£ per device.
-                        Within two weeks, I sold ten units of the intriguing VKWorld S8 phone.
+                        cleaned it thoroughly, and listed it as &quot;Like new&quot; on eBay. It
+                        sold for 100£, a 100-fold profit. Encouraged, I continued acquiring broken
+                        laptops, restoring them, and reselling them. With the profits, I bought my
+                        own laptop and focused on web scraping in web development. In one week, I
+                        created a Python bot to retrieve phone prices from Chinese websites. I took
+                        advantage of discounts and consistently made a minimum profit of 75£ per
+                        device. Within two weeks, I sold ten units of the intriguing VKWorld S8
+                        phone.
                         <br />
                         <br />
                         While pursuing my studies, I initially struggled to maintain my businesses.
@@ -101,20 +102,21 @@ export default function About() {
                         my journey as a web developer.
                         <br />
                         <br />
-                        Today, I'm still in college, balancing my studies while earning a living
-                        doing what I love. I've remained committed to continuous learning, exploring
-                        and mastering various languages and technologies beyond my formal education.
-                        From Mediapipe and Tensorflow to Pytorch and Cuda, I've embraced these tools
-                        to broaden my knowledge and skill set. Learning has become a way of life for
-                        me, and I take pride in how far I've come. This ongoing self-improvement has
-                        allowed me to pursue my passion and thrive in the ever-evolving world of
-                        computer science and computer vision.
+                        Today, I&apos;m still in college, balancing my studies while earning a
+                        living doing what I love. I&apos;ve remained committed to continuous
+                        learning, exploring and mastering various languages and technologies beyond
+                        my formal education. From Mediapipe and Tensorflow to Pytorch and Cuda,
+                        I&apos;ve embraced these tools to broaden my knowledge and skill set.
+                        Learning has become a way of life for me, and I take pride in how far
+                        I&apos;ve come. This ongoing self-improvement has allowed me to pursue my
+                        passion and thrive in the ever-evolving world of computer science and
+                        computer vision.
                         <br />
                         <br />I immerse myself in computer vision projects, constantly fueling my
-                        curiosity and expertise. Currently, I'm developing my own drone, applying
-                        computer vision principles like finger recognition for control and object
-                        detection using the onboard camera. This hands-on application deepens my
-                        understanding and opens up new avenues for innovation.
+                        curiosity and expertise. Currently, I&apos;m developing my own drone,
+                        applying computer vision principles like finger recognition for control and
+                        object detection using the onboard camera. This hands-on application deepens
+                        my understanding and opens up new avenues for innovation.
                     </p>
 
                     <h3 className='mt-5 mb-3 text-2xl font-semibold tracking-wide text-left underline uppercase underline-offset-8'>
@@ -125,12 +127,12 @@ export default function About() {
                         my professional aspirations. I am determined to dedicate my time, energy,
                         and expertise to these fields, as they offer tremendous opportunities to
                         make a lasting impact. At Epita, my primary focus is on computer vision,
-                        where I aim to apply my skills to tackle real-world challenges. Whether it's
-                        developing computer vision solutions or creating immersive experiences in
-                        video games, I am passionate about using these technologies to solve
-                        practical problems and make significant contributions. By pursuing a career
-                        in computer vision or video game development, I believe I can make a
-                        meaningful difference in addressing real-world challenges and pushing the
+                        where I aim to apply my skills to tackle real-world challenges. Whether
+                        it&apos;s developing computer vision solutions or creating immersive
+                        experiences in video games, I am passionate about using these technologies
+                        to solve practical problems and make significant contributions. By pursuing
+                        a career in computer vision or video game development, I believe I can make
+                        a meaningful difference in addressing real-world challenges and pushing the
                         boundaries of what is possible.
                     </p>
                 </AccordionBody>
