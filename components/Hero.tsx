@@ -1,7 +1,7 @@
 import { TypeAnimation } from 'react-type-animation';
 import { ArrowDownIcon } from '@heroicons/react/24/solid';
 import Spline from '@splinetool/react-spline';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, Suspense } from 'react';
 
 const animationSequence = ['Web Developer Freelance', 1000, 'Computer Vision Engineer', 1000];
 
@@ -41,11 +41,7 @@ export default function Hero({ setCurrent }: HeroProps) {
             className='flex flex-col items-center justify-center w-screen min-h-screen mt-10 text-center'
             id='hero'
         >
-            <Spline
-                scene='https://prod.spline.design/sKnEkDMN2rPJRqYh/scene.splinecode'
-                className='absolute inset-0 -z-10 items-center justify-center flex w-[80vw] h-[80vh] bg-[#030406]'
-                onLoad={onLoad}
-            />
+            <FallbackImage />
             <h1 className='text-4xl font-semibold tracking-wide uppercase md:text-7xl'>
                 Pierre-Louis
             </h1>
@@ -71,3 +67,11 @@ export default function Hero({ setCurrent }: HeroProps) {
         </div>
     );
 }
+
+const FallbackImage = () => {
+    return (
+        <div className='flex justify-center items-center w-screen h-screen bg-[#030406] absolute -z-10'>
+            <img src='/mushrooms.png' className='w-3/4 h-auto md:w-2/3' />
+        </div>
+    );
+};
