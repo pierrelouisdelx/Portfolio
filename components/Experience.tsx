@@ -21,6 +21,7 @@ const workexperiences = [
     },
     {
         company: 'Freelance',
+        link: 'https://www.malt.fr/profile/pierrelouisdelcroix',
         position: 'Fullstack Developer',
         location: 'Worldwide',
         date: '09/2021 - Present',
