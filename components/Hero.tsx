@@ -1,7 +1,6 @@
 import { TypeAnimation } from 'react-type-animation';
 import { ArrowDownIcon } from '@heroicons/react/24/solid';
-import Spline from '@splinetool/react-spline';
-import { useEffect, useRef, Suspense } from 'react';
+import { useEffect, useRef } from 'react';
 
 const animationSequence = ['Web Developer Freelance', 1000, 'Computer Vision Engineer', 1000];
 
