@@ -31,6 +31,7 @@ const projects = [
         url: '',
         category: Categories.COMPUTERVISION,
         background: '/drone.png',
+        height: 217,
     },
     {
         name: 'HyperLiDAR Classification',
@@ -40,6 +41,7 @@ const projects = [
         url: '',
         category: Categories.COMPUTERVISION,
         background: '/hyperspectral.png',
+        height: 217,
     },
     {
         name: 'SchoolRunner',
@@ -49,7 +51,8 @@ const projects = [
         category: Categories.VIDEOGAME,
         background: '/schoolrunner.png',
         demo: 'https://cdn.orbs.cloud/SchoolRunner.mp4',
-        height: 3,
+        size: 3,
+        height: 217,
     },
     {
         name: 'SkyCrane',
@@ -58,6 +61,7 @@ const projects = [
         url: '',
         category: Categories.VIDEOGAME,
         background: '/skycrane.png',
+        height: 217,
     },
     {
         name: 'Multiplayer THREE.js Video Game',
@@ -66,6 +70,7 @@ const projects = [
         url: '',
         category: Categories.WEB,
         background: '/balls.png',
+        height: 217,
     },
     {
         name: 'HydraFlow',
@@ -75,6 +80,7 @@ const projects = [
         category: Categories.SOFTWARE,
         background: '/fluid.png',
         demo: 'https://cdn.orbs.cloud/fluid_75k.mp4',
+        height: 217,
     },
     {
         name: 'TerraNoise',
@@ -83,6 +89,7 @@ const projects = [
         url: '',
         category: Categories.VIDEOGAME,
         background: '/terranoise.png',
+        height: 217,
     },
     {
         name: 'Snow avalanche detection',
@@ -91,6 +98,7 @@ const projects = [
         url: '',
         category: Categories.COMPUTERVISION,
         background: '/avalanche.png',
+        height: 217,
     },
     {
         name: 'Drone Choreography',
@@ -100,6 +108,7 @@ const projects = [
         category: Categories.SOFTWARE,
         background: '/OlympicGames.jpg',
         demo: 'https://cdn.orbs.cloud/OlympicGames.mp4',
+        height: 217,
     },
     {
         name: 'SSH brute force map',
@@ -109,6 +118,7 @@ const projects = [
         category: Categories.SOFTWARE,
         background:
             'https://raw.githubusercontent.com/pierrelouisdelx/ssh-bruteforce-map/main/bruteforce-map.png',
+        height: 217,
     },
     {
         name: 'Aqualand',
@@ -117,6 +127,7 @@ const projects = [
         url: '',
         category: Categories.WEB,
         background: '/balena.png',
+        height: 217,
     },
     {
         name: 'Optical Character Recognition',
@@ -126,6 +137,7 @@ const projects = [
         category: Categories.SOFTWARE,
         background:
             'https://raw.githubusercontent.com/pierrelouisdelx/OCR/main/images/gui-intro.png',
+        height: 217,
     },
 ];
 

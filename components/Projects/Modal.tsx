@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 interface ModalProps {
     name: string;
     description: string;
@@ -9,6 +11,7 @@ interface ModalProps {
     demo?: string;
     setSelectedProject: (index: any) => void;
     innerRef: any;
+    height: number;
 }
 
 export default function Modal(props: ModalProps) {
@@ -48,10 +51,12 @@ export default function Modal(props: ModalProps) {
                     <p className='text-base leading-relaxed text-gray-400'>{props.description}</p>
                     <p className='pt-2 italic text-slate-500'>{props.technologies.join(', ')}</p>
                     {!video && props.background && (
-                        <img
+                        <Image
                             src={props.background}
                             alt={props.name}
                             className='p-4 rounded-lg max-h-96'
+                            width={658}
+                            height={props.height * 1.7}
                         />
                     )}
                     {video && (

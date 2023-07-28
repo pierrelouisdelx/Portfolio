@@ -9,7 +9,8 @@ interface ProjectProps {
     url: string;
     category: number;
     background?: string;
-    height?: number;
+    height: number;
+    size?: number;
     video?: string;
 }
 
@@ -29,12 +30,12 @@ export const Card = ({
             style={{
                 width: '100%',
                 maxWidth: '24rem',
-                gridRowEnd: getGridRowEnd(project?.height),
+                gridRowEnd: getGridRowEnd(project?.size),
             }}
             onClick={() => setSelectedProject(project)}
         >
             {project.background && (
-                <img
+                <Image
                     src={project.background}
                     alt={project.name}
                     className={`${
@@ -42,6 +43,8 @@ export const Card = ({
                     } transition-all ease-in-out duration-300 rounded-lg border`}
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
+                    width={384}
+                    height={project.height}
                 />
             )}
             {project.video && (

@@ -1,5 +1,6 @@
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
+import Image from 'next/image';
 
 interface ExperienceCardProps {
     company: string;
@@ -20,10 +21,12 @@ export default function ExperienceCard(props: ExperienceCardProps) {
             contentArrowStyle={{ borderRight: '7px solid orange' }}
             iconStyle={{ background: '#1f2937', color: '#fff' }}
             icon={
-                <img
+                <Image
                     src={props.icon}
                     className='w-full h-full p-2 bg-white rounded-full'
                     alt='Company Logo'
+                    width={60}
+                    height={60}
                 />
             }
             date={props.date}

@@ -11,7 +11,7 @@ const workexperiences = [
         position: 'Software Engineer',
         location: 'London, UK',
         date: '09/2022 - 01/2023',
-        icon: 'https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/isifma26whlciahngbqi',
+        icon: '/logos/onecommerce.png',
         description: `<ul class="list-disclosure-closed px-4">
         <li>Reduced test suite runtime by 80% through parallelization</li>
         <li>Developed a tool extracting geolocation from inaccurate addresses in MENA with 60%+ accuracy</li>
@@ -25,7 +25,7 @@ const workexperiences = [
         position: 'Fullstack Developer',
         location: 'Worldwide',
         date: '09/2021 - Present',
-        icon: '/malt.png',
+        icon: '/logos/malt.png',
         description:
             'Currently working as a freelance in parallel of my studies on malt.fr for french companies and upwork.com for international companies.',
     },
