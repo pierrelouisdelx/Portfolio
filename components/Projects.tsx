@@ -2,7 +2,12 @@ import { Title } from '@/ui';
 import { useEffect, useRef, useState } from 'react';
 import { Card } from '@/components/Projects/Card';
 import Modal from '@/components/Projects/Modal';
-import { AnimatePresence, motion, useMotionValue, animate } from 'framer-motion';
+import {
+    AnimatePresence,
+    motion,
+    useMotionValue,
+    animate,
+} from 'framer-motion';
 import DotGrid from '@/components/DotGrid';
 import { useOutsideClick } from '@/hooks/outsideClick';
 
@@ -26,8 +31,15 @@ const projects = [
     },
     {
         name: 'Autonomous Drone',
-        description: 'Autonomous drone for package delivery controlled by finger tracking',
-        technologies: ['C++', 'Python', 'Mediapipe', 'Ardupilot', 'Raspberry Pi'],
+        description:
+            'Autonomous drone for package delivery controlled by finger tracking',
+        technologies: [
+            'C++',
+            'Python',
+            'Mediapipe',
+            'Ardupilot',
+            'Raspberry Pi',
+        ],
         url: '',
         category: Categories.COMPUTERVISION,
         background: '/drone.png',
@@ -102,7 +114,8 @@ const projects = [
     },
     {
         name: 'Drone Choreography',
-        description: 'Trailer - Drone Choreography for Paris 2024 Olympic Games',
+        description:
+            'Trailer - Drone Choreography for Paris 2024 Olympic Games',
         technologies: ['Blender', 'Skybrush'],
         url: '',
         category: Categories.SOFTWARE,
@@ -112,7 +125,8 @@ const projects = [
     },
     {
         name: 'SSH brute force map',
-        description: 'Map of the world with SSH brute force attacks based on IP addresses',
+        description:
+            'Map of the world with SSH brute force attacks based on IP addresses',
         technologies: ['Python', 'React', 'SQL'],
         url: '',
         category: Categories.SOFTWARE,
@@ -149,13 +163,19 @@ interface CategoryProps {
 }
 
 export default function Projects() {
-    const [selectedCategory, setSelectedCategory] = useState<Categories>(Categories.ALL);
+    const [selectedCategory, setSelectedCategory] = useState<Categories>(
+        Categories.ALL
+    );
     const [filteredProjects, setFilteredProjects] = useState(projects);
     const [selectedProject, setSelectedProject] = useState<any>(null);
     const modalRef = useRef<any>();
 
-    const mouseX = useMotionValue(typeof window !== 'undefined' ? window.innerWidth / 2 : 0);
-    const mouseY = useMotionValue(typeof window !== 'undefined' ? window.innerHeight / 2 : 0);
+    const mouseX = useMotionValue(
+        typeof window !== 'undefined' ? window.innerWidth / 2 : 0
+    );
+    const mouseY = useMotionValue(
+        typeof window !== 'undefined' ? window.innerHeight / 2 : 0
+    );
 
     useEffect(() => {
         const handleMouseMove = (e: MouseEvent) => {
@@ -175,7 +195,9 @@ export default function Projects() {
         if (selectedCategory === Categories.ALL) setFilteredProjects(projects);
         else
             setFilteredProjects(
-                projects.filter((project) => project.category === selectedCategory)
+                projects.filter(
+                    (project) => project.category === selectedCategory
+                )
             );
     }, [selectedCategory]);
 
@@ -198,7 +220,10 @@ export default function Projects() {
                     />
                 ))}
             </div>
-            <div style={{ perspective: 1000 }} className='flex justify-center min-h-72'>
+            <div
+                style={{ perspective: 1000 }}
+                className='flex justify-center min-h-72'
+            >
                 <motion.div
                     layout
                     className='relative grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 grid-flow-dense'
@@ -229,7 +254,7 @@ export default function Projects() {
 const Category = (props: CategoryProps) => {
     return (
         <div
-            className={`flex items-center justify-center px-2 py-1 m-2 text-white capitalize rounded-lg cursor-pointer hover:bg-orange-400
+            className={`flex items-center justify-center px-2 py-1 m-2 text-white capitalize rounded-lg cursor-pointer hover:bg-orange-800
             ${props.isSelected ? 'bg-orange-800' : 'bg-orange-400'}`}
             onClick={() => props.setSelectedCategory(props.index)}
         >
