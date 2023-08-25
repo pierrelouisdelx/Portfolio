@@ -43,7 +43,7 @@ export default function Navbar({ setCurrent }: NavbarProps) {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
 
     return (
-        <nav className='bg-white dark:bg-[#030406] w-full fixed z-50'>
+        <nav className='bg-white dark:bg-[#030406] w-full fixed z-30'>
             <div className='flex flex-wrap items-center justify-between w-full max-w-screen-xl p-4 mx-auto md:flex-row-reverse'>
                 <div className='flex items-center justify-between w-full md:w-auto'>
                     <button
@@ -80,7 +80,11 @@ export default function Navbar({ setCurrent }: NavbarProps) {
                 >
                     <ul className='flex flex-col w-full py-4 mt-4 font-medium md:p-0 md:flex-row md:space-x-8 md:mt-0'>
                         {Links.map((link, index) => (
-                            <Link {...link} key={link.title} setCurrent={setCurrent} />
+                            <Link
+                                {...link}
+                                key={link.title}
+                                setCurrent={setCurrent}
+                            />
                         ))}
                     </ul>
                 </div>
