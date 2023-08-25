@@ -71,7 +71,9 @@ export const Card = ({
             >
                 <h3 className='pb-3 text-2xl font-semibold'>{project.name}</h3>
                 <p>{project.description}</p>
-                <p className='pt-2 italic text-slate-500'>{project.technologies.join(', ')}</p>
+                <p className='pt-2 italic text-slate-500'>
+                    {project.technologies.join(', ')}
+                </p>
             </a>
         </motion.div>
     );
