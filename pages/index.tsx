@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { letter } from '@/variants/animations';
 
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -26,7 +25,7 @@ export default function App() {
                     width: '0%',
                     transition: {
                         ease: [0.455, 0.03, 0.515, 0.955],
-                        duration: 3,
+                        duration: 2.5,
                         delay: 2,
                     },
                 }}
@@ -39,6 +38,9 @@ export default function App() {
                     transition: {
                         duration: 0.5,
                         delay: 4,
+                    },
+                    transitionEnd: {
+                        display: 'none',
                     },
                 }}
             >
@@ -56,7 +58,7 @@ export default function App() {
                     Pierre-Louis
                 </motion.h1>
                 <motion.h1
-                    className='text-4xl font-semibold tracking-wide uppercase md:text-7xl'
+                    className='text-4xl font-semibold tracking-wide uppercase md:text-7xl md:mb-52 mb-56'
                     initial={{ opacity: 0 }}
                     animate={{
                         opacity: 1,
@@ -77,7 +79,7 @@ export default function App() {
                     width: '0%',
                     transition: {
                         ease: [0.455, 0.03, 0.515, 0.955],
-                        duration: 3,
+                        duration: 2.5,
                         delay: 2,
                     },
                 }}
