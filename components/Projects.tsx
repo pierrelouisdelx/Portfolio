@@ -28,6 +28,7 @@ const projects = [
         url: '',
         category: Categories.WEB,
         video: '/gottagohack.mp4',
+        height: 217,
     },
     {
         name: 'Autonomous Drone',
