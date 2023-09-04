@@ -120,7 +120,7 @@ const freelanceexperiences = [
         location: 'Paris, France',
         position: 'Fullstack Developer',
         date: '10/2021',
-        icon: 'https://www.harmony-promotion.com/wp-content/uploads/2022/09/image001.gif',
+        icon: '/logos/harmonypromotion.png',
         description: 'Added fonctionalities to an admin panel',
     },
     {
@@ -190,18 +190,34 @@ export default function Experience() {
                 </ul>
             </div>
             <div id='myTabContent'>
-                <div className={classNames('p-4 rounded-lg', activeTab === 0 ? 'block' : 'hidden')}>
+                <div
+                    className={classNames(
+                        'p-4 rounded-lg',
+                        activeTab === 0 ? 'block' : 'hidden'
+                    )}
+                >
                     <VerticalTimeline animate={true} lineColor={'#fb923c'}>
                         {workexperiences.map((experience) => (
-                            <ExperienceCard {...experience} key={experience.company} />
+                            <ExperienceCard
+                                {...experience}
+                                key={experience.company}
+                            />
                         ))}
                     </VerticalTimeline>
                 </div>
 
-                <div className={classNames('p-4 rounded-lg', activeTab === 1 ? 'block' : 'hidden')}>
+                <div
+                    className={classNames(
+                        'p-4 rounded-lg',
+                        activeTab === 1 ? 'block' : 'hidden'
+                    )}
+                >
                     <VerticalTimeline animate={true} lineColor={'#fb923c'}>
                         {freelanceexperiences.map((experience) => (
-                            <ExperienceCard {...experience} key={experience.company} />
+                            <ExperienceCard
+                                {...experience}
+                                key={experience.company}
+                            />
                         ))}
                     </VerticalTimeline>
                 </div>
