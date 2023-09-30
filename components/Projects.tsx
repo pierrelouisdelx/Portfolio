@@ -13,20 +13,19 @@ import { useOutsideClick } from '@/hooks/outsideClick';
 
 enum Categories {
     ALL = -1,
-    WEB,
-    VIDEOGAME,
-    SOFTWARE,
     COMPUTERVISION,
+    SOFTWARE,
+    VIDEOGAME,
 }
 
-const cats = ['all', 'web', 'video games', 'software', 'computer vision'];
+const cats = ['all', 'computer vision', 'software', 'video games'];
 const projects = [
     {
         name: 'Finalist of the GottaGoHack Hackathon 2022',
         description: 'Dating app in the metaverse',
         technologies: ['C#', 'Unity', 'Mediapipe'],
         url: '',
-        category: Categories.WEB,
+        category: Categories.COMPUTERVISION,
         video: '/gottagohack.mp4',
         height: 217,
     },
@@ -68,21 +67,22 @@ const projects = [
         height: 217,
     },
     {
+        name: 'Moving objects detection',
+        description:
+            'Moving objects detection using FuzzyChoquet Integral in CUDA',
+        technologies: ['CUDA', 'C++'],
+        url: '',
+        category: Categories.VIDEOGAME,
+        background: '/cuda.png',
+        height: 217,
+    },
+    {
         name: 'SkyCrane',
         description: 'RPG video game',
         technologies: ['C#', 'Unity'],
         url: '',
         category: Categories.VIDEOGAME,
         background: '/skycrane.png',
-        height: 217,
-    },
-    {
-        name: 'Multiplayer THREE.js Video Game',
-        description: 'Agar.io like video game made in 3D with THREE.js',
-        technologies: ['NextJS', 'React', 'THREE.js', 'NodeJS', 'Socket.io'],
-        url: '',
-        category: Categories.WEB,
-        background: '/balls.png',
         height: 217,
     },
     {
@@ -102,6 +102,15 @@ const projects = [
         url: '',
         category: Categories.VIDEOGAME,
         background: '/terranoise.png',
+        height: 217,
+    },
+    {
+        name: 'Multiplayer THREE.js Video Game',
+        description: 'Agar.io like video game made in 3D with THREE.js',
+        technologies: ['NextJS', 'React', 'THREE.js', 'NodeJS', 'Socket.io'],
+        url: '',
+        category: Categories.VIDEOGAME,
+        background: '/balls.png',
         height: 217,
     },
     {
@@ -133,15 +142,6 @@ const projects = [
         category: Categories.SOFTWARE,
         background:
             'https://raw.githubusercontent.com/pierrelouisdelx/ssh-bruteforce-map/main/bruteforce-map.png',
-        height: 217,
-    },
-    {
-        name: 'Aqualand',
-        description: 'Aquarium website prototype',
-        technologies: ['React', 'tailwindcss'],
-        url: '',
-        category: Categories.WEB,
-        background: '/balena.png',
         height: 217,
     },
     {
