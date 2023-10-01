@@ -1,4 +1,5 @@
 import { Title } from '@/ui';
+import { Reveal } from '@/components/Reveal';
 
 interface SkillProps {
     name: string;
@@ -150,7 +151,11 @@ export default function Skills() {
             <Title>Skills</Title>
             <div className='flex flex-row flex-wrap'>
                 {skills.map((skill) => (
-                    <CategorySkills title={skill.title} skills={skill.skills} key={skill.title} />
+                    <CategorySkills
+                        title={skill.title}
+                        skills={skill.skills}
+                        key={skill.title}
+                    />
                 ))}
             </div>
         </div>
@@ -160,12 +165,18 @@ export default function Skills() {
 const CategorySkills = (props: CategorySkillProps) => {
     return (
         <div className='flex flex-col w-full py-5 md:w-1/3 md:px-5 items-left justify-left'>
-            <h1 className='text-2xl uppercase'>{props.title}</h1>
-            <div className='flex flex-row flex-wrap'>
-                {props.skills.map((skill) => (
-                    <Skill name={skill.name} level={skill.level} key={skill.name} />
-                ))}
-            </div>
+            <Reveal>
+                <h1 className='text-2xl uppercase'>{props.title}</h1>
+                <div className='flex flex-row flex-wrap'>
+                    {props.skills.map((skill) => (
+                        <Skill
+                            name={skill.name}
+                            level={skill.level}
+                            key={skill.name}
+                        />
+                    ))}
+                </div>
+            </Reveal>
         </div>
     );
 };
@@ -182,7 +193,10 @@ const Skill = (props: SkillProps) => {
 const ProgressBar = ({ p }: { p: number }) => {
     return (
         <div className='w-full h-1 bg-gray-300 rounded-md'>
-            <div style={{ width: `${p}%` }} className='h-1 bg-orange-400 rounded-md'></div>
+            <div
+                style={{ width: `${p}%` }}
+                className='h-1 bg-orange-400 rounded-md'
+            ></div>
         </div>
     );
 };

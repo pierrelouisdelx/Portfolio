@@ -3,7 +3,7 @@ import { motion, useInView, useAnimation } from 'framer-motion';
 import classNames from 'classnames';
 
 interface Props {
-    children: JSX.Element;
+    children: JSX.Element | JSX.Element[] | Element;
     width?: 'fit-content' | '100%';
 }
 

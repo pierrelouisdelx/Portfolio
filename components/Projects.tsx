@@ -10,6 +10,7 @@ import {
 } from 'framer-motion';
 import DotGrid from '@/components/DotGrid';
 import { useOutsideClick } from '@/hooks/outsideClick';
+import { Reveal } from './Reveal';
 
 enum Categories {
     ALL = -1,
@@ -254,12 +255,14 @@ export default function Projects() {
 
 const Category = (props: CategoryProps) => {
     return (
-        <div
-            className={`flex items-center justify-center px-2 py-1 m-2 text-white capitalize rounded-lg cursor-pointer hover:bg-orange-800
+        <Reveal>
+            <div
+                className={`flex items-center justify-center px-2 py-1 m-2 text-white capitalize rounded-lg cursor-pointer hover:bg-orange-800
             ${props.isSelected ? 'bg-orange-800' : 'bg-orange-400'}`}
-            onClick={() => props.setSelectedCategory(props.index)}
-        >
-            <h1 className='text-lg'>{props.category}</h1>
-        </div>
+                onClick={() => props.setSelectedCategory(props.index)}
+            >
+                <h1 className='text-lg'>{props.category}</h1>
+            </div>
+        </Reveal>
     );
 };

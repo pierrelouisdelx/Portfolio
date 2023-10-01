@@ -25,7 +25,7 @@ export default function App() {
                 }}
             ></motion.div>
             <motion.div
-                className='absolute w-full h-full z-50 flex justify-center items-center flex-col'
+                className='absolute w-full inset-0 z-50 flex justify-center items-center flex-col'
                 initial={{ opacity: 1 }}
                 animate={{
                     opacity: 0,
@@ -52,7 +52,7 @@ export default function App() {
                     Pierre-Louis
                 </motion.h1>
                 <motion.h1
-                    className='text-4xl font-semibold tracking-wide uppercase md:text-7xl md:mb-52 mb-56'
+                    className='text-4xl font-semibold tracking-wide uppercase md:text-7xl mb-60'
                     initial={{ opacity: 0 }}
                     animate={{
                         opacity: 1,
