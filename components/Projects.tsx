@@ -1,3 +1,5 @@
+'use client';
+
 import { Title } from '@/ui';
 import { useEffect, useRef, useState } from 'react';
 import { Card } from '@/components/Projects/Card';
@@ -209,7 +211,7 @@ export default function Projects() {
     });
 
     return (
-        <div className='flex flex-col w-full' id='projects'>
+        <div className='flex flex-col w-full bg-black' id='projects'>
             <Title>Projects</Title>
             <div className='flex flex-wrap justify-center'>
                 {cats.map((cat, index) => (

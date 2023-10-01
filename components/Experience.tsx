@@ -1,3 +1,5 @@
+'use client';
+
 import { VerticalTimeline } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import ExperienceCard from '@/components/Experience/WorkCard';
@@ -169,7 +171,7 @@ export default function Experience() {
     const [activeTab, setActiveTab] = useState(0);
 
     return (
-        <div className='flex flex-col w-full' id='experience'>
+        <div className='flex flex-col w-full bg-black' id='experience'>
             <Title>Experience</Title>
             <div className='flex justify-center mb-4 border-b border-gray-200 dark:border-gray-700'>
                 <ul className='flex text-sm font-medium text-center'>

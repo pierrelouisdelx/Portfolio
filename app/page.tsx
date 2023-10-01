@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -9,7 +11,7 @@ import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import Contacts from '@/components/Contact';
 
-export default function App() {
+export default function Page() {
     return (
         <div className='flex flex-col'>
             <motion.div

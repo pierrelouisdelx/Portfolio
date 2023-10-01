@@ -1,3 +1,5 @@
+'use client';
+
 import Title from '@/ui/Title';
 import emailjs from '@emailjs/browser';
 import { useState, useRef } from 'react';
@@ -57,7 +59,7 @@ export default function Contacts() {
     };
 
     return (
-        <div className='flex flex-col w-full h-screen' id='contacts'>
+        <div className='flex flex-col w-full h-screen bg-black' id='contacts'>
             <Title>Contacts</Title>
             <div className='flex items-center justify-center h-full'>
                 <form

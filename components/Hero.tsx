@@ -1,3 +1,5 @@
+'use client';
+
 import { TypeAnimation } from 'react-type-animation';
 import { ArrowDownIcon } from '@heroicons/react/24/solid';
 import { useEffect, useRef } from 'react';

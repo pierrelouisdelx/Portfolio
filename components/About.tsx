@@ -1,3 +1,5 @@
+'use client';
+
 import { Title } from '@/ui';
 import {
     Accordion,
