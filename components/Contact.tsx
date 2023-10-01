@@ -59,7 +59,7 @@ export default function Contacts() {
     };
 
     return (
-        <div className='flex flex-col w-full h-screen bg-black' id='contacts'>
+        <div className='flex flex-col w-full h-screen' id='contacts'>
             <Title>Contacts</Title>
             <div className='flex items-center justify-center h-full'>
                 <form
