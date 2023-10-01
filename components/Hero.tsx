@@ -3,6 +3,7 @@
 import { TypeAnimation } from 'react-type-animation';
 import { ArrowDownIcon } from '@heroicons/react/24/solid';
 import { useEffect, useRef } from 'react';
+import Image from 'next/image';
 
 const animationSequence = [
     'Software Engineer',
@@ -74,11 +75,13 @@ export default function Hero() {
 const FallbackImage = () => {
     return (
         <div className='flex justify-center items-center inset-0 bg-[#030406] fixed -z-10'>
-            <img
+            <Image
                 src='/mushrooms.png'
                 className='w-3/4 h-auto md:w-2/3'
                 loading='lazy'
                 fetchPriority='high'
+                width={1275}
+                height={1050}
                 alt='Mushrooms'
             />
         </div>

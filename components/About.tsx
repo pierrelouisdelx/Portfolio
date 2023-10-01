@@ -124,7 +124,7 @@ export default function About() {
                             developer. Drawing upon the experience I had been
                             cultivating since the age of 15, I quickly attracted
                             a tenth of clients, successfully earning over
-                            $30,000 in less than two years. This marked the
+                            $50,000 in less than two years. This marked the
                             turning point where my passion transformed into a
                             sustainable livelihood. One notable example of my
                             collaborative work was during my mission at
@@ -192,7 +192,7 @@ export default function About() {
                 <div className='flex items-center justify-center w-full my-5'>
                     <video
                         controls
-                        className='w-full max-w-3xl'
+                        className='w-full max-w-3xl rounded-2xl'
                         poster='/poster.jpg'
                     >
                         <source
