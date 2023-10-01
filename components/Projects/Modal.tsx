@@ -48,8 +48,12 @@ export default function Modal(props: ModalProps) {
                     </button>
                 </div>
                 <div className='flex flex-col items-center justify-center p-3'>
-                    <p className='text-base leading-relaxed text-gray-400'>{props.description}</p>
-                    <p className='pt-2 italic text-slate-500'>{props.technologies.join(', ')}</p>
+                    <p className='text-base leading-relaxed text-gray-400'>
+                        {props.description}
+                    </p>
+                    <p className='pt-2 italic text-slate-500'>
+                        {props.technologies.join(', ')}
+                    </p>
                     {!video && props.background && (
                         <Image
                             src={props.background}
@@ -57,10 +61,15 @@ export default function Modal(props: ModalProps) {
                             className='p-4 rounded-lg max-h-96'
                             width={658}
                             height={props.height * 1.7}
+                            fill
                         />
                     )}
                     {video && (
-                        <video autoPlay controls className='w-full p-4 rounded-lg max-h-96'>
+                        <video
+                            autoPlay
+                            controls
+                            className='w-full p-4 rounded-lg max-h-96'
+                        >
                             <source src={video} type='video/mp4' />
                         </video>
                     )}

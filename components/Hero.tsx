@@ -71,8 +71,14 @@ export default function Hero() {
 
 const FallbackImage = () => {
     return (
-        <div className='flex justify-center items-center w-screen h-screen bg-[#030406] absolute -z-10'>
-            <img src='/mushrooms.png' className='w-3/4 h-auto md:w-2/3' />
+        <div className='flex justify-center items-center inset-0 bg-[#030406] absolute -z-10'>
+            <img
+                src='/mushrooms.png'
+                className='w-3/4 h-auto md:w-2/3'
+                loading='lazy'
+                fetchPriority='high'
+                alt='Mushrooms'
+            />
         </div>
     );
 };

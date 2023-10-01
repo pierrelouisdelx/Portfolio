@@ -11,8 +11,10 @@ module.exports = {
                 'bounce-slow': 'bounce 1.5s infinite',
             },
             backgroundImage: {
-                'gradient-radial': 'radial-gradient(circle at 1px 1px, grey 2px, transparent 0)',
-                'backdrop-filter': 'backdrop-filter: blur(4px) brightness(120%)',
+                'gradient-radial':
+                    'radial-gradient(circle at 1px 1px, grey 2px, transparent 0)',
+                'backdrop-filter':
+                    'backdrop-filter: blur(4px) brightness(120%)',
             },
             listStyleType: {
                 'disclosure-closed': 'disclosure-closed',

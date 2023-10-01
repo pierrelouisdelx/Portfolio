@@ -48,6 +48,7 @@ export const Card = ({
                             onMouseLeave={() => setIsHovered(false)}
                             width={384}
                             height={project.height}
+                            loading='lazy'
                         />
                     )}
                     {project.video && (

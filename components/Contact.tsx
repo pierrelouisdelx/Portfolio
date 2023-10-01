@@ -98,9 +98,11 @@ export default function Contacts() {
                             />
                         </div>
                     </Reveal>
-                    <div className='flex justify-center py-2'>
-                        <ReCAPTCHA sitekey={captcha} ref={captchaRef} />
-                    </div>
+                    <Reveal>
+                        <div className='flex justify-center py-2'>
+                            <ReCAPTCHA sitekey={captcha} ref={captchaRef} />
+                        </div>
+                    </Reveal>
                     <Reveal>
                         <div className='flex justify-center'>
                             <button className='w-1/2 p-2 m-2 text-orange-400 border border-orange-400 rounded-lg cursor-pointer hover:bg-orange-400 hover:text-white'>
