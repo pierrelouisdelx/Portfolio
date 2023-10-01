@@ -206,7 +206,7 @@ export default function Experience() {
             <div id='myTabContent'>
                 <div
                     className={classNames(
-                        'p-4 rounded-lg',
+                        'md:p-4 rounded-lg',
                         activeTab === 0 ? 'block' : 'hidden'
                     )}
                 >
