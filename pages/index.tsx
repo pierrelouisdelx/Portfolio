@@ -86,7 +86,7 @@ export default function App() {
             ></motion.div>
             <Navbar setCurrent={setCurrent} />
 
-            <main className='h-screen overflow-x-hidden overflow-y-scroll text-center text-white max-w-screen child:px-5 md:child:px-20 child:py-20 snap-y snap-mandatory child:snap-start child:min-h-screen scroll-smooth'>
+            <main className='text-center text-white child:px-5 md:child:px-20 child:py-20 child:min-h-screen scroll-smooth'>
                 <Hero setCurrent={setCurrent} />
                 <About />
                 <Experience />
