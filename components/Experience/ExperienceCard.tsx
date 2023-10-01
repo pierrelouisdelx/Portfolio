@@ -15,6 +15,7 @@ interface ExperienceCardProps {
 
 export default function ExperienceCard(props: ExperienceCardProps) {
     return (
+        // @ts-ignore
         <VerticalTimelineElement
             className='text-left vertical-timeline-element--work'
             contentStyle={{ background: '#1f2937', color: '#fff' }}
