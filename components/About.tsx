@@ -188,7 +188,11 @@ export default function About() {
                 </Accordion>
 
                 <div className='flex items-center justify-center w-full my-5'>
-                    <video controls className='w-full max-w-3xl'>
+                    <video
+                        controls
+                        className='w-full max-w-3xl'
+                        poster='/poster.jpg'
+                    >
                         <source
                             src='https://cdn.orbs.cloud/story_720p.mp4'
                             type='video/mp4'
