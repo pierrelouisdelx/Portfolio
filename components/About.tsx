@@ -23,7 +23,7 @@ const education = [
         to: 'July 2024',
         title: 'Epita - School of Engineering and Computer Science, Major in Computer Vision',
         description:
-            'EPITA, the school of engineers in computer intelligence. Since its creation in 1984, EPITA is the first engineering school in Paris. It prepares her passionate students in computer engineering jobs to build the world of tomorrow. ',
+            'Computer vision, Machine learning, Deep Learning, Image processing, GPGPU, OpenGL',
     },
 ];
 
