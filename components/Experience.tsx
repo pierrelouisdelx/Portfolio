@@ -2,7 +2,7 @@
 
 import { VerticalTimeline } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import ExperienceCard from '@/components/Experience/WorkCard';
+import ExperienceCard from '@/components/Experience/ExperienceCard';
 import { useState } from 'react';
 import { Title } from '@/ui';
 
