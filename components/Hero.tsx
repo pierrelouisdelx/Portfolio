@@ -40,7 +40,7 @@ export default function Hero() {
 
     return (
         <div
-            className='flex flex-col items-center justify-center w-screen min-h-screen mt-10 text-center'
+            className='flex flex-col items-center justify-center text-center'
             id='hero'
         >
             <FallbackImage />

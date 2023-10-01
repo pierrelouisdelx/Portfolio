@@ -80,7 +80,7 @@ export default function App() {
             ></motion.div>
             <Navbar />
 
-            <main className='text-center text-white child:px-5 md:child:px-20 child:py-20 child:min-h-screen scroll-smooth'>
+            <main className='text-center text-white child:px-5 md:child:px-20 child:py-20 child:min-h-screen'>
                 <Hero />
                 <About />
                 <Experience />
