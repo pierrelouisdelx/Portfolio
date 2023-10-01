@@ -35,11 +35,7 @@ const socials = [
     },
 ];
 
-interface NavbarProps {
-    setCurrent: (index: any) => void;
-}
-
-export default function Navbar({ setCurrent }: NavbarProps) {
+export default function Navbar() {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
 
     return (
@@ -80,11 +76,7 @@ export default function Navbar({ setCurrent }: NavbarProps) {
                 >
                     <ul className='flex flex-col w-full py-4 mt-4 font-medium md:p-0 md:flex-row md:space-x-8 md:mt-0'>
                         {Links.map((link, index) => (
-                            <Link
-                                {...link}
-                                key={link.title}
-                                setCurrent={setCurrent}
-                            />
+                            <Link {...link} key={link.title} />
                         ))}
                     </ul>
                 </div>
@@ -97,16 +89,17 @@ export default function Navbar({ setCurrent }: NavbarProps) {
 interface LinkProps {
     href: string;
     title: string;
-    setCurrent: (index: any) => void;
 }
 
-const Link = ({ href, title, setCurrent }: LinkProps) => {
+const Link = ({ href, title }: LinkProps) => {
     return (
-        <li
-            className='block py-2 pl-3 pr-4 text-gray-900 rounded cursor-pointer hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-400 md:p-0 md:dark:hover:text-orange-400 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 '
-            onClick={() => setCurrent(href)}
-        >
-            {title}
+        <li>
+            <a
+                className='block py-2 pl-3 pr-4 text-gray-900 rounded cursor-pointer hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-400 md:p-0 md:dark:hover:text-orange-400 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 '
+                href={href}
+            >
+                {title}
+            </a>
         </li>
     );
 };

@@ -11,11 +11,7 @@ const animationSequence = [
     1000,
 ];
 
-interface HeroProps {
-    setCurrent: (index: any) => void;
-}
-
-export default function Hero({ setCurrent }: HeroProps) {
+export default function Hero() {
     const obj = useRef<any>();
 
     function onLoad(spline: any) {
@@ -66,12 +62,9 @@ export default function Hero({ setCurrent }: HeroProps) {
                 </h5>
             </div>
 
-            <div
-                className='flex flex-row mt-20 cursor-pointer'
-                onClick={() => setCurrent('#about')}
-            >
+            <a className='flex flex-row mt-20 cursor-pointer p-5' href='#about'>
                 <ArrowDownIcon className='w-10 h-10 mt-10 text-orange-400 animate-bounce-slow' />
-            </div>
+            </a>
         </div>
     );
 }

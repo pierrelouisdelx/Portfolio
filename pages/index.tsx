@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
 import Navbar from '@/components/Navbar';
@@ -10,12 +10,6 @@ import Projects from '@/components/Projects';
 import Contacts from '@/components/Contact';
 
 export default function App() {
-    const [current, setCurrent] = React.useState('#hero');
-
-    useEffect(() => {
-        document.querySelector(`${current}`)?.scrollIntoView();
-    }, [current]);
-
     return (
         <div className='flex flex-col'>
             <motion.div
@@ -84,10 +78,10 @@ export default function App() {
                     },
                 }}
             ></motion.div>
-            <Navbar setCurrent={setCurrent} />
+            <Navbar />
 
             <main className='text-center text-white child:px-5 md:child:px-20 child:py-20 child:min-h-screen scroll-smooth'>
-                <Hero setCurrent={setCurrent} />
+                <Hero />
                 <About />
                 <Experience />
                 <Skills />
