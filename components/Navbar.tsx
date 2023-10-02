@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useState } from 'react';
 
 const Links = [
     {
@@ -69,19 +70,18 @@ export default function Navbar() {
                         ))}
                     </ul>
                 </div>
-                <div
-                    className={[
-                        'w-full md:flex md:items-center md:w-auto transition-all duration-300 ease-in-out',
-                        showMobileMenu ? '' : 'hidden',
-                    ].join(' ')}
+                <motion.div
+                    className='w-full md:flex md:items-center md:w-auto overflow-hidden'
                     onClick={() => setShowMobileMenu(false)}
+                    initial={{ height: 0 }}
+                    animate={{ height: showMobileMenu ? 'auto' : 0 }}
                 >
                     <ul className='flex flex-col w-full py-4 mt-4 font-medium md:p-0 md:flex-row md:space-x-8 md:mt-0'>
                         {Links.map((link, index) => (
                             <Link {...link} key={link.title} />
                         ))}
                     </ul>
-                </div>
+                </motion.div>
                 <div />
             </div>
         </nav>
