@@ -69,6 +69,7 @@ export default function Modal(props: ModalProps) {
                             autoPlay
                             controls
                             className='w-full p-4 rounded-lg max-h-96'
+                            preload='none'
                         >
                             <source src={video} type='video/mp4' />
                         </video>

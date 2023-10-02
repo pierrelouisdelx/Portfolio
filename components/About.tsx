@@ -194,6 +194,7 @@ export default function About() {
                         controls
                         className='w-full max-w-3xl rounded-2xl'
                         poster='/poster.jpg'
+                        preload='none'
                     >
                         <source
                             src='https://cdn.orbs.cloud/story_720p.mp4'

@@ -49,6 +49,8 @@ export const Card = ({
                             width={384}
                             height={project.height}
                             loading='lazy'
+                            blurDataURL={project.background}
+                            placeholder='blur'
                         />
                     )}
                     {project.video && (
@@ -62,6 +64,7 @@ export const Card = ({
                             } transition-all ease-in-out duration-300 rounded-lg border`}
                             onMouseEnter={() => setIsHovered(true)}
                             onMouseLeave={() => setIsHovered(false)}
+                            preload='none'
                         >
                             <source src={project.video} type='video/mp4' />
                         </video>
