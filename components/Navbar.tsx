@@ -41,6 +41,35 @@ const socials = [
 export default function Navbar() {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
 
+    const top = {
+        closed: {
+            rotate: 0,
+            translateY: 0,
+        },
+        opened: {
+            rotate: 45,
+            translateY: 7.5,
+        },
+    };
+    const center = {
+        closed: {
+            opacity: 1,
+        },
+        opened: {
+            opacity: 0,
+        },
+    };
+    const bottom = {
+        closed: {
+            rotate: 0,
+            translateY: 0,
+        },
+        opened: {
+            rotate: -45,
+            translateY: -7.5,
+        },
+    };
+
     return (
         <nav className='bg-white dark:bg-[#030406] w-full fixed z-30'>
             <div className='flex flex-wrap items-center justify-between w-full max-w-screen-xl p-4 mx-auto md:flex-row-reverse'>
@@ -51,18 +80,46 @@ export default function Navbar() {
                         onClick={() => setShowMobileMenu(!showMobileMenu)}
                     >
                         <span className='sr-only'>Open main menu</span>
-                        <svg
+                        <motion.svg
                             className='w-6 h-6'
-                            fill='currentColor'
                             viewBox='0 0 20 20'
-                            xmlns='http://www.w3.org/2000/svg'
+                            overflow='visible'
+                            preserveAspectRatio='none'
                         >
-                            <path
-                                fillRule='evenodd'
-                                d='M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z'
-                                clipRule='evenodd'
-                            ></path>
-                        </svg>
+                            <motion.line
+                                x1='0'
+                                x2='20'
+                                y1='3'
+                                y2='3'
+                                variants={top}
+                                stroke='white'
+                                vectorEffect='non-scaling-stroke'
+                                initial='closed'
+                                animate={showMobileMenu ? 'opened' : 'closed'}
+                            />
+                            <motion.line
+                                x1='0'
+                                x2='20'
+                                y1='10.5'
+                                y2='10.5'
+                                variants={center}
+                                stroke='white'
+                                vectorEffect='non-scaling-stroke'
+                                initial='closed'
+                                animate={showMobileMenu ? 'opened' : 'closed'}
+                            />
+                            <motion.line
+                                x1='0'
+                                x2='20'
+                                y1='18'
+                                y2='18'
+                                variants={bottom}
+                                stroke='white'
+                                vectorEffect='non-scaling-stroke'
+                                initial='closed'
+                                animate={showMobileMenu ? 'opened' : 'closed'}
+                            />
+                        </motion.svg>
                     </button>
                     <ul className='flex flex-row justify-center pl-3 space-x-4 md:justify-end md:pl-0'>
                         {socials.map((social) => (
