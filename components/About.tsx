@@ -1,13 +1,13 @@
 'use client';
 
 import { Title } from '@/ui';
+import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import {
     Accordion,
-    AccordionHeader,
     AccordionBody,
+    AccordionHeader,
 } from '@material-tailwind/react';
 import { useState } from 'react';
-import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import { Reveal } from './Reveal';
 
 const education = [

@@ -1,9 +1,9 @@
 'use client';
 
-import { TypeAnimation } from 'react-type-animation';
 import { ArrowDownIcon } from '@heroicons/react/24/solid';
-import { useEffect, useRef } from 'react';
 import Image from 'next/image';
+import { useEffect, useRef } from 'react';
+import { TypeAnimation } from 'react-type-animation';
 
 const animationSequence = [
     'Software Engineer',
@@ -83,6 +83,8 @@ const FallbackImage = () => {
                 width={1275}
                 height={1050}
                 alt='Mushrooms'
+                blurDataURL='/mushrooms.png'
+                placeholder='blur'
             />
         </div>
     );
