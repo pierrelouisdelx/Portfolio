@@ -1,12 +1,16 @@
 'use client';
 
+import dynamic from 'next/dynamic';
+
 import Title from '@/ui/Title';
 import emailjs from '@emailjs/browser';
-import { useState, useRef } from 'react';
+import { useRef, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import ReCAPTCHA from 'react-google-recaptcha';
 import { Reveal } from './Reveal';
+
+// @ts-ignore
+const ReCAPTCHA = dynamic(() => import('react-google-recaptcha'));
 
 const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
 const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string;
