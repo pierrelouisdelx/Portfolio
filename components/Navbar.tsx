@@ -128,7 +128,7 @@ export default function Navbar() {
                     </ul>
                 </div>
                 <motion.div
-                    className='w-full md:flex md:items-center md:w-auto overflow-hidden'
+                    className='w-full md:flex md:items-center md:w-auto overflow-hidden md:overflow-visible'
                     onClick={() => setShowMobileMenu(false)}
                     initial={{ height: 0 }}
                     animate={{ height: showMobileMenu ? 'auto' : 0 }}
