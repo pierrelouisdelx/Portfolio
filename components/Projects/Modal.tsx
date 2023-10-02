@@ -61,7 +61,6 @@ export default function Modal(props: ModalProps) {
                             className='p-4 rounded-lg max-h-96'
                             width={658}
                             height={props.height * 1.7}
-                            fill
                         />
                     )}
                     {video && (
