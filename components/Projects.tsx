@@ -1,17 +1,17 @@
 'use client';
 
-import { Title } from '@/ui';
-import { useEffect, useRef, useState } from 'react';
+import DotGrid from '@/components/DotGrid';
 import { Card } from '@/components/Projects/Card';
 import Modal from '@/components/Projects/Modal';
+import { useOutsideClick } from '@/hooks/outsideClick';
+import { Title } from '@/ui';
 import {
     AnimatePresence,
+    animate,
     motion,
     useMotionValue,
-    animate,
 } from 'framer-motion';
-import DotGrid from '@/components/DotGrid';
-import { useOutsideClick } from '@/hooks/outsideClick';
+import { useEffect, useRef, useState } from 'react';
 import { Reveal } from './Reveal';
 
 enum Categories {
@@ -29,7 +29,8 @@ const projects = [
         technologies: ['C#', 'Unity', 'Mediapipe'],
         url: '',
         category: Categories.COMPUTERVISION,
-        video: '/gottagohack.mp4',
+        demo: 'https://cdn.orbs.cloud/gottagohack.mp4',
+        background: '/gottagohack.png',
         height: 217,
     },
     {

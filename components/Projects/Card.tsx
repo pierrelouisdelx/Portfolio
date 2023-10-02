@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
-import { useState } from 'react';
-import Image from 'next/image';
 import { Reveal } from '@/components/Reveal';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { useState } from 'react';
 
 interface ProjectProps {
     name: string;
@@ -64,7 +64,6 @@ export const Card = ({
                             } transition-all ease-in-out duration-300 rounded-lg border`}
                             onMouseEnter={() => setIsHovered(true)}
                             onMouseLeave={() => setIsHovered(false)}
-                            preload='none'
                         >
                             <source src={project.video} type='video/mp4' />
                         </video>
