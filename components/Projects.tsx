@@ -24,7 +24,27 @@ enum Categories {
 const cats = ['all', 'computer vision', 'software', 'video games'];
 const projects = [
     {
-        name: 'Finalist of the GottaGoHack Hackathon 2022',
+        name: 'Research - Point Cloud Classification',
+        description:
+            'Research on Autonomous Driving Pre-Training with Large-scale Point Cloud Dataset',
+        technologies: ['Python', 'CUDA'],
+        url: '',
+        category: Categories.COMPUTERVISION,
+        background: '/autonomous.png',
+        height: 217,
+    },
+    {
+        name: "Brand's bike detection",
+        description:
+            "Detection of brand's bikes in the city of Paris for Sharelock",
+        technologies: ['Tensorflow, Python'],
+        url: '',
+        category: Categories.COMPUTERVISION,
+        background: '/bike.png',
+        height: 217,
+    },
+    {
+        name: 'Finalist of GottaGoHack Hackathon 2022',
         description: 'Dating app in the metaverse',
         technologies: ['C#', 'Unity', 'Mediapipe'],
         url: '',
@@ -52,7 +72,7 @@ const projects = [
     {
         name: 'HyperLiDAR Classification',
         description:
-            'Classification pixels in hyperspectral and LiDAR images to identify object classes in the environment',
+            'Classification of pixels in hyperspectral and LiDAR images to identify object classes in the environment',
         technologies: ['Python', 'Sklearn', 'SeaBorn', 'Pandas', 'Numpy'],
         url: '',
         category: Categories.COMPUTERVISION,
@@ -76,7 +96,7 @@ const projects = [
             'Moving objects detection using FuzzyChoquet Integral in CUDA',
         technologies: ['CUDA', 'C++'],
         url: '',
-        category: Categories.VIDEOGAME,
+        category: Categories.COMPUTERVISION,
         background: '/cuda.png',
         height: 217,
     },
@@ -119,8 +139,9 @@ const projects = [
     },
     {
         name: 'Snow avalanche detection',
-        description: 'Computer vision project',
-        technologies: ['Python', 'OpenCV'],
+        description:
+            'Snow avalanche detection using a self made CNN for my drone',
+        technologies: ['Tensorflow', 'Python', 'OpenCV'],
         url: '',
         category: Categories.COMPUTERVISION,
         background: '/avalanche.png',

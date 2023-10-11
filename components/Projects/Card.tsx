@@ -75,7 +75,7 @@ export const Card = ({
                         onMouseEnter={() => setIsHovered(true)}
                         onMouseLeave={() => setIsHovered(false)}
                     >
-                        <h3 className='pb-3 text-2xl font-semibold'>
+                        <h3 className='pb-3 text-xl font-semibold'>
                             {project.name}
                         </h3>
                         <p>{project.description}</p>
