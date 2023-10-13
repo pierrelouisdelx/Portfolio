@@ -6,7 +6,6 @@ import { Project, projects } from '@/data/projects';
 import { useOutsideClick } from '@/hooks/outsideClick';
 import { Title } from '@/ui';
 import classNames from 'classnames';
-import Isotope from 'isotope-layout';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Reveal } from './Reveal';
 
@@ -26,20 +25,27 @@ export default function Projects() {
 
     useEffect(() => {
         setTimeout(() => {
-            isotope.current = new Isotope('.portfolio-items', {
-                itemSelector: '.item',
-                percentPosition: true,
-                masonry: {
-                    columnWidth: '.item',
-                    fitWidth: true,
-                },
-            });
+            if (typeof window === 'undefined') return;
 
-            setFilterKey('all');
+            (async () => {
+                const Isotope = (await import('isotope-layout')).default;
+
+                isotope.current = new Isotope('.portfolio-items', {
+                    itemSelector: '.item',
+                    percentPosition: true,
+                    masonry: {
+                        columnWidth: '.item',
+                        fitWidth: true,
+                    },
+                });
+
+                setFilterKey('all');
+            })();
         }, 1000);
     }, []);
 
     useEffect(() => {
+        console.log(isotope.current);
         if (isotope.current) {
             filterKey === 'all'
                 ? isotope.current?.arrange({ filter: '*' })
