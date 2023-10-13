@@ -1,20 +1,21 @@
 export enum Categories {
-    ALL = -1,
-    COMPUTERVISION = 0,
-    SOFTWARE = 1,
-    VIDEOGAME = 2,
+    ALL = '*',
+    COMPUTERVISION = 'computer-vision',
+    SOFTWARE = 'software',
+    VIDEOGAME = 'video-games',
 }
 
-interface Project {
+export interface Project {
     name: string;
     description: string;
     technologies: string[];
     url: string;
-    category: Categories;
-    background: string;
-    demo?: string;
-    size?: number;
+    category: string;
+    background?: string;
     height: number;
+    size?: number;
+    video?: string;
+    demo?: string;
 }
 
 export const projects: Project[] = [
