@@ -1,5 +1,6 @@
 'use client';
 
+import { education, international } from '@/data/about';
 import { Title } from '@/ui';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import {
@@ -9,38 +10,6 @@ import {
 } from '@material-tailwind/react';
 import { useState } from 'react';
 import { Reveal } from './Reveal';
-
-const education = [
-    {
-        from: 'August 2023',
-        to: 'December 2023',
-        title: 'NTNU - Norwegian University of Science and Technology, Gjovik',
-        description:
-            'Deep Learning for computer vision, Specialisation in colour imaging, Game programming, Flexible Automation and Artificial Intelligence',
-    },
-    {
-        from: 'September 2019',
-        to: 'July 2024',
-        title: 'Epita - School of Engineering and Computer Science, Major in Computer Vision',
-        description:
-            'Computer vision, Machine learning, Deep Learning, Image processing, GPGPU, OpenGL',
-    },
-];
-
-const international = [
-    {
-        from: 'September 2015',
-        to: 'July 2019',
-        title: 'International Lycee of London Winston Churchill',
-        description: 'High School Student, London, UK',
-    },
-    {
-        from: 'September 2007',
-        to: 'July 2011',
-        title: 'Lived in Seoul, Hong Kong and Tokyo',
-        description: 'International Student',
-    },
-];
 
 export default function About() {
     const [open, setOpen] = useState(false);

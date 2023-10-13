@@ -18,7 +18,8 @@
             "@/*": ["./*"],
             "@components/*": ["./components/*"],
             "@ui/*": ["./ui/*"],
-            "@hooks/*": ["./hooks/*"]
+            "@hooks/*": ["./hooks/*"],
+            "@data/*": ["./data/*"],
         },
         "plugins": [
             {

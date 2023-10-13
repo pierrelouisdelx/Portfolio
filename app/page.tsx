@@ -1,15 +1,12 @@
 'use client';
 
-import React from 'react';
-import { motion } from 'framer-motion';
-
-import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
 import About from '@/components/About';
-import Experience from '@/components/Experience';
-import Skills from '@/components/Skills';
-import Projects from '@/components/Projects';
 import Contacts from '@/components/Contact';
+import Experience from '@/components/Experience';
+import Hero from '@/components/Hero';
+import Navbar from '@/components/Navbar';
+import Projects from '@/components/Projects';
+import Skills from '@/components/Skills';
 
 export default function Page() {
     return (
