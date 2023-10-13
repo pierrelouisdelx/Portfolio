@@ -33,7 +33,7 @@ export const projects: Project[] = [
         name: "Brand's bike detection",
         description:
             "Detection of brand's bikes in the city of Paris for Sharelock",
-        technologies: ['Tensorflow, Python'],
+        technologies: ['Tensorflow', 'Python'],
         url: '',
         category: Categories.COMPUTERVISION,
         background: '/bike.png',

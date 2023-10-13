@@ -1,35 +1,32 @@
+import { type Project } from '@/data/projects';
 import Image from 'next/image';
 
 interface ModalProps {
-    name: string;
-    description: string;
-    technologies: string[];
-    url: string;
-    category: number;
-    background?: string;
-    video?: string;
-    demo?: string;
-    setSelectedProject: (index: any) => void;
+    project: Project;
+    setSelectedProject: (project: Project | null) => void;
     innerRef: any;
-    height: number;
 }
 
-export default function Modal(props: ModalProps) {
-    const video = props.video || props.demo || null;
+export default function Modal({
+    project,
+    setSelectedProject,
+    innerRef,
+}: ModalProps) {
+    const video = project.video ?? project.demo ?? null;
 
     return (
         <div className='fixed inset-0 z-50 flex items-center justify-center w-full h-full p-4 bg-black bg-opacity-80'>
             <div
                 className='flex flex-col justify-center w-full bg-gray-700 rounded-lg shadow md:w-auto'
-                ref={props.innerRef}
+                ref={innerRef}
             >
                 <div className='flex items-center justify-between p-4 border-b border-gray-600 rounded-t'>
                     <h3 className='text-xl font-semibold text-white max-w-[80%] text-start'>
-                        {props.name}
+                        {project.name}
                     </h3>
                     <button
                         className='text-gray-400 bg-transparent rounded-lg text-sm p-1.5 ml-auto inline-flex items-center hover:bg-gray-600 hover:text-white'
-                        onClick={() => props.setSelectedProject(null)}
+                        onClick={() => setSelectedProject(null)}
                     >
                         <svg
                             aria-hidden='true'
@@ -49,18 +46,18 @@ export default function Modal(props: ModalProps) {
                 </div>
                 <div className='flex flex-col items-center justify-center p-3'>
                     <p className='text-base leading-relaxed text-gray-400'>
-                        {props.description}
+                        {project.description}
                     </p>
                     <p className='pt-2 italic text-slate-500'>
-                        {props.technologies.join(', ')}
+                        {project.technologies.join(', ')}
                     </p>
-                    {!video && props.background && (
+                    {!video && project.background && (
                         <Image
-                            src={props.background}
-                            alt={props.name}
+                            src={project.background}
+                            alt={project.name}
                             className='p-4 rounded-lg max-h-96'
                             width={658}
-                            height={props.height * 1.7}
+                            height={project.height * 1.7}
                         />
                     )}
                     {video && (

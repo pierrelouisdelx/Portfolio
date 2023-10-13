@@ -3,23 +3,30 @@ import classNames from 'classnames';
 import Image from 'next/image';
 import { useState } from 'react';
 
-export const Card = ({ project }: { project: Project }) => {
+interface CardProps {
+    project: Project;
+    setSelectedProject: (index: any) => void;
+}
+
+export const Card = ({ project, setSelectedProject }: CardProps) => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
         <div
             className={classNames(
-                'relative text-left rounded-lg cursor-pointer md:m-2 item max-w-1/2 lg:max-w-1/3',
+                'relative text-left rounded-lg cursor-pointer md:m-2 item',
                 project.category
             )}
+            onClick={() => setSelectedProject(project)}
         >
             {project.background && (
                 <Image
                     src={project.background}
                     alt={project.name}
-                    className={`${
+                    className={classNames(
+                        'transition-all ease-in-out duration-300 rounded-lg',
                         isHovered ? 'blur-sm brightness-50' : ''
-                    } transition-all ease-in-out duration-300 rounded-lg border`}
+                    )}
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                     width={384}
@@ -51,19 +58,19 @@ export const Card = ({ project }: { project: Project }) => {
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >
-                <h3 className='pb-3 text-xl font-semibold'>{project.name}</h3>
+                <h3 className='pb-2 text-xl font-semibold'>{project.name}</h3>
                 <p>{project.description}</p>
-                <p className='pt-2 italic text-slate-500'>
-                    {project.technologies.join(', ')}
+                <p className='mt-2 flex flex-wrap'>
+                    {project.technologies.map((tech) => (
+                        <span
+                            className='bg-orange-400 px-2 py-1 rounded-lg mr-2 mb-2'
+                            key={tech}
+                        >
+                            {tech}
+                        </span>
+                    ))}
                 </p>
             </a>
         </div>
     );
-};
-
-const getGridRowEnd = (height: any) => {
-    if (height) {
-        return `span ${height}`;
-    }
-    return 'span 1';
 };
