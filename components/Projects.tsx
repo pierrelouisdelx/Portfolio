@@ -5,6 +5,7 @@ import { Card } from '@/components/Projects/Card';
 import Modal from '@/components/Projects/Modal';
 import { useOutsideClick } from '@/hooks/outsideClick';
 import { Title } from '@/ui';
+import classNames from 'classnames';
 import {
     AnimatePresence,
     animate,
@@ -72,16 +73,18 @@ export default function Projects() {
     return (
         <div className='flex flex-col w-full' id='projects'>
             <Title>Projects</Title>
-            <div className='flex flex-wrap justify-center'>
-                {cats.map((cat, index) => (
-                    <Category
-                        category={cat}
-                        key={cat}
-                        index={index - 1}
-                        setSelectedCategory={setSelectedCategory}
-                        isSelected={selectedCategory === index - 1}
-                    />
-                ))}
+            <div className='flex items-center justify-center mb-5'>
+                <div className='portfolio-filters flex items-center justify-center border border-orange-400 border-dashed rounded-full'>
+                    {cats.map((cat, index) => (
+                        <Category
+                            category={cat}
+                            key={cat}
+                            index={index - 1}
+                            setSelectedCategory={setSelectedCategory}
+                            isSelected={selectedCategory === index - 1}
+                        />
+                    ))}
+                </div>
             </div>
             <div
                 style={{ perspective: 1000 }}
@@ -105,7 +108,7 @@ export default function Projects() {
             </div>
             {selectedProject && (
                 <Modal
-                    {...selectedProject}
+                    project={selectedProject}
                     setSelectedProject={setSelectedProject}
                     innerRef={modalRef}
                 />
@@ -118,8 +121,10 @@ const Category = (props: CategoryProps) => {
     return (
         <Reveal>
             <div
-                className={`flex items-center justify-center px-2 py-1 m-2 text-white capitalize rounded-lg cursor-pointer hover:bg-orange-800
-            ${props.isSelected ? 'bg-orange-800' : 'bg-orange-400'}`}
+                className={classNames(
+                    'flex items-center justify-center px-2 py-1 text-white capitalize rounded-full cursor-pointer',
+                    props.isSelected && 'bg-orange-400'
+                )}
                 onClick={() => props.setSelectedCategory(props.index)}
             >
                 <h1 className='text-lg'>{props.category}</h1>

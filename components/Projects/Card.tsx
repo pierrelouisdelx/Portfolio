@@ -1,25 +1,14 @@
 import { Reveal } from '@/components/Reveal';
+import { Project } from '@/data/projects';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
-
-interface ProjectProps {
-    name: string;
-    description: string;
-    technologies: string[];
-    url: string;
-    category: number;
-    background?: string;
-    height: number;
-    size?: number;
-    video?: string;
-}
 
 export const Card = ({
     project,
     setSelectedProject,
 }: {
-    project: ProjectProps;
+    project: Project;
     setSelectedProject: (index: any) => void;
 }) => {
     const [isHovered, setIsHovered] = useState(false);
@@ -79,8 +68,15 @@ export const Card = ({
                             {project.name}
                         </h3>
                         <p>{project.description}</p>
-                        <p className='pt-2 italic text-slate-500'>
-                            {project.technologies.join(', ')}
+                        <p className='mt-2 flex flex-wrap'>
+                            {project.technologies.map((tech) => (
+                                <span
+                                    className='bg-orange-400 px-2 py-1 rounded-lg mr-2 mb-2'
+                                    key={tech}
+                                >
+                                    {tech}
+                                </span>
+                            ))}
                         </p>
                     </a>
                 </>

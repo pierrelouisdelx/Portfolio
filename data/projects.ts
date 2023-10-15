@@ -5,16 +5,17 @@ export enum Categories {
     VIDEOGAME = 2,
 }
 
-interface Project {
+export interface Project {
     name: string;
     description: string;
     technologies: string[];
     url: string;
-    category: Categories;
-    background: string;
-    demo?: string;
-    size?: number;
+    category: number;
+    background?: string;
     height: number;
+    size?: number;
+    video?: string;
+    demo?: string;
 }
 
 export const projects: Project[] = [
@@ -32,7 +33,7 @@ export const projects: Project[] = [
         name: "Brand's bike detection",
         description:
             "Detection of brand's bikes in the city of Paris for Sharelock",
-        technologies: ['Tensorflow, Python'],
+        technologies: ['Tensorflow', 'Python'],
         url: '',
         category: Categories.COMPUTERVISION,
         background: '/bike.png',
