@@ -14,7 +14,7 @@ export const Card = ({ project, setSelectedProject }: CardProps) => {
     return (
         <div
             className={classNames(
-                'relative text-left rounded-lg cursor-pointer md:m-2 item',
+                'relative text-left rounded-lg cursor-pointer m-2 item lg:max-w-1/3 md:max-w-1/2',
                 project.category
             )}
             onClick={() => setSelectedProject(project)}
