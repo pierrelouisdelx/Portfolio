@@ -45,7 +45,6 @@ export default function Projects() {
     }, []);
 
     useEffect(() => {
-        console.log(isotope.current);
         if (isotope.current) {
             filterKey === 'all'
                 ? isotope.current?.arrange({ filter: '*' })
@@ -74,14 +73,16 @@ export default function Projects() {
                 handleFilterKeyChange={handleFilterKeyChange}
             />
             <div className='flex items-center justify-center'>
-                <div className='flex flex-wrap relative portfolio-items lg:w-2/3 m-0 p-0'>
-                    {projects.map((project) => (
-                        <Card
-                            project={project}
-                            key={project.name}
-                            setSelectedProject={setSelectedProject}
-                        />
-                    ))}
+                <div className='w-full xl:w-2/3 flex items-center justify-center'>
+                    <div className='flex flex-wrap relative portfolio-items m-0 p-0'>
+                        {projects.map((project) => (
+                            <Card
+                                project={project}
+                                key={project.name}
+                                setSelectedProject={setSelectedProject}
+                            />
+                        ))}
+                    </div>
                 </div>
             </div>
             {selectedProject && (
