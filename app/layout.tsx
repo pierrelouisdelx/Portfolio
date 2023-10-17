@@ -1,11 +1,11 @@
+import Navbar from '@/components/Navbar';
 import { Metadata } from 'next';
-
 import './globals.css';
 
 export const metadata: Metadata = {
     title: 'Portfolio',
-    description: 'Portfolio website',
-    themeColor: '#000000',
+    description: "Pierre-Louis Delcroix's Portfolio",
+    themeColor: '#030406',
 };
 
 export default function RootLayout({
@@ -17,7 +17,10 @@ export default function RootLayout({
 }) {
     return (
         <html lang='en' className='scroll-smooth'>
-            <body>{children}</body>
+            <body className='flex flex-col'>
+                <Navbar />
+                {children}
+            </body>
         </html>
     );
 }
