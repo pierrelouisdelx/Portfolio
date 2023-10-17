@@ -19,6 +19,14 @@ module.exports = {
             listStyleType: {
                 'disclosure-closed': 'disclosure-closed',
             },
+            colors: {
+                black: {
+                    '1': '#1a191d'
+                },
+                grey: {
+                    '1': '#030406'
+                }
+            }
         },
     },
     plugins: [

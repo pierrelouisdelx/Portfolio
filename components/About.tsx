@@ -5,7 +5,7 @@ import { Reveal } from './Reveal';
 export default function About() {
     return (
         <div
-            className='flex flex-col w-full text-left snap-center bg-[#1a191d]'
+            className='flex flex-col w-full text-left snap-center bg-black-1'
             id='about'
         >
             <Title>About</Title>

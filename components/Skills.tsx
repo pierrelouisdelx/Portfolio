@@ -4,7 +4,7 @@ import { Title } from '@/ui';
 
 export default function Skills() {
     return (
-        <div className='flex flex-col w-full bg-[#1a191d]' id='skills'>
+        <div className='flex flex-col w-full bg-black-1' id='skills'>
             <Title>Skills</Title>
             <div className='flex flex-row flex-wrap'>
                 {skills.map((skill) => (

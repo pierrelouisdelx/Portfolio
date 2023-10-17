@@ -28,7 +28,7 @@ export default function Modal({
                     ref={innerRef}
                 >
                     <div className='flex items-center justify-between p-4 border-b border-gray-600 rounded-t'>
-                        <h3 className='text-xl font-semibold text-white max-w-[80%] text-start'>
+                        <h3 className='text-xl font-semibold text-white max-w-3/4 text-start'>
                             {project.name}
                         </h3>
                         <button

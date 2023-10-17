@@ -38,7 +38,7 @@ export default function Navbar() {
     };
 
     return (
-        <nav className='bg-white dark:bg-[#030406] w-full fixed z-30'>
+        <nav className='bg-white dark:bg-grey-1 w-full fixed z-30'>
             <div className='flex flex-wrap items-center justify-between w-full max-w-screen-xl p-4 mx-auto md:flex-row-reverse'>
                 <div className='flex items-center justify-between w-full md:w-auto'>
                     <button
