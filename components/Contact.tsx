@@ -82,7 +82,7 @@ export default function Contacts() {
                     <Reveal>
                         <div className='flex flex-wrap justify-between md:flex-row'>
                             <input
-                                className='w-full p-2 m-2 text-black border rounded-lg md:max-w-1/2'
+                                className='w-full p-2 m-2 text-black border rounded-lg md:max-w-1/2 text-slate-800'
                                 placeholder='Full Name'
                                 onChange={(e) => setName(e.target.value)}
                                 value={name}
@@ -90,7 +90,7 @@ export default function Contacts() {
                                 required
                             />
                             <input
-                                className='w-full p-2 m-2 text-black border rounded-lg md:max-w-1/2'
+                                className='w-full p-2 m-2 text-black border rounded-lg md:max-w-1/2 text-slate-800'
                                 placeholder='Email'
                                 onChange={(e) => setEmail(e.target.value)}
                                 value={email}
@@ -102,7 +102,7 @@ export default function Contacts() {
                     <Reveal>
                         <div className='flex'>
                             <textarea
-                                className='w-full p-2 m-2 text-black border rounded-lg'
+                                className='w-full p-2 m-2 text-black border rounded-lg text-slate-800'
                                 placeholder='Message'
                                 rows={5}
                                 onChange={(e) => setMessage(e.target.value)}
@@ -121,7 +121,7 @@ export default function Contacts() {
                     </Reveal>
                     <Reveal>
                         <div className='flex justify-center'>
-                            <button className='w-1/2 p-2 m-2 text-orange-400 border border-orange-400 rounded-lg cursor-pointer hover:bg-orange-400 hover:text-white'>
+                            <button className='w-1/2 p-2 m-2 text-primary border border-primary rounded-lg cursor-pointer hover:bg-primary hover:text-white'>
                                 Send
                             </button>
                         </div>

@@ -20,6 +20,9 @@ module.exports = {
                 'disclosure-closed': 'disclosure-closed',
             },
             colors: {
+                primary: {
+                    DEFAULT: '#fb923c',
+                },
                 black: {
                     '1': '#1a191d'
                 },
