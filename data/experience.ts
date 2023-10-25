@@ -16,7 +16,7 @@ export const workexperiences: WorkExperience[] = [
         position: 'Software Engineer',
         location: 'London, UK',
         date: '09/2022 - 01/2023',
-        icon: '/logos/onecommerce.png',
+        icon: '/logos/onecommerce.webp',
         description: `<ul class="list-disclosure-closed px-4">
         <li>Reduced test suite runtime by 80% through parallelization</li>
         <li>Developed a tool extracting geolocation from inaccurate addresses in MENA with 60%+ accuracy</li>
@@ -30,7 +30,7 @@ export const workexperiences: WorkExperience[] = [
         position: 'Fullstack Developer',
         location: 'Worldwide',
         date: '09/2021 - Present',
-        icon: '/logos/malt.png',
+        icon: '/logos/malt.webp',
         description:
             'Currently working as a freelance in parallel of my studies on malt.fr for french companies and upwork.com for international companies.',
     },

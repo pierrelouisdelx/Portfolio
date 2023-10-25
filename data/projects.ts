@@ -26,7 +26,7 @@ export const projects: Project[] = [
         technologies: ['Python', 'CUDA'],
         url: '',
         category: Categories.COMPUTERVISION,
-        background: '/lidar.png',
+        background: '/lidar.webp',
         height: 217,
     },
     {
@@ -36,7 +36,7 @@ export const projects: Project[] = [
         technologies: ['Tensorflow', 'Python'],
         url: '',
         category: Categories.COMPUTERVISION,
-        background: '/bike.png',
+        background: '/bike.webp',
         height: 217,
     },
     {
@@ -46,7 +46,7 @@ export const projects: Project[] = [
         url: '',
         category: Categories.COMPUTERVISION,
         demo: 'https://cdn.orbs.cloud/gottagohack.mp4',
-        background: '/gottagohack.png',
+        background: '/gottagohack.webp',
         height: 217,
     },
     {
@@ -62,7 +62,7 @@ export const projects: Project[] = [
         ],
         url: '',
         category: Categories.COMPUTERVISION,
-        background: '/drone.png',
+        background: '/drone.webp',
         height: 217,
     },
     {
@@ -72,7 +72,7 @@ export const projects: Project[] = [
         technologies: ['Python', 'Sklearn', 'SeaBorn', 'Pandas', 'Numpy'],
         url: '',
         category: Categories.COMPUTERVISION,
-        background: '/hyperspectral.png',
+        background: '/hyperspectral.webp',
         height: 217,
     },
     {
@@ -81,7 +81,7 @@ export const projects: Project[] = [
         technologies: ['C#', 'Unity'],
         url: '',
         category: Categories.VIDEOGAME,
-        background: '/schoolrunner.png',
+        background: '/schoolrunner.webp',
         demo: 'https://cdn.orbs.cloud/SchoolRunner.mp4',
         size: 3,
         height: 217,
@@ -93,7 +93,7 @@ export const projects: Project[] = [
         technologies: ['CUDA', 'C++'],
         url: '',
         category: Categories.COMPUTERVISION,
-        background: '/cuda.png',
+        background: '/cuda.webp',
         height: 217,
     },
     {
@@ -102,7 +102,7 @@ export const projects: Project[] = [
         technologies: ['C#', 'Unity'],
         url: '',
         category: Categories.VIDEOGAME,
-        background: '/skycrane.png',
+        background: '/skycrane.webp',
         height: 217,
     },
     {
@@ -111,7 +111,7 @@ export const projects: Project[] = [
         technologies: ['OpenGL', 'C++'],
         url: '',
         category: Categories.SOFTWARE,
-        background: '/fluid.png',
+        background: '/fluid.webp',
         demo: 'https://cdn.orbs.cloud/fluid_75k.mp4',
         height: 217,
     },
@@ -121,7 +121,7 @@ export const projects: Project[] = [
         technologies: ['C++', 'Unreal Engine'],
         url: '',
         category: Categories.VIDEOGAME,
-        background: '/terranoise.png',
+        background: '/terranoise.webp',
         height: 217,
     },
     {
@@ -130,7 +130,7 @@ export const projects: Project[] = [
         technologies: ['NextJS', 'React', 'THREE.js', 'NodeJS', 'Socket.io'],
         url: '',
         category: Categories.VIDEOGAME,
-        background: '/balls.png',
+        background: '/balls.webp',
         height: 217,
     },
     {
@@ -140,7 +140,7 @@ export const projects: Project[] = [
         technologies: ['Tensorflow', 'Python', 'OpenCV'],
         url: '',
         category: Categories.COMPUTERVISION,
-        background: '/avalanche.png',
+        background: '/avalanche.webp',
         height: 217,
     },
     {

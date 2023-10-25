@@ -74,14 +74,14 @@ const FallbackImage = () => {
     return (
         <div className='flex justify-center items-center inset-0 bg-grey-1 fixed -z-10'>
             <Image
-                src='/mushrooms.png'
+                src='/mushrooms.webp'
                 className='w-3/4 h-auto md:w-2/3'
                 loading='lazy'
                 fetchPriority='high'
                 width={1275}
                 height={1050}
                 alt='Mushrooms'
-                blurDataURL='/mushrooms.png'
+                blurDataURL='/mushrooms.webp'
                 placeholder='blur'
             />
         </div>

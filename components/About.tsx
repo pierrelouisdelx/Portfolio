@@ -15,7 +15,7 @@ export default function About() {
                     <video
                         controls
                         className='w-full max-w-3xl rounded-2xl'
-                        poster='/poster.jpg'
+                        poster='/poster.webp'
                         preload='none'
                     >
                         <source

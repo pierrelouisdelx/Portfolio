@@ -23,11 +23,11 @@ export const Links = [
 
 export const socials = [
     {
-        image: '/linkedin.png',
+        image: '/linkedin.webp',
         link: 'https://www.linkedin.com/in/pierre-louis-delcroix',
     },
     {
-        image: '/github.png',
+        image: '/github.webp',
         link: 'https://github.com/pierrelouisdelx',
     },
 ];
