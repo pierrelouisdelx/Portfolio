@@ -81,11 +81,11 @@ export default function Page() {
 
     return (
         <>
-            <div className='z-50 pointer-events-none fixed' ref={mainCursor}>
+            <div className='z-100 pointer-events-none fixed' ref={mainCursor}>
                 <div className='w-2 h-2 rounded-full bg-primary'></div>
             </div>
             <div
-                className='w-12 h-12 z-50 pointer-events-none fixed transition-opacity duration-[1s] ease-[cubic-bezier(0.77,0,0.175,1)] animate-[fadeIn_1s_cubic-bezier(0.77,0,0.175,1)_0s_forwards]'
+                className='w-12 h-12 z-100 pointer-events-none fixed transition-opacity duration-[1s] ease-[cubic-bezier(0.77,0,0.175,1)] animate-[fadeIn_1s_cubic-bezier(0.77,0,0.175,1)_0s_forwards]'
                 ref={secondaryCursor}
             >
                 <div className='w-full h-full rounded-full border border-primary relative'></div>

@@ -2,7 +2,6 @@ import { Reveal } from '@/components/Reveal';
 import { Project } from '@/data/projects';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { useState } from 'react';
 
 export const Card = ({
     project,
@@ -11,8 +10,6 @@ export const Card = ({
     project: Project;
     setSelectedProject: (index: any) => void;
 }) => {
-    const [isHovered, setIsHovered] = useState(false);
-
     return (
         <motion.div
             layout
@@ -25,16 +22,12 @@ export const Card = ({
             onClick={() => setSelectedProject(project)}
         >
             <Reveal>
-                <>
+                <div className='group'>
                     {project.background && (
                         <Image
                             src={project.background}
                             alt={project.name}
-                            className={`${
-                                isHovered ? 'blur-sm brightness-50' : ''
-                            } transition-all ease-in-out duration-300 rounded-lg border`}
-                            onMouseEnter={() => setIsHovered(true)}
-                            onMouseLeave={() => setIsHovered(false)}
+                            className='group-hover:blur-sm group-hover:brightness-50 transition-all ease-in-out duration-300 rounded-lg border'
                             width={384}
                             height={project.height}
                             loading='lazy'
@@ -48,22 +41,12 @@ export const Card = ({
                             loop
                             muted
                             playsInline
-                            className={`${
-                                isHovered ? 'blur-sm brightness-50' : ''
-                            } transition-all ease-in-out duration-300 rounded-lg border`}
-                            onMouseEnter={() => setIsHovered(true)}
-                            onMouseLeave={() => setIsHovered(false)}
+                            className='group-hover:blur-sm group-hover:brightness-50 transition-all ease-in-out duration-300 rounded-lg border'
                         >
                             <source src={project.video} type='video/mp4' />
                         </video>
                     )}
-                    <a
-                        className={`w-full h-full ${
-                            isHovered ? 'opacity-100' : 'opacity-0'
-                        } transition-all ease-in-out duration-300 absolute z-10 p-5 top-0`}
-                        onMouseEnter={() => setIsHovered(true)}
-                        onMouseLeave={() => setIsHovered(false)}
-                    >
+                    <a className='w-full h-full group-hover:opacity-100 opacity-0 transition-all ease-in-out duration-300 absolute z-10 p-5 top-0'>
                         <h3 className='pb-3 text-xl font-semibold'>
                             {project.name}
                         </h3>
@@ -79,7 +62,7 @@ export const Card = ({
                             ))}
                         </p>
                     </a>
-                </>
+                </div>
             </Reveal>
         </motion.div>
     );
