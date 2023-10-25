@@ -159,7 +159,7 @@ export const freelanceexperiences: FreelanceExperience[] = [
         icon: 'https://d1hbpr09pwz0sk.cloudfront.net/logo_url/legaware-db493ab3',
         description: `
         <ul class="list-disclosure-closed px-4">
-        <li>Contributed to the UI development of <a href='https://infogreffe.mesobligations.fr/' target='_blank' class='text-orange-400'>https://infogreffe.mesobligations.fr/</a></li>
+        <li>Contributed to the UI development of <a href='https://infogreffe.mesobligations.fr/' target='_blank' class='text-primary'>https://infogreffe.mesobligations.fr/</a></li>
         <li>Developed from scratch a platform that has hundreds of users per day</li>
         <li>Currenly working on a new platform for entrepreneurs</li>
         </ul>

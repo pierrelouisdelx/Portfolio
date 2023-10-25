@@ -69,9 +69,9 @@ interface TimelineProps {
 const Timeline = (props: TimelineProps) => {
     return (
         <Reveal>
-            <ol className='relative border-l border-orange-400'>
+            <ol className='relative border-l border-primary'>
                 <li className='ml-4'>
-                    <div className='absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-orange-500 bg-orange-400'></div>
+                    <div className='absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-orange-500 bg-primary'></div>
                     <time className='mb-1 text-sm font-normal leading-none text-gray-400'>
                         {props.to}
                     </time>
@@ -81,7 +81,7 @@ const Timeline = (props: TimelineProps) => {
                     <p className='text-base italic font-normal text-gray-200'>
                         {props.description}
                     </p>
-                    <div className='absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-orange-500 bg-orange-400'></div>
+                    <div className='absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-orange-500 bg-primary'></div>
                     <time className='text-sm font-normal leading-none text-gray-400'>
                         {props.from}
                     </time>

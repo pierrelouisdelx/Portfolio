@@ -1,6 +1,6 @@
-import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
+import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 
 interface ExperienceCardProps {
     company: string;
@@ -39,7 +39,7 @@ export default function ExperienceCard(props: ExperienceCardProps) {
                 </h3>
                 {props.link ? (
                     <a href={props.link} target='_blank' rel='noreferrer'>
-                        <ArrowTopRightOnSquareIcon className='w-6 h-6 pb-1 ml-2 text-orange-400 cursor-pointer' />
+                        <ArrowTopRightOnSquareIcon className='w-6 h-6 pb-1 ml-2 text-primary cursor-pointer' />
                     </a>
                 ) : null}
             </div>

@@ -6,11 +6,9 @@ import { useEffect, useRef } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 
 const animationSequence = [
-    'Software Engineer',
-    1000,
     'Computer Vision Engineer',
     1000,
-    'Web Developper Freelance',
+    'Software Engineer Freelance',
     1000,
 ];
 
@@ -55,7 +53,7 @@ export default function Hero() {
             </h1>
             <div className='flex flex-col items-center md:flex-row'>
                 <h5 className='text-xl tracking-wide uppercase'>I&apos;m a</h5>
-                <h5 className='ml-2 text-xl leading-10 tracking-wide underline uppercase underline-offset-8 decoration-orange-400 decoration-4'>
+                <h5 className='ml-2 text-xl leading-10 tracking-wide underline uppercase underline-offset-8 decoration-primary decoration-4'>
                     <TypeAnimation
                         sequence={animationSequence}
                         wrapper='span'
@@ -66,7 +64,7 @@ export default function Hero() {
             </div>
 
             <a className='flex flex-row mt-20 cursor-pointer p-5' href='#about'>
-                <ArrowDownIcon className='w-10 h-10 mt-10 text-orange-400 animate-bounce-slow' />
+                <ArrowDownIcon className='w-10 h-10 mt-10 text-primary animate-bounce-slow' />
             </a>
         </div>
     );

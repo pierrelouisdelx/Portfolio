@@ -74,7 +74,7 @@ export default function Projects() {
         <div className='flex flex-col w-full' id='projects'>
             <Title>Projects</Title>
             <div className='flex items-center justify-center mb-5'>
-                <div className='portfolio-filters flex items-center justify-center border border-orange-400 border-dashed rounded-full'>
+                <div className='portfolio-filters flex items-center justify-center border border-primary border-dashed rounded-full'>
                     {cats.map((cat, index) => (
                         <Category
                             category={cat}
@@ -123,7 +123,7 @@ const Category = (props: CategoryProps) => {
             <div
                 className={classNames(
                     'flex items-center justify-center px-2 py-1 text-white capitalize rounded-full cursor-pointer',
-                    props.isSelected && 'bg-orange-400'
+                    props.isSelected && 'bg-primary'
                 )}
                 onClick={() => props.setSelectedCategory(props.index)}
             >

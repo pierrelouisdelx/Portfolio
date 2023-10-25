@@ -71,7 +71,7 @@ export const Card = ({
                         <p className='mt-2 flex flex-wrap'>
                             {project.technologies.map((tech) => (
                                 <span
-                                    className='bg-orange-400 px-2 py-1 rounded-lg mr-2 mb-2'
+                                    className='bg-primary px-2 py-1 rounded-lg mr-2 mb-2'
                                     key={tech}
                                 >
                                     {tech}

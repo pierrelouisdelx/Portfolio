@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang='en' className='scroll-smooth'>
-            <body className='flex flex-col'>
+            <body className='flex flex-col cursor-none'>
                 <Navbar />
                 {children}
             </body>

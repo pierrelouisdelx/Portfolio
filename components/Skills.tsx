@@ -1,5 +1,5 @@
 import { Reveal } from '@/components/Reveal';
-import skills, { Skill, SkillCategory } from '@/data/skills';
+import skills, { SkillCategory, Skill as SkillProps } from '@/data/skills';
 import { Title } from '@/ui';
 
 export default function Skills() {
@@ -38,7 +38,7 @@ const CategorySkills = (props: SkillCategory) => {
     );
 };
 
-const Skill = (props: Skill) => {
+const Skill = (props: SkillProps) => {
     return (
         <div className='flex flex-col w-full p-2 text-left'>
             <h1 className='text-lg'>{props.name}</h1>
@@ -52,7 +52,7 @@ const ProgressBar = ({ p }: { p: number }) => {
         <div className='w-full h-1 bg-gray-300 rounded-md'>
             <div
                 style={{ width: `${p}%` }}
-                className='h-1 bg-orange-400 rounded-md'
+                className='h-1 bg-primary rounded-md'
             ></div>
         </div>
     );
