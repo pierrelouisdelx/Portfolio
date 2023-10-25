@@ -26,7 +26,7 @@ export const projects: Project[] = [
         technologies: ['Python', 'CUDA'],
         url: '',
         category: Categories.COMPUTERVISION,
-        background: '/autonomous.png',
+        background: '/lidar.png',
         height: 217,
     },
     {
