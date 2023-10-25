@@ -8,6 +8,7 @@ import Projects from '@/components/Projects';
 import Skills from '@/components/Skills';
 
 import { useEffect, useRef } from 'react';
+import { BrowserView, isBrowser } from 'react-device-detect';
 
 export default function Page() {
     const mainCursor = useRef<null | HTMLDivElement>(null);
@@ -22,26 +23,34 @@ export default function Page() {
         key: -1,
     });
 
+    const onMouseMove = (event: any) => {
+        const { clientX, clientY } = event;
+
+        const mouseX = clientX;
+        const mouseY = clientY;
+
+        if (secondaryCursor.current && mainCursor.current) {
+            positionRef.current.mouseX =
+                mouseX - secondaryCursor.current.clientWidth / 2;
+            positionRef.current.mouseY =
+                mouseY - secondaryCursor.current.clientHeight / 2;
+            mainCursor.current.style.transform = `translate3d(${
+                mouseX - mainCursor.current.clientWidth / 2
+            }px, ${mouseY - mainCursor.current.clientHeight / 2}px, 0)`;
+        }
+    };
+
     useEffect(() => {
         document.addEventListener('mousemove', (event) => {
-            const { clientX, clientY } = event;
-
-            const mouseX = clientX;
-            const mouseY = clientY;
-
-            if (secondaryCursor.current && mainCursor.current) {
-                positionRef.current.mouseX =
-                    mouseX - secondaryCursor.current.clientWidth / 2;
-                positionRef.current.mouseY =
-                    mouseY - secondaryCursor.current.clientHeight / 2;
-                mainCursor.current.style.transform = `translate3d(${
-                    mouseX - mainCursor.current.clientWidth / 2
-                }px, ${mouseY - mainCursor.current.clientHeight / 2}px, 0)`;
-            }
+            onMouseMove(event);
         });
 
-        return () => {};
-    }, []);
+        return () => {
+            document.removeEventListener('mousemove', (event) => {
+                onMouseMove(event);
+            });
+        };
+    }, [isBrowser]);
 
     useEffect(() => {
         const followMouse = () => {
@@ -76,20 +85,26 @@ export default function Page() {
             if (secondaryCursor.current)
                 secondaryCursor.current.style.transform = `translate3d(${destinationX}px, ${destinationY}px, 0)`;
         };
-        followMouse();
-    }, []);
+
+        if (isBrowser) followMouse();
+    }, [isBrowser]);
 
     return (
         <>
-            <div className='z-100 pointer-events-none fixed' ref={mainCursor}>
-                <div className='w-2 h-2 rounded-full bg-primary'></div>
-            </div>
-            <div
-                className='w-12 h-12 z-100 pointer-events-none fixed transition-opacity duration-[1s] ease-[cubic-bezier(0.77,0,0.175,1)] animate-[fadeIn_1s_cubic-bezier(0.77,0,0.175,1)_0s_forwards]'
-                ref={secondaryCursor}
-            >
-                <div className='w-full h-full rounded-full border border-primary relative'></div>
-            </div>
+            <BrowserView>
+                <div
+                    className='z-100 pointer-events-none fixed'
+                    ref={mainCursor}
+                >
+                    <div className='w-2 h-2 rounded-full bg-primary'></div>
+                </div>
+                <div
+                    className='w-12 h-12 z-100 pointer-events-none fixed transition-opacity duration-[1s] ease-[cubic-bezier(0.77,0,0.175,1)] animate-[fadeIn_1s_cubic-bezier(0.77,0,0.175,1)_0s_forwards]'
+                    ref={secondaryCursor}
+                >
+                    <div className='w-full h-full rounded-full border border-primary relative'></div>
+                </div>
+            </BrowserView>
             <main className='text-center text-white child:px-5 md:child:px-20 child:py-20 child:min-h-screen'>
                 <Hero />
                 <About />
