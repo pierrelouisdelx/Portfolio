@@ -121,8 +121,11 @@ export default function Contacts() {
                     </Reveal>
                     <Reveal>
                         <div className='flex justify-center'>
-                            <button className='w-1/2 p-2 m-2 text-primary border border-primary rounded-lg cursor-pointer hover:bg-primary hover:text-white'>
-                                Send
+                            <button className='w-1/2 p-2 m-2 relative inline-flex items-center justify-center text-primary border border-primary rounded-lg transition-all group'>
+                                <span className='w-0 h-0 rounded bg-primary absolute top-0 left-0 ease-out duration-500 transition-all group-hover:w-full group-hover:h-full -z-1'></span>
+                                <span className='w-full text-black transition-colors duration-300 ease-in-out group-hover:text-white z-10'>
+                                    Send
+                                </span>
                             </button>
                         </div>
                     </Reveal>
