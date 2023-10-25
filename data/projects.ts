@@ -150,7 +150,7 @@ export const projects: Project[] = [
         technologies: ['Blender', 'Skybrush'],
         url: '',
         category: Categories.SOFTWARE,
-        background: '/OlympicGames.jpg',
+        background: '/OlympicGames.webp',
         demo: 'https://cdn.orbs.cloud/OlympicGames.mp4',
         height: 217,
     },
