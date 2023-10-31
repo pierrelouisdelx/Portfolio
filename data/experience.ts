@@ -76,7 +76,7 @@ export const freelanceexperiences: FreelanceExperience[] = [
     },
     {
         company: 'IROC',
-        link: 'https://iroc.app',
+        link: 'https://www.iroc.app',
         location: 'Paris, France',
         position: 'Fullstack Developer',
         date: '04/2023 - 06/2023',
@@ -93,7 +93,7 @@ export const freelanceexperiences: FreelanceExperience[] = [
         location: 'London, UK',
         position: 'Fullstack Developer - CTO',
         date: '03/2023',
-        icon: 'https://uploads-ssl.webflow.com/6448183e496bc3264491c91a/646ca8ebece104b428536f80_OG%20Favicon%20s.png',
+        icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAilBMVEVCNCE8MCA3LSAvJx4pIx0mIRwgHhweHBscGxsYGBo0KiAaGRs0Kx9ZWFiLi4xzc3QkJCZqVDaKa0FGOSpRUVP////FxcbmrWD8vWingEs1NTfPz9D29vbus2O6jlLBwcFPQCzNm1jDlFU/NCh1WzleSzJ9fX7v7+/d3d0hISOurq+4uLnZ2dlMTE5XL6TZAAABBElEQVR4AczPVaKDMBRF0eIcXOJ19/lP7yWh7p9vt+hdWK/nuJ4fhFGM1+l5okEUp29B5nlB+AEk3vsnWHCax0jfAD/Q8ygvbGUFXVg3TXsBeh5GhJ5iAFoudNI/AX15FBeUKFN/ACR82CStFKMT0I+P04IqmMYaSDEBThsD4jRNcQv4FKaJaDoAPb8HM5jmF2C6BbNhAN1C1G/AUkw98wSe3oAVZbb1BkAjhrOp4C1uwHa3tm0IdPWMc5ngFrzvV1CNB7ZNDpBNt7+vbkBJ+2OTecnDemyjqzefuWYwKVr8O0CUiRlwsLvkDhB6ag/s6an8BuBY2FZboCq7ffI3suOC/goAUH00pJUyDrYAAAAASUVORK5CYII=',
         description: `
         <ul class="list-disclosure-closed px-4">
         <li>Managed of team of 4 developers based in Pakistan to develop a web application from scratch</li>
@@ -147,7 +147,7 @@ export const freelanceexperiences: FreelanceExperience[] = [
         location: 'Paris, France',
         position: 'Fullstack Developer',
         date: '10/2021',
-        icon: '/logos/harmonypromotion.png',
+        icon: '/logos/harmonypromotion.webp',
         description: 'Added fonctionalities to an admin panel',
     },
     {

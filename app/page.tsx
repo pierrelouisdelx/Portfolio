@@ -8,7 +8,6 @@ import Projects from '@/components/Projects';
 import Skills from '@/components/Skills';
 
 import { useEffect, useRef } from 'react';
-import { BrowserView, isBrowser } from 'react-device-detect';
 
 export default function Page() {
     const mainCursor = useRef<null | HTMLDivElement>(null);
@@ -50,7 +49,7 @@ export default function Page() {
                 onMouseMove(event);
             });
         };
-    }, [isBrowser]);
+    }, []);
 
     useEffect(() => {
         const followMouse = () => {
@@ -86,25 +85,23 @@ export default function Page() {
                 secondaryCursor.current.style.transform = `translate3d(${destinationX}px, ${destinationY}px, 0)`;
         };
 
-        if (isBrowser) followMouse();
-    }, [isBrowser]);
+        followMouse();
+    }, []);
 
     return (
         <>
-            <BrowserView>
-                <div
-                    className='z-100 pointer-events-none fixed'
-                    ref={mainCursor}
-                >
-                    <div className='w-2 h-2 rounded-full bg-primary'></div>
-                </div>
-                <div
-                    className='w-12 h-12 z-100 pointer-events-none fixed transition-opacity duration-[1s] ease-[cubic-bezier(0.77,0,0.175,1)] animate-[fadeIn_1s_cubic-bezier(0.77,0,0.175,1)_0s_forwards]'
-                    ref={secondaryCursor}
-                >
-                    <div className='w-full h-full rounded-full border border-primary relative'></div>
-                </div>
-            </BrowserView>
+            <div
+                className='z-100 pointer-events-none fixed hidden md:flex'
+                ref={mainCursor}
+            >
+                <div className='w-2 h-2 rounded-full bg-primary'></div>
+            </div>
+            <div
+                className='w-12 h-12 z-100 pointer-events-none fixed hidden md:flex transition-opacity duration-[1s] ease-[cubic-bezier(0.77,0,0.175,1)] animate-[fadeIn_1s_cubic-bezier(0.77,0,0.175,1)_0s_forwards]'
+                ref={secondaryCursor}
+            >
+                <div className='w-full h-full rounded-full border border-primary relative'></div>
+            </div>
             <main className='text-center text-white child:px-5 md:child:px-20 child:py-20 child:min-h-screen'>
                 <Hero />
                 <About />
