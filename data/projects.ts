@@ -40,6 +40,16 @@ export const projects: Project[] = [
         height: 217,
     },
     {
+        name: 'Brain tumor detection',
+        description:
+            'Following the development of a tumor in a brain with a longitudinal study',
+        technologies: ['VTK', 'ITK', 'Python'],
+        url: '',
+        category: Categories.COMPUTERVISION,
+        background: '/brain.webp',
+        height: 217,
+    },
+    {
         name: 'Finalist of GottaGoHack Hackathon 2022',
         description: 'Dating app in the metaverse',
         technologies: ['C#', 'Unity', 'Mediapipe'],
