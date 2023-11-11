@@ -12,7 +12,6 @@ export const metadata: Metadata = {
         'Computer Vision Engineer',
         'Deep Learning Engineer',
     ],
-    colorScheme: 'dark',
 };
 
 export default function RootLayout({
