@@ -5,7 +5,14 @@ import './globals.css';
 export const metadata: Metadata = {
     title: 'Portfolio',
     description: "Pierre-Louis Delcroix's Portfolio",
-    themeColor: '#030406',
+    applicationName: "Pierre-Louis Delcroix's Portfolio",
+    authors: [{ name: 'Pierre-Louis Delcroix' }],
+    keywords: [
+        "Pierre-Louis Delcroix's Portfolio",
+        'Computer Vision Engineer',
+        'Deep Learning Engineer',
+    ],
+    colorScheme: 'dark',
 };
 
 export default function RootLayout({

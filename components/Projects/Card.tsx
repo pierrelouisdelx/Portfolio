@@ -46,7 +46,7 @@ export const Card = ({
                             <source src={project.video} type='video/mp4' />
                         </video>
                     )}
-                    <a className='w-full h-full group-hover:opacity-100 opacity-0 transition-all ease-in-out duration-300 absolute z-10 p-5 top-0'>
+                    <div className='w-full h-full group-hover:opacity-100 opacity-0 transition-all ease-in-out duration-300 absolute z-10 p-5 top-0'>
                         <h3 className='pb-3 text-xl font-semibold'>
                             {project.name}
                         </h3>
@@ -61,7 +61,7 @@ export const Card = ({
                                 </span>
                             ))}
                         </p>
-                    </a>
+                    </div>
                 </div>
             </Reveal>
         </motion.div>
