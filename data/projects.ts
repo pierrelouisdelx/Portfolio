@@ -20,6 +20,16 @@ export interface Project {
 
 export const projects: Project[] = [
     {
+        name: 'Research - Methane plume detection',
+        description:
+            'Research on Methane Plume Detection in Hyperspectral Images using Deep Learning',
+        technologies: ['Python', 'Pytorch', 'CUDA'],
+        url: '',
+        category: Categories.COMPUTERVISION,
+        background: 'https://cdn.orbs.cloud/methane.webp',
+        height: 217,
+    },
+    {
         name: 'Research - Point Cloud Classification',
         description:
             'Research on Autonomous Driving Pre-Training with Large-scale Point Cloud Dataset',

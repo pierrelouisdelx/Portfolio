@@ -13,6 +13,7 @@ const nextConfig = {
             'www.harmony-promotion.com',
             'd1hbpr09pwz0sk.cloudfront.net',
             'www.psychologies.com',
+            'cdn.orbs.cloud'
         ],
     },
     typescript: {
