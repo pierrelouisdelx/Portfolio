@@ -1,4 +1,5 @@
 import Navbar from '@/components/Navbar';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata } from 'next';
 import './globals.css';
 
@@ -26,6 +27,7 @@ export default function RootLayout({
             <body className='flex flex-col cursor-none'>
                 <Navbar />
                 {children}
+                <SpeedInsights />
             </body>
         </html>
     );
