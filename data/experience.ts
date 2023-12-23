@@ -20,7 +20,7 @@ export const workexperiences: WorkExperience[] = [
         description: `<ul class="list-disclosure-closed px-4">
         <li>Reduced test suite runtime by 80% through parallelization</li>
         <li>Developed a tool extracting geolocation from inaccurate addresses in MENA with 60%+ accuracy</li>
-        <li>Developed a business-oriented web application from scratch for managing Shopify's discount codes</li.
+        <li>Developed a business-oriented web application from scratch for managing Shopify's discount codes</li>
         </ul>`,
         skills: 'https://skillicons.dev/icons?i=ts,nodejs,express,react,nextjs,tailwind,python,mongodb,gcp,githubactions,docker',
     },
