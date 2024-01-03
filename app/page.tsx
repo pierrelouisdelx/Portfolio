@@ -11,6 +11,7 @@ import { useEffect, useRef } from 'react';
 
 export default function Page() {
     const mainCursor = useRef<null | HTMLDivElement>(null);
+    const mainCursorCircle = useRef<null | HTMLDivElement>(null);
     const secondaryCursor = useRef<null | HTMLDivElement>(null);
     const positionRef = useRef({
         mouseX: 0,
@@ -39,14 +40,45 @@ export default function Page() {
         }
     };
 
+    const onMouseOver = () => {
+        if (mainCursorCircle.current) {
+            mainCursorCircle.current.style.width = '32px';
+            mainCursorCircle.current.style.height = '32px';
+            mainCursorCircle.current.style.backdropFilter = 'invert(100)';
+            mainCursorCircle.current.style.backgroundColor = 'transparent';
+        }
+    };
+
+    const onMouseOut = () => {
+        if (mainCursorCircle.current) {
+            mainCursorCircle.current.style.width = '12px';
+            mainCursorCircle.current.style.height = '12px';
+            mainCursorCircle.current.style.backdropFilter = 'invert(0)';
+            mainCursorCircle.current.style.backgroundColor = '#fb923c';
+        }
+    };
+
     useEffect(() => {
         document.addEventListener('mousemove', (event) => {
             onMouseMove(event);
         });
 
+        const cursorPointerElements =
+            document.querySelectorAll('.cursor-pointer');
+
+        cursorPointerElements.forEach((element) => {
+            element.addEventListener('mouseover', onMouseOver);
+            element.addEventListener('mouseout', onMouseOut);
+        });
+
         return () => {
             document.removeEventListener('mousemove', (event) => {
                 onMouseMove(event);
+            });
+
+            cursorPointerElements.forEach((element) => {
+                element.removeEventListener('mouseover', onMouseOver);
+                element.removeEventListener('mouseout', onMouseOut);
             });
         };
     }, []);
@@ -94,7 +126,10 @@ export default function Page() {
                 className='z-100 pointer-events-none fixed hidden md:flex'
                 ref={mainCursor}
             >
-                <div className='w-2 h-2 rounded-full bg-primary'></div>
+                <div
+                    className='w-2 h-2 rounded-full bg-primary transition-all duration-200 ease-in-out'
+                    ref={mainCursorCircle}
+                ></div>
             </div>
             <div
                 className='w-12 h-12 z-100 pointer-events-none fixed hidden md:flex transition-opacity duration-[1s] ease-[cubic-bezier(0.77,0,0.175,1)] animate-[fadeIn_1s_cubic-bezier(0.77,0,0.175,1)_0s_forwards]'

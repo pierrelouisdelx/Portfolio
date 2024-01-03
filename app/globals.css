@@ -4,6 +4,7 @@
 
 * {
     font-family: 'Popins', sans-serif;
+    cursor: none !important;
 }
 
 ::selection {
