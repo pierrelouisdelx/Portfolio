@@ -2,7 +2,7 @@
 
 import { ArrowDownIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 
 const animationSequence = [
@@ -17,26 +17,6 @@ export default function Hero() {
 
     function onLoad(spline: any) {
         obj.current = spline.findObjectByName('Mushrooms');
-    }
-
-    useEffect(() => {
-        window.addEventListener('mousemove', animateMushrooms);
-        return () => {
-            window.removeEventListener('mousemove', animateMushrooms);
-        };
-    }, []);
-
-    function animateMushrooms(event: MouseEvent) {
-        if (!obj.current) return;
-
-        const mouseX = event.clientX;
-        const mouseY = event.clientY;
-
-        const x = mouseX / window.innerWidth;
-        const y = mouseY / window.innerHeight;
-
-        obj.current.rotation.x = x * 0.1;
-        obj.current.rotation.y = y * 0.1;
     }
 
     return (
