@@ -2,7 +2,7 @@
 
 import { ArrowDownIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 
 const animationSequence = [
@@ -13,12 +13,6 @@ const animationSequence = [
 ];
 
 export default function Hero() {
-    const obj = useRef<any>();
-
-    function onLoad(spline: any) {
-        obj.current = spline.findObjectByName('Mushrooms');
-    }
-
     return (
         <div
             className='flex flex-col items-center justify-center text-center'
@@ -51,6 +45,24 @@ export default function Hero() {
 }
 
 const FallbackImage = () => {
+    const imageRef = useRef<HTMLImageElement>(null);
+
+    const onMouseMove = (e: any) => {
+        const rotateX = (e.clientY - window.innerHeight / 2) * 0.025;
+        const rotateY = (e.clientX - window.innerWidth / 2) * -0.0125;
+
+        if (imageRef.current)
+            imageRef.current.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    };
+
+    useEffect(() => {
+        window.addEventListener('mousemove', onMouseMove);
+
+        return () => {
+            window.removeEventListener('mousemove', onMouseMove);
+        };
+    }, []);
+
     return (
         <div className='flex justify-center items-center inset-0 bg-grey-1 fixed -z-10'>
             <Image
@@ -63,6 +75,7 @@ const FallbackImage = () => {
                 alt='Mushrooms'
                 blurDataURL='/mushrooms.webp'
                 placeholder='blur'
+                ref={imageRef}
             />
         </div>
     );
