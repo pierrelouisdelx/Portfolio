@@ -70,7 +70,7 @@ export default function Contacts() {
     };
 
     return (
-        <div className='flex flex-col w-full h-screen' id='contacts'>
+        <section className='flex flex-col w-full h-screen' id='contacts'>
             <Title>Contacts</Title>
             <div className='flex items-center justify-center h-full'>
                 <form
@@ -115,6 +115,7 @@ export default function Contacts() {
                     <Reveal>
                         <div className='flex justify-center py-2'>
                             {recaptchaNeeded && (
+                                // @ts-ignore
                                 <ReCAPTCHA sitekey={captcha} ref={captchaRef} />
                             )}
                         </div>
@@ -144,7 +145,7 @@ export default function Contacts() {
                 pauseOnHover
                 theme='dark'
             />
-        </div>
+        </section>
     );
 }
 

@@ -4,7 +4,7 @@ import { Reveal } from './Reveal';
 
 export default function About() {
     return (
-        <div
+        <section
             className='flex flex-col w-full text-left snap-center bg-black-1'
             id='about'
         >
@@ -55,7 +55,7 @@ export default function About() {
                     key={item.title}
                 />
             ))}
-        </div>
+        </section>
     );
 }
 

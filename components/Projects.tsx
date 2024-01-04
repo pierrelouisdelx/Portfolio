@@ -71,7 +71,7 @@ export default function Projects() {
     });
 
     return (
-        <div className='flex flex-col w-full' id='projects'>
+        <section className='flex flex-col w-full' id='projects'>
             <Title>Projects</Title>
             <div className='flex items-center justify-center mb-5'>
                 <div className='portfolio-filters flex items-center justify-center border border-primary border-dashed rounded-full'>
@@ -113,7 +113,7 @@ export default function Projects() {
                     innerRef={modalRef}
                 />
             )}
-        </div>
+        </section>
     );
 }
 
