@@ -20,7 +20,7 @@ export default function Experience() {
                     <li className='mr-2'>
                         <button
                             className={classNames(
-                                'inline-block p-4 border-b-2 rounded-t-lg',
+                                'inline-block p-4 border-b-2 rounded-t-lg cursor-pointer',
                                 activeTab === 0
                                     ? 'border-gray-600 text-white dark:border-gray-300 dark:text-gray-300'
                                     : 'border-transparent text-gray-400 hover:border-gray-300 dark:hover:text-gray-300'
@@ -33,7 +33,7 @@ export default function Experience() {
                     <li className='mr-2'>
                         <button
                             className={classNames(
-                                'inline-block p-4 border-b-2 rounded-t-lg',
+                                'inline-block p-4 border-b-2 rounded-t-lg cursor-pointer',
                                 activeTab === 1
                                     ? 'border-gray-600 text-white dark:border-gray-300 dark:text-gray-300'
                                     : 'border-transparent text-gray-400 hover:border-gray-300 dark:hover:text-gray-300'
