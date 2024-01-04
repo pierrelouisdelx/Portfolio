@@ -32,6 +32,7 @@ export default function ExperienceCard(props: ExperienceCardProps) {
             }
             date={props.date}
             dateClassName='text-gray-400'
+            visible={true}
         >
             <div className='flex items-center'>
                 <h3 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 vertical-timeline-element-title dark:text-white'>

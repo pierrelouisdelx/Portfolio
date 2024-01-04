@@ -13,7 +13,7 @@ export default function Experience() {
     const [activeTab, setActiveTab] = useState(0);
 
     return (
-        <div className='flex flex-col w-full' id='experience'>
+        <section className='flex flex-col w-full' id='experience'>
             <Title>Experience</Title>
             <div className='flex justify-center mb-4 border-b border-gray-200 dark:border-gray-700'>
                 <ul className='flex text-sm font-medium text-center'>
@@ -78,6 +78,6 @@ export default function Experience() {
                     </VerticalTimeline>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

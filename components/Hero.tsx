@@ -14,7 +14,7 @@ const animationSequence = [
 
 export default function Hero() {
     return (
-        <div
+        <section
             className='flex flex-col items-center justify-center text-center'
             id='hero'
         >
@@ -40,7 +40,7 @@ export default function Hero() {
             <a className='flex flex-row mt-20 cursor-pointer p-5' href='#about'>
                 <ArrowDownIcon className='w-10 h-10 mt-10 text-primary animate-bounce-slow' />
             </a>
-        </div>
+        </section>
     );
 }
 

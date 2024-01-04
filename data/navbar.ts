@@ -1,4 +1,4 @@
-export const Links = [
+export const links = [
     {
         href: '#hero',
         title: 'Home',
