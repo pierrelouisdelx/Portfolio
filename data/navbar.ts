@@ -1,26 +1,3 @@
-export const links = [
-    {
-        href: '#hero',
-        title: 'Home',
-    },
-    {
-        href: '#about',
-        title: 'About',
-    },
-    {
-        href: '#experience',
-        title: 'Experience',
-    },
-    {
-        href: '#projects',
-        title: 'Projects',
-    },
-    {
-        href: '#contacts',
-        title: 'Contacts',
-    },
-];
-
 export const socials = [
     {
         image: '/linkedin.webp',

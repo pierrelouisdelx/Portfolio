@@ -30,7 +30,9 @@ export default async function Hero({ lang }: { lang: Locale }) {
                 Delcroix
             </h1>
             <div className='flex flex-col items-center md:flex-row'>
-                <h5 className='text-xl tracking-wide uppercase'>I&apos;m a</h5>
+                <h5 className='text-xl tracking-wide uppercase'>
+                    {dict.hero.iam}
+                </h5>
                 <h5 className='ml-2 text-xl leading-10 tracking-wide underline uppercase underline-offset-8 decoration-primary decoration-4'>
                     <TypeAnimation
                         sequence={animationSequence}

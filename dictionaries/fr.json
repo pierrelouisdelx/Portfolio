@@ -7,7 +7,12 @@
         "contact": "Contact"
     },
     "hero": {
-        "typing1": "Développeur Web Full Stack Freelance",
+        "iam": "Je suis",
+        "typing1": "Développeur Full Stack Freelance",
         "typing2": "Développeur Logiciel"
+    },
+    "about": {
+        "title": "About",
+        "education": "Education"
     }
 }

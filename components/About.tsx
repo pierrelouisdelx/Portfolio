@@ -1,14 +1,18 @@
 import { education, international } from '@/data/about';
+import { Locale } from '@/i18n.config';
+import { getDictionary } from '@/lib/dictionaries';
 import { Title } from '@/ui';
 import { Reveal } from './Reveal';
 
-export default function About() {
+export default async function About({ lang }: { lang: Locale }) {
+    const dict = await getDictionary(lang);
+
     return (
         <section
             className='flex flex-col w-full text-left snap-center bg-black-1'
             id='about'
         >
-            <Title>About</Title>
+            <Title>{dict.about.title}</Title>
 
             <Reveal>
                 <div className='flex items-center justify-center w-full my-5'>

@@ -1,13 +1,39 @@
 'use client';
 
-import { links, socials } from '@/data/navbar';
+import { socials } from '@/data/navbar';
 import type { Locale } from '@/i18n.config';
+import { getDictionary } from '@/lib/dictionaries';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
 
-export default function Navbar({ lang }: { lang: Locale }) {
+export default async function Navbar({ lang }: { lang: Locale }) {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+    const dict = await getDictionary(lang);
+
+    const links = [
+        {
+            href: '#hero',
+            title: dict.navbar.home,
+        },
+        {
+            href: '#about',
+            title: dict.navbar.about,
+        },
+        {
+            href: '#experience',
+            title: dict.navbar.experience,
+        },
+        {
+            href: '#projects',
+            title: dict.navbar.projects,
+        },
+        {
+            href: '#contacts',
+            title: dict.navbar.contact,
+        },
+    ];
 
     const top = {
         closed: {

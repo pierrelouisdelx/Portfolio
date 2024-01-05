@@ -7,7 +7,12 @@
         "contact": "Contact"
     },
     "hero": {
+        "iam": "I'm a",
         "typing1": "Computer Vision Engineer",
         "typing2": "Software Engineer Freelance"
+    },
+    "about": {
+        "title": "About",
+        "education": "Education"
     }
 }
