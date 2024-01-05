@@ -1,11 +1,12 @@
 'use client';
 
 import { links, socials } from '@/data/navbar';
+import type { Locale } from '@/i18n.config';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
 
-export default function Navbar() {
+export default function Navbar({ lang }: { lang: Locale }) {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
 
     const top = {

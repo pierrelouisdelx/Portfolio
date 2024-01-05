@@ -1,0 +1,13 @@
+{
+    "navbar": {
+        "home": "Home",
+        "about": "About",
+        "experience": "Experience",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "hero": {
+        "typing1": "Computer Vision Engineer",
+        "typing2": "Software Engineer Freelance"
+    }
+}

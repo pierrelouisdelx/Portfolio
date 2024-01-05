@@ -7,9 +7,15 @@ import Hero from '@/components/Hero';
 import Projects from '@/components/Projects';
 import Skills from '@/components/Skills';
 
+import { Locale } from '@/i18n.config';
+
 import { useEffect, useRef } from 'react';
 
-export default function Page() {
+export default function Page({
+    params: { lang },
+}: {
+    params: { lang: Locale };
+}) {
     const mainCursor = useRef<null | HTMLDivElement>(null);
     const mainCursorCircle = useRef<null | HTMLDivElement>(null);
     const secondaryCursor = useRef<null | HTMLDivElement>(null);
@@ -138,12 +144,12 @@ export default function Page() {
                 <div className='w-full h-full rounded-full border border-primary relative'></div>
             </div>
             <main className='text-center text-white child:px-5 md:child:px-20 child:py-20 child:min-h-screen'>
-                <Hero />
-                <About />
-                <Experience />
-                <Skills />
-                <Projects />
-                <Contacts />
+                <Hero lang={lang} />
+                <About lang={lang} />
+                <Experience lang={lang} />
+                <Skills lang={lang} />
+                <Projects lang={lang} />
+                <Contacts lang={lang} />
             </main>
         </>
     );

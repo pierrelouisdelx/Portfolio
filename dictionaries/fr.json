@@ -1,0 +1,13 @@
+{
+    "navbar": {
+        "home": "Home",
+        "about": "About",
+        "experience": "Experience",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "hero": {
+        "typing1": "Développeur Web Full Stack Freelance",
+        "typing2": "Développeur Logiciel"
+    }
+}

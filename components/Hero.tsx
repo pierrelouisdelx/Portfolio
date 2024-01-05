@@ -1,18 +1,22 @@
 'use client';
 
+import type { Locale } from '@/i18n.config';
+import { getDictionary } from '@/lib/dictionaries';
 import { ArrowDownIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 
-const animationSequence = [
-    'Computer Vision Engineer',
-    1000,
-    'Software Engineer Freelance',
-    1000,
-];
+export default async function Hero({ lang }: { lang: Locale }) {
+    const dict = await getDictionary(lang);
 
-export default function Hero() {
+    const animationSequence = [
+        dict.hero.typing1,
+        1000,
+        dict.hero.typing2,
+        1000,
+    ];
+
     return (
         <section
             className='flex flex-col items-center justify-center text-center'
