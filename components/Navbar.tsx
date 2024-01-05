@@ -5,6 +5,7 @@ import type { Locale } from '@/i18n.config';
 import { getDictionary } from '@/lib/dictionaries';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 
 export default async function Navbar({ lang }: { lang: Locale }) {
@@ -66,7 +67,27 @@ export default async function Navbar({ lang }: { lang: Locale }) {
 
     return (
         <nav className='bg-white dark:bg-grey-1 w-full fixed z-30'>
-            <div className='flex flex-wrap items-center justify-between w-full max-w-screen-xl p-4 mx-auto md:flex-row-reverse'>
+            <div className='flex flex-wrap items-center justify-between w-full max-w-screen-xl p-4 mx-auto'>
+                <select className='bg-transparent text-white'>
+                    <option>
+                        <Link href='/en'>EN</Link>
+                    </option>
+                    <option>
+                        <Link href='/fr'>FR</Link>
+                    </option>
+                </select>
+                <motion.div
+                    className='w-full md:flex md:items-center md:w-auto overflow-hidden md:overflow-visible'
+                    onClick={() => setShowMobileMenu(false)}
+                    initial={{ height: 0 }}
+                    animate={{ height: showMobileMenu ? 'auto' : 0 }}
+                >
+                    <ul className='flex flex-col w-full py-4 mt-4 font-medium md:p-0 md:flex-row md:space-x-8 md:mt-0'>
+                        {links.map((link) => (
+                            <HyperLink {...link} key={link.title} />
+                        ))}
+                    </ul>
+                </motion.div>
                 <div className='flex items-center justify-between w-full md:w-auto'>
                     <button
                         type='button'
@@ -121,19 +142,6 @@ export default async function Navbar({ lang }: { lang: Locale }) {
                         ))}
                     </ul>
                 </div>
-                <motion.div
-                    className='w-full md:flex md:items-center md:w-auto overflow-hidden md:overflow-visible'
-                    onClick={() => setShowMobileMenu(false)}
-                    initial={{ height: 0 }}
-                    animate={{ height: showMobileMenu ? 'auto' : 0 }}
-                >
-                    <ul className='flex flex-col w-full py-4 mt-4 font-medium md:p-0 md:flex-row md:space-x-8 md:mt-0'>
-                        {links.map((link) => (
-                            <HyperLink {...link} key={link.title} />
-                        ))}
-                    </ul>
-                </motion.div>
-                <div />
             </div>
         </nav>
     );
