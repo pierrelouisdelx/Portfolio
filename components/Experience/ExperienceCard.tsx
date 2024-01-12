@@ -35,7 +35,7 @@ export default function ExperienceCard(props: ExperienceCardProps) {
             visible={true}
         >
             <div className='flex items-center'>
-                <h3 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 vertical-timeline-element-title dark:text-white'>
+                <h3 className='mb-2 text-2xl font-bold tracking-tight vertical-timeline-element-title text-white'>
                     {props.company}
                 </h3>
                 {props.link ? (
@@ -44,7 +44,7 @@ export default function ExperienceCard(props: ExperienceCardProps) {
                     </a>
                 ) : null}
             </div>
-            <h4 className='mb-3 font-normal text-gray-700 vertical-timeline-element-subtitle dark:text-gray-400'>
+            <h4 className='mb-3 font-normal vertical-timeline-element-subtitle text-gray-400'>
                 {props.position} - {props.location}
             </h4>
             <div dangerouslySetInnerHTML={{ __html: props.description }}></div>
