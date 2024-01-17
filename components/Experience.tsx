@@ -45,38 +45,36 @@ export default function Experience() {
                     </li>
                 </ul>
             </div>
-            <div id='myTabContent'>
-                <div
-                    className={classNames(
-                        'md:p-4 rounded-lg',
-                        activeTab === 0 ? 'block' : 'hidden'
-                    )}
-                >
-                    <VerticalTimeline animate={true} lineColor={'#fb923c'}>
-                        {workexperiences.map((experience) => (
-                            <ExperienceCard
-                                {...experience}
-                                key={experience.company}
-                            />
-                        ))}
-                    </VerticalTimeline>
-                </div>
+            <div
+                className={classNames(
+                    'md:p-4 rounded-lg',
+                    activeTab === 0 ? 'block' : 'hidden'
+                )}
+            >
+                <VerticalTimeline animate={true} lineColor={'#fb923c'}>
+                    {workexperiences.map((experience) => (
+                        <ExperienceCard
+                            {...experience}
+                            key={experience.company}
+                        />
+                    ))}
+                </VerticalTimeline>
+            </div>
 
-                <div
-                    className={classNames(
-                        'p-4 rounded-lg',
-                        activeTab === 1 ? 'block' : 'hidden'
-                    )}
-                >
-                    <VerticalTimeline animate={true} lineColor={'#fb923c'}>
-                        {freelanceexperiences.map((experience) => (
-                            <ExperienceCard
-                                {...experience}
-                                key={experience.company}
-                            />
-                        ))}
-                    </VerticalTimeline>
-                </div>
+            <div
+                className={classNames(
+                    'p-4 rounded-lg',
+                    activeTab === 1 ? 'block' : 'hidden'
+                )}
+            >
+                <VerticalTimeline animate={true} lineColor={'#fb923c'}>
+                    {freelanceexperiences.map((experience) => (
+                        <ExperienceCard
+                            {...experience}
+                            key={experience.company}
+                        />
+                    ))}
+                </VerticalTimeline>
             </div>
         </section>
     );
