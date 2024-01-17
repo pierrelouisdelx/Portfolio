@@ -138,8 +138,15 @@ interface SocialProps {
 
 const Social = (props: SocialProps) => {
     return (
-        <a href={props.link} target='_blank'>
-            <Image src={props.image} width={25} height={25} alt={props.image} />
-        </a>
+        <li>
+            <a href={props.link} target='_blank'>
+                <Image
+                    src={props.image}
+                    width={25}
+                    height={25}
+                    alt={props.image}
+                />
+            </a>
+        </li>
     );
 };

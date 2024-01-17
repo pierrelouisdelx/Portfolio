@@ -27,9 +27,9 @@ export default function About() {
             </Reveal>
 
             <Reveal>
-                <h3 className='mt-5 mb-3 text-2xl font-semibold tracking-wide text-left underline uppercase underline-offset-8'>
+                <h2 className='mt-5 mb-3 text-2xl font-semibold tracking-wide text-left underline uppercase underline-offset-8'>
                     Education
-                </h3>
+                </h2>
             </Reveal>
             {education.map((item) => (
                 <Timeline
@@ -42,9 +42,9 @@ export default function About() {
             ))}
 
             <Reveal>
-                <h3 className='mt-5 mb-3 text-2xl font-semibold tracking-wide text-left underline uppercase underline-offset-8'>
+                <h2 className='mt-5 mb-3 text-2xl font-semibold tracking-wide text-left underline uppercase underline-offset-8'>
                     International
-                </h3>
+                </h2>
             </Reveal>
             {international.map((item) => (
                 <Timeline

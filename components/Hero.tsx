@@ -9,7 +9,7 @@ const animationSequence = [
     'Computer Vision Engineer',
     1000,
     'Software Engineer Freelance',
-    1000,
+    1000
 ];
 
 export default function Hero() {
@@ -26,19 +26,26 @@ export default function Hero() {
                 Delcroix
             </h1>
             <div className='flex flex-col items-center md:flex-row'>
-                <h5 className='text-xl tracking-wide uppercase'>I&apos;m a</h5>
-                <h5 className='ml-2 text-xl leading-10 tracking-wide underline uppercase underline-offset-8 decoration-primary decoration-4'>
+                <h2 className='text-xl tracking-wide uppercase'>I&apos;m a</h2>
+                <h2
+                    className='ml-2 text-xl leading-10 tracking-wide underline uppercase underline-offset-8 decoration-primary decoration-4'
+                    datatype="['Computer Vision Engineer', 'Software Engineer Freelance']"
+                >
                     <TypeAnimation
                         sequence={animationSequence}
                         wrapper='span'
                         cursor={true}
                         repeat={Infinity}
                     />
-                </h5>
+                </h2>
             </div>
 
-            <a className='flex flex-row mt-20 cursor-pointer p-5' href='#about'>
-                <ArrowDownIcon className='w-10 h-10 mt-10 text-primary animate-bounce-slow' />
+            <a
+                className='flex flex-row mt-20 cursor-pointer p-5'
+                href='#about'
+                aria-label='Scroll to about section'
+            >
+                <ArrowDownIcon className='w-10 h-10 mt-10 text-primary animate-bounce-slow focus:ring-primary rounded-full' />
             </a>
         </section>
     );
@@ -68,10 +75,10 @@ const FallbackImage = () => {
             <Image
                 src='/mushrooms.webp'
                 className='w-3/4 h-auto md:w-2/3'
-                loading='lazy'
+                loading='eager'
                 fetchPriority='high'
-                width={1275}
-                height={1050}
+                width={800}
+                height={700}
                 alt='Mushrooms'
                 blurDataURL='/mushrooms.webp'
                 placeholder='blur'

@@ -31,22 +31,27 @@ export default function ExperienceCard(props: ExperienceCardProps) {
                 />
             }
             date={props.date}
-            dateClassName='text-gray-400'
+            dateClassName='text-white !opacity-100'
             visible={true}
         >
             <div className='flex items-center'>
-                <h3 className='mb-2 text-2xl font-bold tracking-tight vertical-timeline-element-title text-white'>
+                <h2 className='mb-2 text-2xl font-bold tracking-tight !text-white'>
                     {props.company}
-                </h3>
+                </h2>
                 {props.link ? (
-                    <a href={props.link} target='_blank' rel='noreferrer'>
+                    <a
+                        href={props.link}
+                        target='_blank'
+                        rel='noreferrer'
+                        aria-label={`${props.company} website`}
+                    >
                         <ArrowTopRightOnSquareIcon className='w-6 h-6 pb-1 ml-2 text-primary cursor-pointer' />
                     </a>
                 ) : null}
             </div>
-            <h4 className='mb-3 font-normal vertical-timeline-element-subtitle text-gray-400'>
+            <h3 className='mb-3 font-normal vertical-timeline-element-subtitle text-gray-400'>
                 {props.position} - {props.location}
-            </h4>
+            </h3>
             <div dangerouslySetInnerHTML={{ __html: props.description }}></div>
             {props.skills && (
                 <img
