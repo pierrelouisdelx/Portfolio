@@ -31,7 +31,7 @@ export default function ExperienceCard(props: ExperienceCardProps) {
                 />
             }
             date={props.date}
-            dateClassName='text-gray-400'
+            dateClassName='text-white !opacity-100'
             visible={true}
         >
             <div className='flex items-center'>
