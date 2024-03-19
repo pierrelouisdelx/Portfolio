@@ -11,6 +11,19 @@ interface WorkExperience {
 
 export const workexperiences: WorkExperience[] = [
     {
+        company: 'Siemens Healthineers',
+        link: 'https://www.siemens-healthineers.com/',
+        position: 'Research Intern',
+        location: 'Princeton, USA',
+        date: '03/2024 - Present',
+        icon: '/logos/siemens.webp',
+        description: `<ul class="list-disclosure-closed px-4">
+        <li>Research Intern - Machine Learning in Medical Image Acquisition and Reconstruction</li>
+        <li>Working on diffusion models for CT scans super resolution</li>
+        </ul>`,
+        skills: 'https://skillicons.dev/icons?i=python,pytorch,anaconda,azure,bash,git',
+    },
+    {
         company: 'OneCommerce',
         link: 'https://onecommerce.group',
         position: 'Software Engineer',
