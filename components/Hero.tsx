@@ -9,7 +9,7 @@ const animationSequence = [
     'Computer Vision Engineer',
     1000,
     'Software Engineer Freelance',
-    1000
+    1000,
 ];
 
 export default function Hero() {

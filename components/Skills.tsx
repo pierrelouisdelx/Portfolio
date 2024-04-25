@@ -1,59 +1,66 @@
-import { Reveal } from '@/components/Reveal';
-import skills, { SkillCategory, Skill as SkillProps } from '@/data/skills';
+'use client';
+
+import skills from '@/data/skills';
 import { Title } from '@/ui';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useState } from 'react';
+import { IconType } from 'react-icons';
 
 export default function Skills() {
+    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
     return (
         <section className='flex flex-col w-full bg-black-1' id='skills'>
             <Title>Skills</Title>
-            <div className='flex flex-row flex-wrap'>
-                {skills.map((skill) => (
-                    <CategorySkills
-                        title={skill.title}
-                        skills={skill.skills}
-                        key={skill.title}
-                    />
+            <div className={'grid grid-cols-2 lg:grid-cols-4 py-10'}>
+                {skills.map((item, idx) => (
+                    <div
+                        key={item?.title}
+                        className='relative group  block p-2 h-full w-full'
+                        onMouseEnter={() => setHoveredIndex(idx)}
+                        onMouseLeave={() => setHoveredIndex(null)}
+                    >
+                        <AnimatePresence>
+                            {hoveredIndex === idx && (
+                                <motion.span
+                                    className='absolute inset-0 h-full w-full bg-primary block rounded-lg'
+                                    layoutId='hoverBackground'
+                                    initial={{ opacity: 0 }}
+                                    animate={{
+                                        opacity: 1,
+                                        transition: { duration: 0.15 },
+                                    }}
+                                    exit={{
+                                        opacity: 0,
+                                        transition: {
+                                            duration: 0.15,
+                                            delay: 0.2,
+                                        },
+                                    }}
+                                />
+                            )}
+                        </AnimatePresence>
+                        <Skill title={item.title} Icon={item.icon} />
+                    </div>
                 ))}
             </div>
         </section>
     );
 }
 
-const CategorySkills = (props: SkillCategory) => {
+const Skill = ({ title, Icon }: { title: string; Icon: IconType }) => {
     return (
-        <div className='flex flex-col w-full py-5 md:w-1/3 md:px-5 items-left justify-left'>
-            <Reveal>
-                <h1 className='text-2xl uppercase'>{props.title}</h1>
-                <div className='flex flex-row flex-wrap'>
-                    {props.skills.map((skill) => (
-                        <Skill
-                            name={skill.name}
-                            level={skill.level}
-                            key={skill.name}
-                        />
-                    ))}
-                </div>
-            </Reveal>
-        </div>
-    );
-};
-
-const Skill = (props: SkillProps) => {
-    return (
-        <div className='flex flex-col w-full p-2 text-left'>
-            <h1 className='text-lg'>{props.name}</h1>
-            <ProgressBar p={props.level} />
-        </div>
-    );
-};
-
-const ProgressBar = ({ p }: { p: number }) => {
-    return (
-        <div className='w-full h-1 bg-gray-300 rounded-md'>
-            <div
-                style={{ width: `${p}%` }}
-                className='h-1 bg-primary rounded-md'
-            ></div>
+        <div
+            className={
+                'rounded-md w-full p-4 overflow-hidden bg-black relative z-20 transition-all duration-500 group'
+            }
+        >
+            <div className='py-10 z-50 relative space-y-5'>
+                <Icon className='w-8 h-8 mx-auto group-hover:text-primary transition-all duration-500' />
+                <p className='text-lg md:text-2xl font-bold text-center text-gray-300 group-hover:text-primary transition-all duration-500'>
+                    {title}
+                </p>
+            </div>
         </div>
     );
 };
