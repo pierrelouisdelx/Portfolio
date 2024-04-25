@@ -1,6 +1,6 @@
 import Navbar from '@/components/Navbar';
-import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata } from 'next';
 import './globals.css';
 
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     keywords: [
         "Pierre-Louis Delcroix's Portfolio",
         'Computer Vision Engineer',
-        'Deep Learning Engineer'
-    ]
+        'Deep Learning Engineer',
+    ],
 };
 
 export default function RootLayout({
     // Layouts must accept a children prop.
     // This will be populated with nested layouts or pages
-    children
+    children,
 }: {
     children: React.ReactNode;
 }) {

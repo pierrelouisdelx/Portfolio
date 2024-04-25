@@ -1,6 +1,6 @@
 'use client';
 
-import classNames from 'classnames';
+import clsx from 'clsx';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 
@@ -22,10 +22,7 @@ export const Reveal = ({ children, width = 'fit-content' }: Props) => {
     }, [isInView]);
 
     return (
-        <div
-            className={classNames('relative overflow-hidden', width)}
-            ref={ref}
-        >
+        <div className={clsx('relative overflow-hidden', width)} ref={ref}>
             <motion.div
                 variants={{
                     hidden: { opacity: 0, y: 75 },

@@ -1,17 +1,11 @@
 'use client';
 
-import DotGrid from '@/components/DotGrid';
 import { Card } from '@/components/Projects/Card';
 import Modal from '@/components/Projects/Modal';
 import { useOutsideClick } from '@/hooks/outsideClick';
 import { Title } from '@/ui';
-import classNames from 'classnames';
-import {
-    AnimatePresence,
-    animate,
-    motion,
-    useMotionValue,
-} from 'framer-motion';
+import clsx from 'clsx';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import { Reveal } from './Reveal';
 
@@ -33,27 +27,6 @@ export default function Projects() {
     const [filteredProjects, setFilteredProjects] = useState(projects);
     const [selectedProject, setSelectedProject] = useState<any>(null);
     const modalRef = useRef<any>();
-
-    const mouseX = useMotionValue(
-        typeof window !== 'undefined' ? window.innerWidth / 2 : 0
-    );
-    const mouseY = useMotionValue(
-        typeof window !== 'undefined' ? window.innerHeight / 2 : 0
-    );
-
-    useEffect(() => {
-        const handleMouseMove = (e: MouseEvent) => {
-            animate(mouseX, e.clientX);
-            animate(mouseY, e.clientY);
-        };
-        if (typeof window === 'undefined') return;
-
-        window.addEventListener('mousemove', handleMouseMove);
-
-        return () => {
-            window.removeEventListener('mousemove', handleMouseMove);
-        };
-    }, []);
 
     useEffect(() => {
         if (selectedCategory === Categories.ALL) setFilteredProjects(projects);
@@ -86,15 +59,11 @@ export default function Projects() {
                     ))}
                 </div>
             </div>
-            <div
-                style={{ perspective: 1000 }}
-                className='flex justify-center min-h-72'
-            >
+            <div className='flex justify-center min-h-72 relative'>
                 <motion.div
                     layout
-                    className='relative grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 grid-flow-dense'
+                    className='relative grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 grid-flow-dense bg-dot-white/[0.2]'
                 >
-                    <DotGrid />
                     <AnimatePresence>
                         {filteredProjects.map((project) => (
                             <Card
@@ -121,7 +90,7 @@ const Category = (props: CategoryProps) => {
     return (
         <Reveal>
             <div
-                className={classNames(
+                className={clsx(
                     'flex items-center justify-center px-2 py-1 text-white capitalize rounded-full cursor-pointer',
                     props.isSelected && 'bg-primary'
                 )}

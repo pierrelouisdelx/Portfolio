@@ -2,7 +2,7 @@
 
 import ExperienceCard from '@/components/Experience/ExperienceCard';
 import { Title } from '@/ui';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import { useState } from 'react';
 import { VerticalTimeline } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
@@ -19,7 +19,7 @@ export default function Experience() {
                 <ul className='flex text-sm font-medium text-center'>
                     <li className='mr-2'>
                         <button
-                            className={classNames(
+                            className={clsx(
                                 'inline-block p-4 border-b-2 rounded-t-lg cursor-pointer',
                                 activeTab === 0
                                     ? 'border-gray-300 text-gray-300'
@@ -32,7 +32,7 @@ export default function Experience() {
                     </li>
                     <li className='mr-2'>
                         <button
-                            className={classNames(
+                            className={clsx(
                                 'inline-block p-4 border-b-2 rounded-t-lg cursor-pointer',
                                 activeTab === 1
                                     ? 'border-gray-300 text-gray-300'
@@ -46,12 +46,12 @@ export default function Experience() {
                 </ul>
             </div>
             <div
-                className={classNames(
+                className={clsx(
                     'md:p-4 rounded-lg',
                     activeTab === 0 ? 'block' : 'hidden'
                 )}
             >
-                <VerticalTimeline animate={true} lineColor={'#fb923c'}>
+                <VerticalTimeline lineColor={'#fb923c'}>
                     {workexperiences.map((experience) => (
                         <ExperienceCard
                             {...experience}
@@ -62,7 +62,7 @@ export default function Experience() {
             </div>
 
             <div
-                className={classNames(
+                className={clsx(
                     'p-4 rounded-lg',
                     activeTab === 1 ? 'block' : 'hidden'
                 )}
