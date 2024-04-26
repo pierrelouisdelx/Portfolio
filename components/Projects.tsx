@@ -62,7 +62,7 @@ export default function Projects() {
             <div className='flex justify-center min-h-72 relative'>
                 <motion.div
                     layout
-                    className='relative grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 grid-flow-dense bg-dot-white/[0.2]'
+                    className='relative grid grid-cols-1 gap-4 sm:grid-cols-3 lg:grid-cols-4 grid-flow-dense bg-dot-white/[0.2]'
                 >
                     <AnimatePresence>
                         {filteredProjects.map((project) => (
