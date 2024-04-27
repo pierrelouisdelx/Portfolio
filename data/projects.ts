@@ -31,7 +31,7 @@ export const projects: Project[] = [
         name: 'Research - Methane plume detection',
         description:
             'Research on Methane Plume Detection in Hyperspectral Images using Deep Learning',
-        technologies: ['Python', 'Pytorch', 'CUDA'],
+        technologies: ['Python', 'Pytorch', 'Sklearn', 'Pandas'],
         url: '',
         category: Categories.COMPUTERVISION,
         background: '/plume.webp',
@@ -40,7 +40,7 @@ export const projects: Project[] = [
         name: 'Research - Point Cloud Classification',
         description:
             'Research on Autonomous Driving Pre-Training with Large-scale Point Cloud Dataset',
-        technologies: ['Python', 'CUDA'],
+        technologies: ['Python', 'Pytorch', 'OpenCV'],
         url: '',
         category: Categories.COMPUTERVISION,
         background: '/lidar.webp',
