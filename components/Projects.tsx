@@ -1,8 +1,6 @@
 'use client';
 
 import { Card } from '@/components/Projects/Card';
-import Modal from '@/components/Projects/Modal';
-import { useOutsideClick } from '@/hooks/outsideClick';
 import { Title } from '@/ui';
 import clsx from 'clsx';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -25,7 +23,6 @@ export default function Projects() {
         Categories.ALL
     );
     const [filteredProjects, setFilteredProjects] = useState(projects);
-    const [selectedProject, setSelectedProject] = useState<any>(null);
     const modalRef = useRef<any>();
 
     useEffect(() => {
@@ -37,11 +34,6 @@ export default function Projects() {
                 )
             );
     }, [selectedCategory]);
-
-    useOutsideClick({
-        ref: modalRef,
-        callback: () => setSelectedProject(null),
-    });
 
     return (
         <section className='flex flex-col w-full' id='projects'>
@@ -62,26 +54,15 @@ export default function Projects() {
             <div className='flex justify-center min-h-72 relative'>
                 <motion.div
                     layout
-                    className='relative grid grid-cols-1 gap-4 sm:grid-cols-3 lg:grid-cols-4 grid-flow-dense bg-dot-white/[0.2]'
+                    className='relative grid grid-cols-1 gap-4 lg:grid-cols-2 2xl:grid-cols-3 3xl:grid-cols-4 grid-flow-dense bg-dot-white/[0.2] overflow-hidden'
                 >
                     <AnimatePresence>
                         {filteredProjects.map((project) => (
-                            <Card
-                                project={project}
-                                key={project.name}
-                                setSelectedProject={setSelectedProject}
-                            />
+                            <Card project={project} key={project.name} />
                         ))}
                     </AnimatePresence>
                 </motion.div>
             </div>
-            {selectedProject && (
-                <Modal
-                    project={selectedProject}
-                    setSelectedProject={setSelectedProject}
-                    innerRef={modalRef}
-                />
-            )}
         </section>
     );
 }
