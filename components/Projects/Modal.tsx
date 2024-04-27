@@ -13,7 +13,7 @@ export default function Modal({
     setSelectedProject,
     innerRef,
 }: ModalProps) {
-    const video = project.video ?? project.demo ?? null;
+    const video = project.demo ?? null;
 
     return (
         <AnimatePresence>
@@ -70,8 +70,10 @@ export default function Modal({
                                 src={project.background}
                                 alt={project.name}
                                 className='p-4 rounded-lg max-h-96'
-                                width={658}
-                                height={project.height * 1.7}
+                                width={500}
+                                height={
+                                    project.height ? project.height * 300 : 300
+                                }
                             />
                         )}
                         {video && (

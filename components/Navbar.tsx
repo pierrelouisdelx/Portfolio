@@ -11,30 +11,30 @@ export default function Navbar() {
     const top = {
         closed: {
             rotate: 0,
-            translateY: 0
+            translateY: 0,
         },
         opened: {
             rotate: 45,
-            translateY: 7.5
-        }
+            translateY: 7.5,
+        },
     };
     const center = {
         closed: {
-            opacity: 1
+            opacity: 1,
         },
         opened: {
-            opacity: 0
-        }
+            opacity: 0,
+        },
     };
     const bottom = {
         closed: {
             rotate: 0,
-            translateY: 0
+            translateY: 0,
         },
         opened: {
             rotate: -45,
-            translateY: -7.5
-        }
+            translateY: -7.5,
+        },
     };
 
     return (
@@ -43,7 +43,7 @@ export default function Navbar() {
                 <div className='flex items-center justify-between w-full md:w-auto'>
                     <button
                         type='button'
-                        className='inline-flex items-center p-2 text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 text-gray-400 hover:bg-gray-700 focus:ring-gray-600'
+                        className='inline-flex items-center p-2 text-sm rounded-lg md:hidden  text-gray-400'
                         onClick={() => setShowMobileMenu(!showMobileMenu)}
                     >
                         <span className='sr-only'>Open main menu</span>
@@ -121,7 +121,7 @@ const HyperLink = ({ href, title }: HyperLinkProps) => {
     return (
         <li className='relative group'>
             <a
-                className='block py-2 pl-3 pr-4 rounded cursor-pointer md:hover:text-primary md:p-0 text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700'
+                className='block py-2 pl-3 pr-4 rounded cursor-pointer md:hover:text-primary md:p-0 text-white'
                 href={href}
             >
                 {title}

@@ -12,13 +12,21 @@ export interface Project {
     url: string;
     category: number;
     background?: string;
-    height: number;
-    size?: number;
-    video?: string;
+    height?: number;
+    width?: number;
     demo?: string;
 }
 
 export const projects: Project[] = [
+    {
+        name: 'Trading Bot - Forex',
+        description:
+            'Trading bot for forex using LSTM and Reinforcement Learning',
+        technologies: ['Python', 'Tensorflow', 'Keras'],
+        url: '',
+        category: Categories.SOFTWARE,
+        background: '/trading.webp',
+    },
     {
         name: 'Research - Methane plume detection',
         description:
@@ -26,8 +34,7 @@ export const projects: Project[] = [
         technologies: ['Python', 'Pytorch', 'CUDA'],
         url: '',
         category: Categories.COMPUTERVISION,
-        background: 'https://cdn.orbs.cloud/methane.webp',
-        height: 217,
+        background: '/plume.webp',
     },
     {
         name: 'Research - Point Cloud Classification',
@@ -37,7 +44,6 @@ export const projects: Project[] = [
         url: '',
         category: Categories.COMPUTERVISION,
         background: '/lidar.webp',
-        height: 217,
     },
     {
         name: "Brand's bike detection",
@@ -47,7 +53,6 @@ export const projects: Project[] = [
         url: '',
         category: Categories.COMPUTERVISION,
         background: '/bike.webp',
-        height: 217,
     },
     {
         name: 'Brain tumor detection',
@@ -57,22 +62,21 @@ export const projects: Project[] = [
         url: '',
         category: Categories.COMPUTERVISION,
         background: '/brain.webp',
-        height: 217,
     },
     {
         name: 'Finalist of GottaGoHack Hackathon 2022',
-        description: 'Dating app in the metaverse',
+        description:
+            'Dating app in the metaverse developed in 48 hours with Unity and Mediapipe. The users dance in the metaverse to find their soulmate.',
         technologies: ['C#', 'Unity', 'Mediapipe'],
         url: '',
         category: Categories.COMPUTERVISION,
         demo: 'https://cdn.orbs.cloud/gottagohack.mp4',
         background: '/gottagohack.webp',
-        height: 217,
     },
     {
         name: 'Autonomous Drone',
         description:
-            'Autonomous drone for package delivery controlled by finger tracking',
+            'Autonomous drone for package delivery controlled with finger tracking',
         technologies: [
             'C++',
             'Python',
@@ -83,17 +87,6 @@ export const projects: Project[] = [
         url: '',
         category: Categories.COMPUTERVISION,
         background: '/drone.webp',
-        height: 217,
-    },
-    {
-        name: 'HyperLiDAR Classification',
-        description:
-            'Classification of pixels in hyperspectral and LiDAR images to identify object classes in the environment',
-        technologies: ['Python', 'Sklearn', 'SeaBorn', 'Pandas', 'Numpy'],
-        url: '',
-        category: Categories.COMPUTERVISION,
-        background: '/hyperspectral.webp',
-        height: 217,
     },
     {
         name: 'SchoolRunner',
@@ -103,8 +96,16 @@ export const projects: Project[] = [
         category: Categories.VIDEOGAME,
         background: '/schoolrunner.webp',
         demo: 'https://cdn.orbs.cloud/SchoolRunner.mp4',
-        size: 3,
-        height: 217,
+        height: 3,
+    },
+    {
+        name: 'HyperLiDAR Classification',
+        description:
+            'Classification of pixels in hyperspectral and LiDAR images to identify object classes in the environment',
+        technologies: ['Python', 'Sklearn', 'SeaBorn', 'Pandas', 'Numpy'],
+        url: '',
+        category: Categories.COMPUTERVISION,
+        background: '/hyperspectral.webp',
     },
     {
         name: 'Moving objects detection',
@@ -114,16 +115,14 @@ export const projects: Project[] = [
         url: '',
         category: Categories.COMPUTERVISION,
         background: '/cuda.webp',
-        height: 217,
     },
     {
         name: 'SkyCrane',
-        description: 'RPG video game',
+        description: 'RPG video game like Skyrim made in Unity with C#. ',
         technologies: ['C#', 'Unity'],
         url: '',
         category: Categories.VIDEOGAME,
         background: '/skycrane.webp',
-        height: 217,
     },
     {
         name: 'HydraFlow',
@@ -133,7 +132,6 @@ export const projects: Project[] = [
         category: Categories.SOFTWARE,
         background: '/fluid.webp',
         demo: 'https://cdn.orbs.cloud/fluid_75k.mp4',
-        height: 217,
     },
     {
         name: 'TerraNoise',
@@ -142,7 +140,6 @@ export const projects: Project[] = [
         url: '',
         category: Categories.VIDEOGAME,
         background: '/terranoise.webp',
-        height: 217,
     },
     {
         name: 'Multiplayer THREE.js Video Game',
@@ -151,7 +148,6 @@ export const projects: Project[] = [
         url: '',
         category: Categories.VIDEOGAME,
         background: '/balls.webp',
-        height: 217,
     },
     {
         name: 'Snow avalanche detection',
@@ -161,7 +157,6 @@ export const projects: Project[] = [
         url: '',
         category: Categories.COMPUTERVISION,
         background: '/avalanche.webp',
-        height: 217,
     },
     {
         name: 'Drone Choreography',
@@ -172,7 +167,6 @@ export const projects: Project[] = [
         category: Categories.SOFTWARE,
         background: '/OlympicGames.webp',
         demo: 'https://cdn.orbs.cloud/OlympicGames.mp4',
-        height: 217,
     },
     {
         name: 'SSH brute force map',
@@ -181,9 +175,7 @@ export const projects: Project[] = [
         technologies: ['Python', 'React', 'SQL'],
         url: '',
         category: Categories.SOFTWARE,
-        background:
-            'https://raw.githubusercontent.com/pierrelouisdelx/ssh-bruteforce-map/main/bruteforce-map.png',
-        height: 217,
+        background: '/bruteforce-map.webp',
     },
     {
         name: 'Optical Character Recognition',
@@ -191,8 +183,6 @@ export const projects: Project[] = [
         technologies: ['C', 'GTK'],
         url: 'https://github.com/pierrelouisdelx/OCR',
         category: Categories.SOFTWARE,
-        background:
-            'https://raw.githubusercontent.com/pierrelouisdelx/OCR/main/images/gui-intro.png',
-        height: 217,
+        background: '/ocr.webp',
     },
 ];
