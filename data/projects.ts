@@ -19,6 +19,15 @@ export interface Project {
 
 export const projects: Project[] = [
     {
+        name: 'Trading Bot - Forex',
+        description:
+            'Trading bot for forex using LSTM and Reinforcement Learning',
+        technologies: ['Python', 'Tensorflow', 'Keras'],
+        url: '',
+        category: Categories.SOFTWARE,
+        background: '/trading.webp',
+    },
+    {
         name: 'Research - Methane plume detection',
         description:
             'Research on Methane Plume Detection in Hyperspectral Images using Deep Learning',
@@ -166,7 +175,7 @@ export const projects: Project[] = [
         technologies: ['Python', 'React', 'SQL'],
         url: '',
         category: Categories.SOFTWARE,
-        background: 'https://cdn.orbs.cloud/bruteforce-map.webp',
+        background: '/bruteforce-map.webp',
     },
     {
         name: 'Optical Character Recognition',
@@ -174,6 +183,6 @@ export const projects: Project[] = [
         technologies: ['C', 'GTK'],
         url: 'https://github.com/pierrelouisdelx/OCR',
         category: Categories.SOFTWARE,
-        background: 'https://cdn.orbs.cloud/ocr.webp',
+        background: '/ocr.webp',
     },
 ];
