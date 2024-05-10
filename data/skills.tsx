@@ -1,11 +1,13 @@
 import { IconType } from 'react-icons';
 import {
+    SiAmazonaws,
     SiBlender,
     SiC,
     SiCplusplus,
     SiCsharp,
     SiDjango,
     SiDocker,
+    SiGooglecloud,
     SiMongodb,
     SiNextdotjs,
     SiNodedotjs,
@@ -30,6 +32,30 @@ export interface SkillCategory {
 }
 
 const skills: SkillCategory[] = [
+    {
+        title: 'Python',
+        icon: SiPython,
+    },
+    {
+        title: 'Tensorflow',
+        icon: SiTensorflow,
+    },
+    {
+        title: 'PyTorch',
+        icon: SiPytorch,
+    },
+    {
+        title: 'Scikit-Learn',
+        icon: SiScikitlearn,
+    },
+    {
+        title: 'Pandas',
+        icon: SiPandas,
+    },
+    {
+        title: 'OpenCV',
+        icon: SiOpencv,
+    },
     {
         title: 'React',
         icon: SiReact,
@@ -68,6 +94,14 @@ const skills: SkillCategory[] = [
         icon: SiDocker,
     },
     {
+        title: 'AWS',
+        icon: SiAmazonaws,
+    },
+    {
+        title: 'Google Cloud',
+        icon: SiGooglecloud,
+    },
+    {
         title: 'C',
         icon: SiC,
     },
@@ -79,30 +113,7 @@ const skills: SkillCategory[] = [
         title: 'C++',
         icon: SiCplusplus,
     },
-    {
-        title: 'Python',
-        icon: SiPython,
-    },
-    {
-        title: 'Tensorflow',
-        icon: SiTensorflow,
-    },
-    {
-        title: 'PyTorch',
-        icon: SiPytorch,
-    },
-    {
-        title: 'Scikit-Learn',
-        icon: SiScikitlearn,
-    },
-    {
-        title: 'Pandas',
-        icon: SiPandas,
-    },
-    {
-        title: 'OpenCV',
-        icon: SiOpencv,
-    },
+
     {
         title: 'Unity',
         icon: SiUnity,
