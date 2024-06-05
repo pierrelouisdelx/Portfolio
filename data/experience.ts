@@ -18,8 +18,9 @@ export const workexperiences: WorkExperience[] = [
         date: '03/2024 - Present',
         icon: '/logos/siemens.webp',
         description: `<ul class="list-disclosure-closed px-4">
-        <li>Research Intern - Machine Learning in Medical Image Acquisition and Reconstruction</li>
-        <li>Working on diffusion models for CT scans super resolution</li>
+        <li>Research on state of the art diffusion models for CT-scans denoising and super resolution</li>
+        <li>Improved quality of ultra-high resolution photon-counting CT images of the chest using
+state of the art super resolution technique</li>
         </ul>`,
         skills: 'https://skillicons.dev/icons?i=python,pytorch,anaconda,azure,bash,git',
     },
