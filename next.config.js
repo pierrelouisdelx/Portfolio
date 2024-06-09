@@ -5,50 +5,54 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'raw.githubusercontent.com'
+                hostname: 'raw.githubusercontent.com',
             },
             {
                 protocol: 'https',
-                hostname: 'images.emojiterra.com'
+                hostname: 'images.emojiterra.com',
             },
             {
                 protocol: 'https',
-                hostname: 'cdn.fs.brandfolder.com'
+                hostname: 'cdn.fs.brandfolder.com',
             },
             {
                 protocol: 'https',
-                hostname: 'uploads-ssl.webflow.com'
+                hostname: 'uploads-ssl.webflow.com',
             },
             {
                 protocol: 'https',
-                hostname: 'res.cloudinary.com'
+                hostname: 'res.cloudinary.com',
             },
             {
                 protocol: 'https',
-                hostname: 'parentsonboard.fr'
+                hostname: 'parentsonboard.fr',
             },
             {
                 protocol: 'https',
-                hostname: 'www.lomed.fr'
+                hostname: 'www.lomed.fr',
             },
             {
                 protocol: 'https',
-                hostname: 'www.harmony-promotion.com'
+                hostname: 'www.harmony-promotion.com',
             },
             {
                 protocol: 'https',
-                hostname: 'd1hbpr09pwz0sk.cloudfront.net'
+                hostname: 'd1hbpr09pwz0sk.cloudfront.net',
             },
             {
                 protocol: 'https',
-                hostname: 'www.psychologies.com'
+                hostname: 'www.psychologies.com',
             },
             {
                 protocol: 'https',
-                hostname: 'cdn.orbs.cloud'
-            }
-        ]
-    }
+                hostname: 'cdn.orbs.cloud',
+            },
+            {
+                protocol: 'https',
+                hostname: 'filevert.fr',
+            },
+        ],
+    },
 };
 
 module.exports = nextConfig;
