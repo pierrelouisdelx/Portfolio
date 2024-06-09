@@ -57,6 +57,7 @@ interface FreelanceExperience {
     date: string;
     icon: string;
     description: string;
+    skills: string;
 }
 
 export const freelanceexperiences: FreelanceExperience[] = [
@@ -70,6 +71,7 @@ export const freelanceexperiences: FreelanceExperience[] = [
         description: `<ul class="list-disclosure-closed px-4">
         <li>Developed Filevert chrome extension in React</li>
         </ul>`,
+        skills: 'https://skillicons.dev/icons?i=ts,react,tailwind,postgresql',
     },
     {
         company: 'Avocalix',
@@ -82,6 +84,7 @@ export const freelanceexperiences: FreelanceExperience[] = [
         <li>Development of a custom image generation system using node canvas</li>
         <li>Developed UI components & fixed errors</li>
         </ul>`,
+        skills: 'https://skillicons.dev/icons?i=ts,nodejs,express,react,nextjs,tailwind',
     },
     {
         company: 'Sweez',
@@ -97,6 +100,7 @@ export const freelanceexperiences: FreelanceExperience[] = [
             <li>Developed UI components & fixed errors</li>
             </ul>
             `,
+        skills: 'https://skillicons.dev/icons?i=ts,react,nextjs,tailwind,python,django,mongodb,postgresql,graphql,redis,socketio&perline=6',
     },
     {
         company: 'IROC',
@@ -110,6 +114,7 @@ export const freelanceexperiences: FreelanceExperience[] = [
         <li>Improved web scrapers runtime by 95% through parallelization and caching techniques</li>
         <li>Developed UI components & fixed errors</li>
         </ul>`,
+        skills: 'https://skillicons.dev/icons?i=ts,react,nextjs,tailwind,python,fastapi,mongodb,pytorch,redis,selenium,rabbitmq&perline=6',
     },
     {
         company: 'OneGrid',
@@ -126,6 +131,7 @@ export const freelanceexperiences: FreelanceExperience[] = [
         <li>Developed UI components & fixed errors</li>
         </ul>
         `,
+        skills: 'https://skillicons.dev/icons?i=ts,react,nextjs,tailwind,githubactions',
     },
     {
         company: 'Mobility Care',
@@ -141,6 +147,7 @@ export const freelanceexperiences: FreelanceExperience[] = [
         <li>Developed UI components & fixed errors</li>
         </ul>
         `,
+        skills: 'https://skillicons.dev/icons?i=ts,react,nextjs,tailwind,python,django,mongodb',
     },
     {
         company: 'Smartmoms',
@@ -155,6 +162,7 @@ export const freelanceexperiences: FreelanceExperience[] = [
         <li>Live chat integration using websocket</li>
         </ul>
         `,
+        skills: 'https://skillicons.dev/icons?i=ts,react,nextjs,tailwind,mongodb,githubactions,docker',
     },
     {
         company: 'Lomed',
@@ -164,6 +172,7 @@ export const freelanceexperiences: FreelanceExperience[] = [
         date: '05/2022',
         icon: 'https://www.lomed.fr/hubfs/logoipsum-logo-50-1-_2_-1-_1_-_1_-2.png',
         description: 'Development of a landing page for hubspot CRM',
+        skills: 'https://skillicons.dev/icons?i=php,html,css,js',
     },
     {
         company: 'Harmony Promotion',
@@ -173,6 +182,7 @@ export const freelanceexperiences: FreelanceExperience[] = [
         date: '10/2021',
         icon: '/logos/harmonypromotion.webp',
         description: 'Added fonctionalities to an admin panel',
+        skills: 'https://skillicons.dev/icons?i=php,html,css,js',
     },
     {
         company: 'Legaware',
@@ -188,6 +198,7 @@ export const freelanceexperiences: FreelanceExperience[] = [
         <li>Currenly working on a new platform for entrepreneurs</li>
         </ul>
         `,
+        skills: 'https://skillicons.dev/icons?i=ts,nodejs,express,react,nextjs,tailwind,python,mongodb,githubactions,docker,php,html,js&perline=6',
     },
     {
         company: 'Psychologies',
@@ -197,5 +208,6 @@ export const freelanceexperiences: FreelanceExperience[] = [
         date: '09/2021',
         icon: 'https://www.psychologies.com/wp-content/themes/psycho/assets/images/psychologies.svg',
         description: `🎉 My very first freelance mission 🎉<br> Fixed a javascript error on the website`,
+        skills: 'https://skillicons.dev/icons?i=html,css,js',
     },
 ];
