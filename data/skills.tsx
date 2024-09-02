@@ -1,6 +1,6 @@
 import { IconType } from 'react-icons';
 import {
-    SiAmazonaws,
+    SiAmazon,
     SiBlender,
     SiC,
     SiCplusplus,
