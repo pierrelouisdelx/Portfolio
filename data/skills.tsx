@@ -1,6 +1,6 @@
 import { IconType } from 'react-icons';
 import {
-    SiAmazon,
+    SiAmazonwebservices,
     SiBlender,
     SiC,
     SiCplusplus,
@@ -95,7 +95,7 @@ const skills: SkillCategory[] = [
     },
     {
         title: 'AWS',
-        icon: SiAmazonaws,
+        icon: SiAmazonwebservices,
     },
     {
         title: 'Google Cloud',
