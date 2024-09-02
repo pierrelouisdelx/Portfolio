@@ -92,7 +92,7 @@ export const freelanceexperiences: FreelanceExperience[] = [
         link: 'https://sweez.io',
         location: 'Paris, France',
         position: 'Software Engineer',
-        date: '05/2023 - 08/2023',
+        date: '02/2023 - 08/2023',
         icon: 'https://images.emojiterra.com/google/android-11/512px/1f349.png',
         description: `<ul class="list-disclosure-closed px-4">
             <li>Implemented real time collaboration on slatejs using CRDTs</li>
